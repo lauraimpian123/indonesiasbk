@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import RunningText from '@/components/RunningText'
+import MegaMenu from '@/components/MegaMenu'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -19,16 +20,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 }
-
-const categories = [
-  { name: 'SBK', href: '/sbk', color: 'cat-sbk' },
-  { name: 'MotoGP', href: '/motogp', color: 'cat-motogp' },
-  { name: 'F1', href: '/f1', color: 'cat-f1' },
-  { name: 'Review', href: '/review', color: 'cat-review' },
-  { name: 'News', href: '/news', color: 'cat-news' },
-  { name: 'Tech & EV', href: '/tech', color: 'cat-tech' },
-  { name: 'Lifestyle', href: '/lifestyle', color: 'cat-lifestyle' },
-]
 
 export default function RootLayout({
   children,
@@ -66,21 +57,9 @@ export default function RootLayout({
           </div>
         </nav>
 
-        {/* Category Pills */}
-        <div className="bg-secondary border-b border-default sticky top-14 z-30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="category-pills py-3">
-              {categories.map((cat) => (
-                <a
-                  key={cat.href}
-                  href={cat.href}
-                  className={`px-4 py-1.5 rounded-full text-sm font-semibold text-white ${cat.color} hover:opacity-80 transition-opacity whitespace-nowrap`}
-                >
-                  {cat.name}
-                </a>
-              ))}
-            </div>
-          </div>
+        {/* Mega Menu */}
+        <div className="sticky top-14 z-30">
+          <MegaMenu />
         </div>
         
         <main className="min-h-screen">
