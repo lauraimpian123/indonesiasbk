@@ -8,85 +8,77 @@
   }
   
   body {
-    @apply bg-bg-primary text-text-primary antialiased;
+    @apply bg-[#0A0A0B] text-[#F5F5F5] antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-text-secondary;
+    @apply text-[#E0E0E0] font-bold;
   }
 }
 
 @layer utilities {
-  .text-gradient-primary {
-    background: linear-gradient(135deg, #0EA5E9 0%, #6366F1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  /* Background colors */
+  .bg-primary { background: #0A0A0B; }
+  .bg-secondary { background: #111113; }
+  .bg-tertiary { background: #1A1A1C; }
+  .bg-elevated { background: #1F1F23; }
   
-  .text-gradient-accent {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  /* Border colors */
+  .border-default { border-color: #1F1F23; }
+  .border-strong { border-color: #2A2A2E; }
   
-  .bg-gradient-primary {
-    background: linear-gradient(135deg, #0EA5E9 0%, #6366F1 100%);
-  }
+  /* Text colors */
+  .text-primary { color: #F5F5F5; }
+  .text-secondary { color: #E0E0E0; }
+  .text-muted { color: #9CA3AF; }
+  .text-subtle { color: #6B7280; }
   
-  .bg-gradient-accent {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-  }
+  /* Brand colors */
+  .text-brand { color: #E11D48; }
+  .bg-brand { background: #E11D48; }
+  .border-brand { border-color: #E11D48; }
   
+  /* Category colors */
+  .cat-sbk { background: #E11D48; }
+  .cat-motogp { background: #FF6B35; }
+  .cat-f1 { background: #DC2626; }
+  .cat-review { background: #3B82F6; }
+  .cat-news { background: #8B5CF6; }
+  .cat-tech { background: #10B981; }
+  .cat-lifestyle { background: #F59E0B; }
+  
+  /* Components */
   .card {
-    @apply bg-white border border-border rounded-card p-6 shadow-card transition-all duration-300;
+    @apply bg-secondary border border-default rounded-lg overflow-hidden transition-all duration-300;
   }
   
   .card:hover {
-    @apply border-border-strong shadow-card-hover -translate-y-0.5;
+    @apply border-strong -translate-y-0.5;
   }
   
   .btn-primary {
-    @apply bg-gradient-primary text-white px-6 py-3 rounded-button font-semibold shadow-button transition-all duration-300;
+    @apply bg-brand text-white px-4 py-2 rounded font-semibold hover:bg-[#BE123C] transition-colors;
   }
   
-  .btn-primary:hover {
-    @apply shadow-button-hover -translate-y-px;
+  .category-badge {
+    @apply inline-block px-3 py-1 rounded text-xs font-bold text-white uppercase tracking-wider;
   }
-  
-  .btn-secondary {
-    @apply bg-bg-tertiary text-text-primary border border-border px-6 py-3 rounded-button font-semibold transition-all duration-300;
-  }
-  
-  .btn-secondary:hover {
-    @apply bg-bg-hover border-border-strong;
-  }
-  
-  .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
-  }
-  
-  .badge-sbk {
-    @apply bg-gradient-to-r from-red-100 to-red-200 text-red-700;
-  }
-  
-  .badge-review {
-    @apply bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700;
-  }
-  
-  .badge-news {
-    @apply bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700;
-  }
-  
-  .badge-tech {
-    @apply bg-gradient-to-r from-green-100 to-green-200 text-green-700;
-  }
-  
-  .badge-lifestyle {
-    @apply bg-gradient-to-r from-amber-100 to-amber-200 text-amber-700;
-  }
+}
+
+/* Running text animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.running-text {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.running-text:hover {
+  animation-play-state: paused;
 }
 
 /* Smooth scroll */
@@ -94,26 +86,40 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar (futuristic) */
+/* Custom scrollbar (dark) */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #111113;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0EA5E9 0%, #6366F1 100%);
+  background: #E11D48;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #0284C7 0%, #4F46E5 100%);
+  background: #BE123C;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(14, 165, 233, 0.2);
-  color: #0F172A;
+  background: rgba(225, 29, 72, 0.3);
+  color: #F5F5F5;
+}
+
+/* Category pills scroll */
+.category-pills {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.category-pills::-webkit-scrollbar {
+  height: 4px;
 }

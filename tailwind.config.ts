@@ -9,49 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: '#E2E8F0',
-        'border-strong': '#CBD5E1',
-        primary: {
-          DEFAULT: '#0EA5E9',
-          dark: '#0284C7',
+        primary: '#0A0A0B',
+        secondary: '#111113',
+        tertiary: '#1A1A1C',
+        elevated: '#1F1F23',
+        border: '#1F1F23',
+        'border-strong': '#2A2A2E',
+        brand: {
+          DEFAULT: '#E11D48',
+          hover: '#BE123C',
         },
-        accent: {
-          DEFAULT: '#8B5CF6',
-        },
-        text: {
-          primary: '#0F172A',
-          secondary: '#334155',
-          muted: '#64748B',
-          subtle: '#94A3B8',
-        },
-        bg: {
-          primary: '#FFFFFF',
-          secondary: '#F8FAFC',
-          tertiary: '#F1F5F9',
-          hover: '#E2E8F0',
-        },
+        accent: '#F59E0B',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Geist', 'Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'SF Mono', 'Consolas', 'monospace'],
-      },
-      fontSize: {
-        display: ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
       },
       borderRadius: {
-        'card': '16px',
-        'button': '12px',
-      },
-      boxShadow: {
-        'card': '0 1px 3px rgba(15, 23, 42, 0.08)',
-        'card-hover': '0 8px 24px rgba(15, 23, 42, 0.12)',
-        'button': '0 4px 12px rgba(14, 165, 233, 0.3)',
-        'button-hover': '0 8px 24px rgba(14, 165, 233, 0.4)',
-      },
-      transitionTimingFunction: {
-        'ease-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
-        'ease-bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'card': '8px',
       },
     },
   },
