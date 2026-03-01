@@ -323,6 +323,16 @@ Untuk fans? **9 bulan non-stop MotoGP action**. Weekends tanpa racing jadi rare.
   `
 };
 
+// Generate static params for all articles (enables static generation at build time)
+export async function generateStaticParams() {
+  // Get all article slugs from our database
+  const slugs = Object.keys(articles);
+  
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
+
 // Generate metadata for SEO
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }

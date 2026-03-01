@@ -16,6 +16,8 @@ export const articlesPhase2A = [
     {
       slug: "5-tim-moto2-terbaik-2026-dominasi-honda-team-asia",
       title: "5 Tim Moto2 Terbaik 2026: Dominasi Honda Team Asia",
+      image: "/images/featured/moto2-5-tim-moto2-terbaik-2026-dominasi-honda-team-asia.webp",
+      keywords: [],
       metaDescription: "Analisis 5 tim Moto2 terbaik 2026! Honda Team Asia, Italtrans, Fantic Racing bersaing ketat. Data lengkap, strategi juara, profil rider Indonesia.",
       excerpt: "Tim mana yang paling kuat di Moto2 2026? Honda Team Asia menunjukkan performa impresif dengan Veda Pratama, tapi persaingan masih sengit!",
       content: `# 5 Tim Moto2 Terbaik 2026: Dominasi Honda Team Asia
@@ -439,6 +441,8 @@ Klasemen tim dihitung dari **total poin kedua rider** (kalau tim punya 2 rider) 
     {
       slug: "teknik-overtaking-moto2-belajar-dari-juara",
       title: "Teknik Overtaking di Moto2: Belajar dari Juara",
+      image: "/images/featured/moto2-teknik-overtaking-moto2-belajar-dari-juara.webp",
+      keywords: [],
       metaDescription: "Rahasia overtaking di Moto2 dari Moreira, Dixon, González! Late braking, switchback, cutback - teknik lengkap dengan data telemetry dan video analysis.",
       excerpt: "Overtaking di Moto2 bukan cuma soal bravery. Ada science, timing, dan racecraft yang pembalap top gunakan untuk nyalip tanpa risiko crash.",
       content: `# Teknik Overtaking di Moto2: Belajar dari Juara
@@ -1019,6 +1023,8 @@ Honda Team Asia dengan Veda Pratama showing the way. If Indonesia want to produc
     {
       slug: "kalex-vs-boscoscuro-perang-chassis-moto2",
       title: "Kalex vs Boscoscuro: Perang Chassis Moto2",
+      image: "/images/featured/moto2-kalex-vs-boscoscuro-perang-chassis-moto2.webp",
+      keywords: [],
       metaDescription: "Kalex dominasi 90% grid, Boscoscuro fight back! Analisis teknis mendalam: geometry, aero, electronics, data lap time. Which chassis suits your riding style?",
       excerpt: "Kalex atau Boscoscuro - mana yang lebih cepat? Jawabannya tidak sesimple yang kamu kira. Chassis choice bisa bikin atau hancurkan championship campaign.",
       content: `# Kalex vs Boscoscuro: Perang Chassis Moto2
@@ -1732,6 +1738,8 @@ Boscoscuro adalah excellent chassis yang keep Kalex honest dan give team alterna
     {
       slug: "jalur-karir-moto2-ke-motogp-studi-kasus",
       title: "Jalur Karir Moto2 ke MotoGP: Studi Kasus",
+      image: "/images/featured/moto2-jalur-karir-moto2-ke-motogp-studi-kasus.webp",
+      keywords: [],
       metaDescription: "Bagaimana Acosta, Binder, Bastianini 'graduate' dari Moto2 ke MotoGP? Data lengkap: minimal poin, usia ideal, kontrak factory. Roadmap untuk Indonesian riders!",
       excerpt: "Moto2 champion otomatis naik MotoGP? Salah! Ada formula rahasia yang determine siapa yang 'graduate' dan siapa yang stuck. Here's the blueprint.",
       content: `# Jalur Karir Moto2 ke MotoGP: Studi Kasus
@@ -2361,7 +2369,7 @@ Realistic timeline untuk Indonesian rider: **4-5 years after MotoGP debut** untu
       readTime: "18 min",
       tags: ["MotoGP", "Moto2", "Career", "Veda Pratama", "Indonesian Riders", "Professional Racing"],
       featured: true,
-    },,
+    },
 
   // ========================================
   // BATCH 2: MOTO3
@@ -2369,6 +2377,7 @@ Realistic timeline untuk Indonesian rider: **4-5 years after MotoGP debut** untu
   {
     slug: "honda-nsf250r-motor-legendaris-moto3",
     title: "Honda NSF250R: Motor Legendaris Moto3",
+      image: "/images/featured/moto3-honda-nsf250r-motor-legendaris-moto3.webp",
     excerpt: "Tahun 2012, Honda meluncurkan sebuah mesin balap 250cc 4-tak yang mengubah permainan selamanya. Honda NSF250R bukan sekadar motor—ini adalah **pabrik ",
     content: `# Honda NSF250R: Motor Legendaris Moto3
 
@@ -2688,6 +2697,7 @@ Karena di dunia balap, **the best bike is the one that wins the most**. Dan seja
   {
     slug: "strategi-balap-moto3-pack-racing-explained",
     title: "Strategi Balap Moto3: Pack Racing Explained",
+      image: "/images/featured/moto3-strategi-balap-moto3-pack-racing-explained.webp",
     excerpt: "Balapan Moto3 terkenal dengan satu fenomena yang tidak ada di kelas lain: **pack racing**.",
     content: `# Strategi Balap Moto3: Pack Racing Explained
 
@@ -3057,6 +3067,7 @@ Welcome to Moto3. Welcome to the pack.
   {
     slug: "5-pembalap-moto3-indonesia-sepanjang-masa",
     title: "5 Pembalap Moto3 Indonesia Sepanjang Masa",
+      image: "/images/featured/moto3-5-pembalap-moto3-indonesia-sepanjang-masa.webp",
     excerpt: "Indonesia punya sejarah panjang di Grand Prix motorcycle racing—tapi prestasi di **Moto3 World Championship** baru dimulai serius di era 2010-an.",
     content: `# 5 Pembalap Moto3 Indonesia Sepanjang Masa
 
@@ -3557,6 +3568,7 @@ Dan ketika itu terjadi, seluruh paddock akan tahu: **Indonesia has arrived**.
   {
     slug: "ktm-vs-honda-vs-husqvarna-perbandingan-motor-moto3",
     title: "KTM vs Honda vs Husqvarna: Perbandingan Motor Moto3",
+      image: "/images/featured/moto3-ktm-vs-honda-vs-husqvarna-perbandingan-motor-moto3.webp",
     excerpt: "Di grid Moto3 World Championship 2026, ada **tiga pabrikan** yang menguasai lebih dari 95% total motor: **KTM, Honda, dan Husqvarna**.",
     content: `# KTM vs Honda vs Husqvarna: Perbandingan Motor Moto3
 
@@ -4027,6 +4039,7 @@ Dan yang paling penting: di Moto3, **motor hanya 30% dari equation**. Rider skil
   {
     slug: "dari-moto3-ke-juara-dunia-kisah-inspiratif",
     title: "Dari Moto3 ke Juara Dunia: Kisah Inspiratif",
+      image: "/images/featured/moto3-dari-moto3-ke-juara-dunia-kisah-inspiratif.webp",
     excerpt: "Setiap **juara dunia MotoGP modern** punya satu kesamaan: mereka **started dari bottom**, berjuang di kelas terbawah, dan climb their way up.",
     content: `# Dari Moto3 ke Juara Dunia: Kisah Inspiratif
 
@@ -4676,6 +4689,7 @@ Tapi kalau kamu lihat nama-nama di trophy MotoGP, **semua mereka walked that roa
   {
     slug: "hamilton-ke-ferrari-dampak-transfer-abad-ini",
     title: "Hamilton ke Ferrari: Dampak Transfer Abad Ini",
+      image: "/images/featured/motorsport-hamilton-ke-ferrari-dampak-transfer-abad-ini.webp",
     excerpt: "**Word Count**: 2000 kata **Search Intent**: Commercial **Primary Keyword**: Hamilton Ferrari **LSI Keywords**: Lewis Hamilton Ferrari 2025, transfer ",
     content: `# Hamilton ke Ferrari: Dampak Transfer Abad Ini
 
@@ -4969,6 +4983,7 @@ Forza Ferrari. Still we rise.
   {
     slug: "regulasi-f1-2026-era-baru-hybrid-power-unit",
     title: "Regulasi F1 2026: Era Baru Hybrid Power Unit",
+      image: "/images/featured/f1-regulasi-f1-2026-era-baru-hybrid-power-unit.webp",
     excerpt: "**Word Count**: 1900 kata **Search Intent**: Informational **Primary Keyword**: regulasi F1 2026 **LSI Keywords**: power unit 2026, aero F1 2026, hybr",
     content: `# Regulasi F1 2026: Era Baru Hybrid Power Unit
 
@@ -5311,6 +5326,7 @@ The future of F1 is electric. Literally.
   {
     slug: "max-verstappen-vs-lewis-hamilton-duel-legenda",
     title: "Max Verstappen vs Lewis Hamilton: Duel Legenda",
+      image: "/images/featured/motorsport-max-verstappen-vs-lewis-hamilton-duel-legenda.webp",
     excerpt: "**Word Count**: 2100 kata **Search Intent**: Commercial (comparison, \"who is better\") **Primary Keyword**: Verstappen vs Hamilton **LSI Keywords**: GO",
     content: `# Max Verstappen vs Lewis Hamilton: Duel Legenda
 
@@ -5717,6 +5733,7 @@ And that's exactly how it should be.
   {
     slug: "5-sirkuit-f1-tercepat-di-dunia-kecepatan-di-atas-350-kmjam",
     title: "5 Sirkuit F1 Tercepat di Dunia: Kecepatan di Atas 350 km/jam!",
+      image: "/images/featured/f1-5-sirkuit-f1-tercepat-di-dunia-kecepatan-di-atas-350-kmjam.webp",
     excerpt: "Tahun 2024, Valtteri Bottas mencatat kecepatan tertinggi sepanjang sejarah F1 modern: **366.1 km/jam** di Sirkuit Monza. Angka yang setara dengan pesa",
     content: `# 5 Sirkuit F1 Tercepat di Dunia: Kecepatan di Atas 350 km/jam!
 
@@ -5931,6 +5948,7 @@ Jika kamu punya kesempatan menonton F1 langsung, pilihlah salah satu dari sirkui
   {
     slug: "teknologi-drs-f1-cara-kerja-dan-kontroversi-yang-tidak-pernah-berakhir",
     title: "Teknologi DRS F1: Cara Kerja dan Kontroversi yang Tidak Pernah Berakhir",
+      image: "/images/featured/f1-teknologi-drs-f1-cara-kerja-dan-kontroversi-yang-tidak-pernah-berakhir.webp",
     excerpt: "Tahun 2011, FIA memperkenalkan sebuah inovasi yang selamanya mengubah wajah Formula 1: **DRS (Drag Reduction System)**. Dalam sekejap, overtaking—yang",
     content: `# Teknologi DRS F1: Cara Kerja dan Kontroversi yang Tidak Pernah Berakhir
 
@@ -6268,6 +6286,7 @@ Hingga saat itu tiba, DRS akan tetap menjadi bagian dari DNA F1—sistem yang ko
   {
     slug: "budget-cap-f1-keadilan-atau-hambatan-inovasi-debat-yang-tidak-akan-pernah-usai",
     title: "Budget Cap F1: Keadilan atau Hambatan Inovasi? Debat yang Tidak Akan Pernah Usai",
+      image: "/images/featured/f1-budget-cap-f1-keadilan-atau-hambatan-inovasi-debat-yang-tidak-akan-pernah-usai.webp",
     excerpt: "**5 Oktober 2021.** Red Bull Racing diumumkan **bersalah melanggar budget cap**—overspend sebesar **£1.8 juta** di musim 2021. Denda: **$7 juta** dan ",
     content: `# Budget Cap F1: Keadilan atau Hambatan Inovasi? Debat yang Tidak Akan Pernah Usai
 
@@ -6727,6 +6746,7 @@ Kalau kamu jadi FIA, apakah kamu akan keep budget cap seperti sekarang, naikkan 
   {
     slug: "ducati-panigale-v4-r-raja-wsbk-2026-yang-tak-tergoyahkan",
     title: "Ducati Panigale V4 R: Raja WSBK 2026 yang Tak Tergoyahkan",
+      image: "/images/featured/wsbk-ducati-panigale-v4-r-raja-wsbk-2026-yang-tak-tergoyahkan.webp",
     excerpt: "Sejak awal musim WSBK 2026, satu nama terus menggema di podium: **Ducati Panigale V4 R**. Bukan kebetulan bahwa motor asal Bologna ini mengoleksi 9 da",
     content: `# Ducati Panigale V4 R: Raja WSBK 2026 yang Tak Tergoyahkan
 
@@ -7092,6 +7112,7 @@ Dan di 2026, statement itu masih 100% valid.
   {
     slug: "perbedaan-wsbk-dan-motogp-production-vs-prototype-mana-yang-lebih-gila",
     title: "Perbedaan WSBK dan MotoGP: Production vs Prototype — Mana yang Lebih Gila?",
+      image: "/images/featured/motogp-perbedaan-wsbk-dan-motogp-production-vs-prototype-mana-yang-lebih-gila.webp",
     excerpt: "**Pertanyaan klasik yang selalu muncul di paddock dan forum motorsport:** mana yang lebih kencang—motor WSBK atau MotoGP?",
     content: `# Perbedaan WSBK dan MotoGP: Production vs Prototype — Mana yang Lebih Gila?
 
@@ -7496,6 +7517,7 @@ Atau seperti kebanyakan fans motorsport:
   {
     slug: "toprak-razgatlioglu-dari-wsbk-ke-motogp-the-turkish-tornado-yang-menaklukkan-dua-dunia",
     title: "Toprak Razgatlioglu: Dari WSBK ke MotoGP — The Turkish Tornado yang Menaklukkan Dua Dunia",
+      image: "/images/featured/motogp-toprak-razgatlioglu-dari-wsbk-ke-motogp-the-turkish-tornado-yang-menaklukkan-dua-dunia.webp",
     excerpt: "**Bayangkan ini:** Kamu adalah juara dunia di kategori tertinggi motorsport roda dua produksi. Kamu mengalahkan legenda hidup seperti Jonathan Rea. Ka",
     content: `# Toprak Razgatlioglu: Dari WSBK ke MotoGP — The Turkish Tornado yang Menaklukkan Dua Dunia
 
@@ -7957,6 +7979,7 @@ The Turkish Tornado is here to stay.
   {
     slug: "arrc-2024-dominasi-pembalap-indonesia-",
     title: "ARRC 2024: Dominasi Pembalap Indonesia 🇮🇩",
+      image: "/images/featured/arrc-arrc-2024-dominasi-pembalap-indonesia-.webp",
     excerpt: "Tiga angka yang bikin Indonesia berdiri tegak di podium Asia Road Racing Championship 2024. Bukan sekadar finis di top 10. Bukan sekadar \"ikut meramai",
     content: `# ARRC 2024: Dominasi Pembalap Indonesia 🇮🇩
 
@@ -8304,6 +8327,7 @@ Merah Putih berkibar. Asia perhatikan.
   {
     slug: "kiandra-ramadhipa-juara-ap250-termuda-yang-bikin-asia-terkesima-",
     title: "Kiandra Ramadhipa: Juara AP250 Termuda yang Bikin Asia Terkesima 🇮🇩",
+      image: "/images/featured/motorsport-kiandra-ramadhipa-juara-ap250-termuda-yang-bikin-asia-terkesima-.webp",
     excerpt: "19 tahun. 147 poin. 5 kemenangan. Satu gelar juara Asia.",
     content: `# Kiandra Ramadhipa: Juara AP250 Termuda yang Bikin Asia Terkesima 🇮🇩
 
@@ -8686,6 +8710,7 @@ Merah Putih berkibar. Asia terperangah. Dunia mulai perhatikan.
   {
     slug: "sentul-international-circuit-kandang-arrc-indonesia-yang-bikin-lawan-gemetar-",
     title: "Sentul International Circuit: Kandang ARRC Indonesia yang Bikin Lawan Gemetar 🇮🇩",
+      image: "/images/featured/arrc-sentul-international-circuit-kandang-arrc-indonesia-yang-bikin-lawan-gemetar-.webp",
     excerpt: "**Sentul International Circuit** di Bogor, Jawa Barat, bukan sekadar sirkuit balap motor biasa. Ini adalah **kandang Indonesia** di Asia Road Racing C",
     content: `# Sentul International Circuit: Kandang ARRC Indonesia yang Bikin Lawan Gemetar 🇮🇩
 
@@ -9196,6 +9221,7 @@ Tapi satu hal tidak akan berubah:
   {
     slug: "dari-arrc-ke-motogp-success-story-mario-aji-yang-menginspirasi-indonesia-",
     title: "Dari ARRC ke MotoGP: Success Story Mario Aji yang Menginspirasi Indonesia 🇮🇩",
+      image: "/images/featured/motogp-dari-arrc-ke-motogp-success-story-mario-aji-yang-menginspirasi-indonesia-.webp",
     excerpt: "Bayangkan ini: pembalap Indonesia yang start dari jalanan sirkuit Asia, kini berdiri di grid Moto2 bersama nama-nama besar dunia. Mario Aji bukan cuma",
     content: `# Dari ARRC ke MotoGP: Success Story Mario Aji yang Menginspirasi Indonesia 🇮🇩
 
@@ -9466,6 +9492,7 @@ Apakah dia akan sampai ke MotoGP? Kita tidak tahu. Tapi satu hal yang pasti: Mar
   {
     slug: "honda-vs-yamaha-di-arrc-persaingan-sengit-yang-memanas-",
     title: "Honda vs Yamaha di ARRC: Persaingan Sengit yang Memanas! 🏍️🔥",
+      image: "/images/featured/arrc-honda-vs-yamaha-di-arrc-persaingan-sengit-yang-memanas-.webp",
     excerpt: "Red vs Blue. Honda vs Yamaha. Rivalitas tertua dan terseru di dunia balap motor.",
     content: `# Honda vs Yamaha di ARRC: Persaingan Sengit yang Memanas! 🏍️🔥
 
@@ -9808,6 +9835,7 @@ Tapi pada akhirnya, pemenang sesungguhnya adalah **INDONESIA**. Karena rivalitas
   {
     slug: "5-pembalap-indonesia-terbaik-arrc-2024-ranking-lengkap-",
     title: "5 Pembalap Indonesia Terbaik ARRC 2024: Ranking Lengkap! 🇮🇩🏆",
+      image: "/images/featured/arrc-5-pembalap-indonesia-terbaik-arrc-2024-ranking-lengkap-.webp",
     excerpt: "Tahun 2024 adalah tahun EMAS bagi balap motor Indonesia. Di Asia Road Racing Championship (ARRC), pembalap Indonesia tidak cuma ikut race—mereka **MEN",
     content: `# 5 Pembalap Indonesia Terbaik ARRC 2024: Ranking Lengkap! 🇮🇩🏆
 
@@ -10234,14 +10262,16 @@ Top 5 rider ini—Kiandra, Andi Farid, Herjun, Fahmi, dan Adenanta—adalah **HE
   // BATCH 6: WSBK PART 2 (3 articles)
   // ========================================
 {
-    title: "5 Pembalap WSBK Terbaik Sepanjang Masa: Legenda Aspal yang Mengubah Sejarah",
-    metaDescription: "Dari Fogarty sampai Rea, ini 5 pembalap WSBK terbaik sepanjang masa yang bikin jantung deg-degan di tiap tikungan. Data lengkap + opini berani!",
-    slug: "5-pembalap-wsbk-terbaik-sepanjang-masa",
-    category: "WSBK",
-    tags: ["WSBK", "Pembalap", "Sejarah", "Jonathan Rea", "Carl Fogarty"],
-    keywordUtama: "pembalap WSBK terbaik",
-    keywordPendukung: ["legenda WSBK", "juara WSBK", "sejarah WSBK", "pembalap superbike", "hall of fame WSBK"],
-    wordCount: 1900,
+      slug: "5-pembalap-wsbk-terbaik-sepanjang-masa",
+      title: "5 Pembalap WSBK Terbaik Sepanjang Masa: Legenda Aspal yang Mengubah Sejarah",
+      excerpt: "Dari Fogarty sampai Rea, ini 5 pembalap WSBK terbaik sepanjang masa yang bikin jantung deg-degan di tiap tikungan. Data lengkap + opini berani!",
+      metaDescription: "Dari Fogarty sampai Rea, ini 5 pembalap WSBK terbaik sepanjang masa yang bikin jantung deg-degan di tiap tikungan. Data lengkap + opini berani!",
+      author: "King Apex Wheelie",
+      date: "2026-03-02",
+      readTime: "12 min",
+      category: "WSBK",
+      image: "/images/featured/wsbk-5-pembalap-wsbk-terbaik-sepanjang-masa.webp",
+      keywords: ["pembalap WSBK terbaik", "legenda WSBK", "juara WSBK", "Jonathan Rea", "Carl Fogarty"],
     content: `
 # 5 Pembalap WSBK Terbaik Sepanjang Masa: Legenda Aspal yang Mengubah Sejarah
 
@@ -10425,14 +10455,16 @@ Siapa pembalap WSBK favorit kamu? Drop di komen!
   },
 
   {
-    title: "Kawasaki ZX-10R: Legenda Hijau di WSBK yang Gak Pernah Kalah Gengsi",
-    metaDescription: "ZX-10R bukan sekadar motor balap—ini mesin dominasi Jonathan Rea & Kawasaki di WSBK. Tekno, evolusi, & kenapa motor hijau ini bikin lawan frustasi.",
-    slug: "kawasaki-zx-10r-legenda-hijau-wsbk",
-    category: "WSBK",
-    tags: ["Kawasaki", "ZX-10R", "WSBK", "Superbike", "Jonathan Rea", "Tekno"],
-    keywordUtama: "Kawasaki ZX-10R WSBK",
-    keywordPendukung: ["ZX-10RR", "motor WSBK", "Kawasaki racing", "superbike Kawasaki", "motor Jonathan Rea"],
-    wordCount: 1800,
+      slug: "kawasaki-zx-10r-legenda-hijau-wsbk",
+      title: "Kawasaki ZX-10R: Legenda Hijau di WSBK yang Gak Pernah Kalah Gengsi",
+      excerpt: "ZX-10R bukan sekadar motor balap—ini mesin dominasi Jonathan Rea & Kawasaki di WSBK. Tekno, evolusi, & kenapa motor hijau ini bikin lawan frustasi.",
+      metaDescription: "ZX-10R bukan sekadar motor balap—ini mesin dominasi Jonathan Rea & Kawasaki di WSBK. Tekno, evolusi, & kenapa motor hijau ini bikin lawan frustasi.",
+      author: "King Apex Wheelie",
+      date: "2026-03-02",
+      readTime: "11 min",
+      category: "WSBK",
+      image: "/images/featured/wsbk-kawasaki-zx-10r-legenda-hijau-wsbk.webp",
+      keywords: ["Kawasaki ZX-10R WSBK", "ZX-10RR", "motor WSBK", "Kawasaki racing", "Jonathan Rea"],
     content: `
 # Kawasaki ZX-10R: Legenda Hijau di WSBK yang Gak Pernah Kalah Gengsi
 
@@ -10637,14 +10669,16 @@ Ninja hijau never dies. 🏁
   },
 
   {
-    title: "Strategi Balap WSBK: 3 Race Format Explained (Superpole, Race 1, Race 2)",
-    metaDescription: "WSBK punya format 3 race unik yang bikin kompetisi seru: Superpole Race, Race 1, Race 2. Begini cara kerjanya, strategi tim, & kenapa ini lebih exciting dari MotoGP.",
-    slug: "strategi-balap-wsbk-3-race-format",
-    category: "WSBK",
-    tags: ["WSBK", "Format Balapan", "Strategi", "Superpole Race", "Panduan"],
-    keywordUtama: "format balap WSBK",
-    keywordPendukung: ["Superpole Race", "WSBK Race 1 Race 2", "strategi WSBK", "aturan WSBK", "jadwal WSBK"],
-    wordCount: 1900,
+      slug: "strategi-balap-wsbk-3-race-format",
+      title: "Strategi Balap WSBK: 3-Race Format yang Bikin Deg-Degan",
+      excerpt: "WSBK bukan MotoGP—3 race per weekend bikin strategi lebih kompleks. Superpole Race, reverse grid, tyre management: ini rahasia juara WSBK.",
+      metaDescription: "WSBK bukan MotoGP—3 race per weekend bikin strategi lebih kompleks. Superpole Race, reverse grid, tyre management: ini rahasia juara WSBK.",
+      author: "King Apex Wheelie",
+      date: "2026-03-02",
+      readTime: "10 min",
+      category: "WSBK",
+      image: "/images/featured/wsbk-strategi-balap-wsbk-3-race-format.webp",
+      keywords: ["strategi WSBK", "3-race format", "Superpole Race", "tyre management", "reverse grid"],
     content: `
 # Strategi Balap WSBK: 3 Race Format Explained (Superpole, Race 1, Race 2)
 
