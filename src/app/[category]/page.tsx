@@ -52,8 +52,9 @@ const championshipData: Record<string, any> = {
   },
 }
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const data = championshipData[params.category]
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params
+  const data = championshipData[category]
   
   if (!data) {
     return notFound()
