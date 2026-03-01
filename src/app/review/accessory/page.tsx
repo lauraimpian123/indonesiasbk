@@ -29,7 +29,7 @@ export default function AccessoryReviewPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -153,25 +153,25 @@ export default function AccessoryReviewPage() {
               📱 Kategori Accessory
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-4 
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-4 
                               hover:border-[#00e5ff]/50 transition-colors">
                 <div className="text-3xl mb-2">📷</div>
                 <h3 className="text-sm font-bebas text-white">ACTION CAMERA</h3>
                 <p className="text-xs text-gray-400">GoPro, Insta360</p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-4 
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-4 
                               hover:border-[#00e5ff]/50 transition-colors">
                 <div className="text-3xl mb-2">🎧</div>
                 <h3 className="text-sm font-bebas text-white">INTERCOM</h3>
                 <p className="text-xs text-gray-400">Sena, Cardo</p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-4 
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-4 
                               hover:border-[#00e5ff]/50 transition-colors">
                 <div className="text-3xl mb-2">📱</div>
                 <h3 className="text-sm font-bebas text-white">PHONE MOUNT</h3>
                 <p className="text-xs text-gray-400">RAM, Quad Lock</p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-4 
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-4 
                               hover:border-[#00e5ff]/50 transition-colors">
                 <div className="text-3xl mb-2">🎒</div>
                 <h3 className="text-sm font-bebas text-white">LUGGAGE</h3>

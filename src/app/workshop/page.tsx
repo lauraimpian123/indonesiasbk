@@ -171,7 +171,7 @@ function StarRating({ rating }: { rating: number }) {
 
 function WorkshopCard({ workshop }: { workshop: Workshop }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
       <div className="relative h-48">
         <Image
           src={workshop.image}
@@ -191,7 +191,7 @@ function WorkshopCard({ workshop }: { workshop: Workshop }) {
         <p className="text-sm text-gray-300 mb-4">{workshop.description}</p>
 
         <div className="mb-4">
-          <h4 className="text-xs font-bold text-[#ff1744] mb-2">🔧 SPECIALIZATION</h4>
+          <h4 className="text-xs font-bold text-[#ff1744] mb-2">SPECIALIZATION</h4>
           <div className="flex flex-wrap gap-2">
             {workshop.specialization.map((spec, i) => (
               <span
@@ -246,7 +246,7 @@ export default function WorkshopPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -262,7 +262,6 @@ export default function WorkshopPage() {
       <section className="py-16 border-b border-white/10 bg-gradient-to-b from-[#ff1744]/10 to-transparent">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-7xl">🔧</span>
             <div>
               <h1 className="text-6xl font-bebas text-[#ff1744] uppercase tracking-tight mb-2">
                 Workshop & Modifikasi
@@ -278,19 +277,19 @@ export default function WorkshopPage() {
             berkualitas dan technician berpengalaman.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
-              <h3 className="text-sm font-bold text-[#ff1744] mb-1">🏁 Track Ready</h3>
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
+              <h3 className="text-sm font-bold text-[#ff1744] mb-1">Track Ready</h3>
               <p className="text-xs text-gray-400">Setup khusus untuk track day & racing</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
-              <h3 className="text-sm font-bold text-[#ff1744] mb-1">⚡ Performance</h3>
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
+              <h3 className="text-sm font-bold text-[#ff1744] mb-1">Performance</h3>
               <p className="text-xs text-gray-400">Power gains dengan dyno tuning</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#ff1744] mb-1">🛡️ Safety First</h3>
               <p className="text-xs text-gray-400">Brake & suspension upgrade</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#ff1744] mb-1">💎 Premium Parts</h3>
               <p className="text-xs text-gray-400">Original aftermarket brands</p>
             </div>
@@ -345,7 +344,7 @@ export default function WorkshopPage() {
             Modification Priority Guide
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🛡️</div>
               <h3 className="text-xl font-bold text-white mb-3">1. Safety First</h3>
               <p className="text-sm text-gray-400 mb-3">
@@ -358,8 +357,7 @@ export default function WorkshopPage() {
                 <li>• Fresh tires dengan compound sesuai</li>
               </ul>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
-              <div className="text-4xl mb-3">⚡</div>
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-xl font-bold text-white mb-3">2. Performance</h3>
               <p className="text-sm text-gray-400 mb-3">
                 Setelah safety oke, tingkatkan power dengan tuning yang proper dan measurable.
@@ -371,7 +369,7 @@ export default function WorkshopPage() {
                 <li>• Air filter upgrade</li>
               </ul>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🎨</div>
               <h3 className="text-xl font-bold text-white mb-3">3. Aesthetics</h3>
               <p className="text-sm text-gray-400 mb-3">

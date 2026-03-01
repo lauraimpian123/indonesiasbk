@@ -65,7 +65,7 @@ function CommentCard({ comment }: { comment: Comment }) {
     .slice(0, 2);
 
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-4 hover:border-white/20 transition-colors">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-4 hover:border-white/20 transition-colors">
       <div className="flex items-start gap-3">
         {/* Avatar */}
         <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-[#ff1744] to-[#00e5ff] rounded-full flex items-center justify-center">
@@ -200,7 +200,7 @@ export default function CommentSection({ productId, initialComments }: CommentSe
       </div>
 
       {/* Comment Form */}
-      <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 mb-8">
+      <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 mb-8">
         <h3 className="text-xl font-bebas text-white mb-4 uppercase">Tulis Komentar</h3>
         
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -215,7 +215,7 @@ export default function CommentSection({ productId, initialComments }: CommentSe
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-2 bg-black/40 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff1744] focus:outline-none transition-colors"
+                className="w-full px-4 py-2 bg-black/80 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff1744] focus:outline-none transition-colors"
                 placeholder="Nama kamu"
                 maxLength={50}
               />
@@ -230,7 +230,7 @@ export default function CommentSection({ productId, initialComments }: CommentSe
                 id="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-2 bg-black/40 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff1744] focus:outline-none transition-colors"
+                className="w-full px-4 py-2 bg-black/80 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff1744] focus:outline-none transition-colors"
                 placeholder="email@example.com"
               />
               <p className="text-xs text-gray-500 mt-1">Email tidak akan dipublikasikan</p>
@@ -257,7 +257,7 @@ export default function CommentSection({ productId, initialComments }: CommentSe
               id="comment"
               value={formData.text}
               onChange={(e) => setFormData({ ...formData, text: e.target.value })}
-              className="w-full px-4 py-3 bg-black/40 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff1744] focus:outline-none transition-colors resize-none"
+              className="w-full px-4 py-3 bg-black/80 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff1744] focus:outline-none transition-colors resize-none"
               placeholder="Bagikan pengalaman atau pertanyaan kamu..."
               rows={4}
               maxLength={500}

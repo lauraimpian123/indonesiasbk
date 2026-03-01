@@ -192,7 +192,7 @@ const riders: Rider[] = [
 
 function RiderCard({ rider }: { rider: Rider }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ffc400]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,196,0,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ffc400]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,196,0,0.3)]">
       <div className="relative h-64 bg-gradient-to-b from-black/20 to-black/80">
         <Image
           src={rider.image}
@@ -298,7 +298,7 @@ export default function RacingRidersPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -381,25 +381,25 @@ export default function RacingRidersPage() {
             Indonesian Riders Statistics
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center">
               <div className="text-4xl font-black text-[#ffc400] font-bebas mb-2">
                 8+
               </div>
               <p className="text-sm text-gray-400">Active World Championship Riders</p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center">
               <div className="text-4xl font-black text-[#ffc400] font-bebas mb-2">
                 15+
               </div>
               <p className="text-sm text-gray-400">ARRC Competitors</p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center">
               <div className="text-4xl font-black text-[#ffc400] font-bebas mb-2">
                 50+
               </div>
               <p className="text-sm text-gray-400">IDC Licensed Racers</p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center">
               <div className="text-4xl font-black text-[#ffc400] font-bebas mb-2">
                 3
               </div>

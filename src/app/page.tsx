@@ -44,13 +44,19 @@ export default function Home() {
   ]
 
   const motogpArticles = [
-    { id: '10', slug: 'bagnaia-strategi-qatar', title: 'Bagnaia: "Start Ketiga Bukan Masalah, Strategi Panjang"', excerpt: 'Pecco Bagnaia optimis bisa menang dari posisi start ketiga dengan strategi ban yang berbeda.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '4 jam' },
-    { id: '11', slug: 'martin-aprilia-adaptasi', title: 'Jorge Martin Butuh Waktu Adaptasi dengan Aprilia', excerpt: 'Perpindahan dari Ducati ke Aprilia membutuhkan penyesuaian riding style yang signifikan.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '6 jam' },
+    { id: '2', slug: 'motogp-losail', title: 'MotoGP Qatar: Marc Marquez Pole Position, Pecco Start Ketiga', excerpt: 'Sesi kualifikasi MotoGP Qatar 2026 ditutup dengan dominasi Marc Marquez yang merebut pole position dengan catatan waktu 1:50.123.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '2 jam' },
+    { id: '7', slug: 'motogp-marquez', title: 'Marquez: "Ducati Sempurna, Target Juara Dunia Realistis"', excerpt: 'Marc Marquez optimis merebut gelar juara dunia MotoGP 2026 bersama Ducati Factory setelah performa impresif di pre-season.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '3 jam' },
+    { id: '8', slug: 'motogp-bagnaia-race-pace', title: 'Bagnaia: "Race Pace Lebih Penting dari Kualifikasi"', excerpt: 'Pecco Bagnaia fokus pada race pace untuk balapan Qatar, meski start dari posisi ketiga.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '4 jam' },
+    { id: '9', slug: 'motogp-martin-aprilia', title: 'Jorge Martin Masih Adaptasi dengan Karakter Aprilia', excerpt: 'Jorge Martin butuh waktu lebih lama untuk beradaptasi dengan Aprilia RS-GP26, terutama di corner entry.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '5 jam' },
+    { id: '10', slug: 'motogp-bastianini-comeback', title: 'Enea Bastianini Comeback Kuat Setelah Cedera', excerpt: 'Bastianini kembali dengan performa impresif setelah operasi bahu, qualify posisi 5 di Qatar.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '6 jam' },
+    { id: '14', slug: 'motogp-acosta-rookie-sensasi', title: 'Pedro Acosta: Rookie Sensasi yang Bikin Veteran Khawatir', excerpt: 'Pedro Acosta tampil impresif di debut MotoGP-nya, qualify posisi 4 dan mengancam para juara dunia.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '7 jam' },
   ]
 
   const wsbkArticles = [
-    { id: '20', slug: 'rea-yamaha-progress', title: 'Jonathan Rea Puas dengan Progress Yamaha R1', excerpt: 'Rea merasa Yamaha R1 sudah jauh lebih kompetitif dibanding musim lalu, terutama di tikungan cepat.', image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp', time: '8 jam' },
-    { id: '21', slug: 'bautista-target-juara', title: 'Bautista: "Target Juara Dunia Ketiga Kalinya"', excerpt: 'Alvaro Bautista yakin bisa merebut gelar juara dunia WSBK untuk ketiga kalinya bersama Ducati.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', time: '10 jam' },
+    { id: '11', slug: 'wsbk-phillip-island-preview', title: 'WSBK Phillip Island: Trek Paling Menantang di Kalender', excerpt: 'Sirkuit Phillip Island terkenal sebagai trek paling cepat dan berbahaya di WSBK, butuh keberanian ekstra.', image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp', time: '3 jam' },
+    { id: '12', slug: 'wsbk-razgatlioglu-dominan', title: 'Toprak Razgatlioglu Dominan di FP1 Phillip Island', excerpt: 'Toprak Razgatlioglu tercepat di FP1 WSBK Phillip Island, unggul 0.4 detik dari Bautista.', image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp', time: '5 jam' },
+    { id: '13', slug: 'wsbk-rea-yamaha-progress', title: 'Jonathan Rea Puas dengan Progress Yamaha R1', excerpt: 'Jonathan Rea merasa Yamaha R1 WSBK 2026 sudah jauh lebih kompetitif, terutama di corner speed.', image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp', time: '8 jam' },
+    { id: '15', slug: 'wsbk-bautista-target-juara', title: 'Alvaro Bautista: "Target Juara Dunia Ketiga Berturut-turut"', excerpt: 'Alvaro Bautista yakin bisa merebut gelar juara dunia WSBK ketiga kalinya bersama Ducati.', image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp', time: '10 jam' },
   ]
 
   const reviewArticles = [
@@ -101,9 +107,24 @@ export default function Home() {
         }
 
         .glass {
-          background: rgba(26, 26, 38, 0.6);
+          background: rgba(26, 26, 38, 0.85);
           backdrop-filter: blur(12px);
           border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes ticker {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
+
+        .animate-ticker {
+          animation: ticker 30s linear infinite;
+        }
+
+        @media (max-width: 768px) {
+          .animate-ticker {
+            animation: ticker 45s linear infinite;
+          }
         }
       `}</style>
 
@@ -126,7 +147,7 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-12">
                 <div className="max-w-4xl">
                   <span className="category-badge bg-[#ff1744] text-white mb-3">
-                    🏁 {breakingNews.category}
+                    {breakingNews.category}
                   </span>
                   <h1 className="text-4xl lg:text-6xl font-bebas font-black leading-tight text-white mb-4 group-hover:text-[#ff1744] transition-colors">
                     {breakingNews.title}
@@ -178,17 +199,25 @@ export default function Home() {
         <section className="mb-16 reveal">
           <div className="flex items-center justify-between mb-6">
             <h2 className="section-title text-3xl font-bebas font-black uppercase">
-              🏁 MOTOGP
+              MOTOGP
             </h2>
             <Link href="/motorsport/motogp" className="text-[#ff1744] hover:text-[#ff4569] text-sm font-bebas tracking-wider uppercase transition-colors">
               LIHAT SEMUA →
             </Link>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          {/* Running Text Standings */}
+          <div className="overflow-hidden bg-[#ff1744] py-2 px-4 mb-4 rounded-lg">
+            <div className="animate-ticker whitespace-nowrap text-white font-bold font-space-mono text-sm">
+              MotoGP Standings 2026: 1. Pedro Acosta (37pts) • 2. Marco Bezzecchi (37pts) • 3. Marc Marquez (25pts) • 4. Jorge Martin (20pts) • 5. Pecco Bagnaia (16pts) • 6. Enea Bastianini (13pts) • 7. Maverick Viñales (11pts) • 8. Brad Binder (10pts)
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {motogpArticles.map((article) => (
               <Link key={article.id} href={`/article/${article.slug}`} className="group glass rounded-xl overflow-hidden hover:border-[#ff1744] transition-all">
-                <div className="flex gap-4 p-4">
-                  <div className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+                <div className="flex flex-col gap-4 p-4">
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -197,7 +226,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-bold leading-tight mb-2 group-hover:text-[#ff1744] transition-colors">
+                    <h3 className="text-lg font-bold leading-tight mb-2 group-hover:text-[#ff1744] transition-colors">
                       {article.title}
                     </h3>
                     <p className="text-sm text-white/60 line-clamp-2 mb-3">
@@ -215,17 +244,25 @@ export default function Home() {
         <section className="mb-16 reveal">
           <div className="flex items-center justify-between mb-6">
             <h2 className="section-title text-3xl font-bebas font-black uppercase">
-              🏍️ WSBK
+              WSBK
             </h2>
             <Link href="/motorsport/wsbk" className="text-[#00e5ff] hover:text-[#00e5ff]/80 text-sm font-bebas tracking-wider uppercase transition-colors">
               LIHAT SEMUA →
             </Link>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          {/* Running Text Standings */}
+          <div className="overflow-hidden bg-[#00e5ff] py-2 px-4 mb-4 rounded-lg">
+            <div className="animate-ticker whitespace-nowrap text-white font-bold font-space-mono text-sm">
+              WSBK Standings 2026: 1. Toprak Razgatlioglu (125pts) • 2. Álvaro Bautista (118pts) • 3. Alex Lowes (75pts) • 4. Andrea Locatelli (72pts) • 5. Jonathan Rea (68pts) • 6. Michael van der Mark (54pts) • 7. Danilo Petrucci (47pts)
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {wsbkArticles.map((article) => (
               <Link key={article.id} href={`/article/${article.slug}`} className="group glass rounded-xl overflow-hidden hover:border-[#00e5ff] transition-all">
-                <div className="flex gap-4 p-4">
-                  <div className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+                <div className="flex flex-col gap-4 p-4">
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -234,7 +271,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-bold leading-tight mb-2 group-hover:text-[#00e5ff] transition-colors">
+                    <h3 className="text-lg font-bold leading-tight mb-2 group-hover:text-[#00e5ff] transition-colors">
                       {article.title}
                     </h3>
                     <p className="text-sm text-white/60 line-clamp-2 mb-3">
@@ -251,7 +288,7 @@ export default function Home() {
         {/* ═══════════════════ STANDINGS SECTION ═══════════════════ */}
         <section className="mb-16 reveal">
           <h2 className="section-title text-3xl font-bebas font-black uppercase mb-6">
-            📊 KLASEMEN TERKINI
+            KLASEMEN TERKINI
           </h2>
           <StandingsTabs />
         </section>
@@ -260,7 +297,7 @@ export default function Home() {
         <section className="mb-16 reveal">
           <div className="flex items-center justify-between mb-6">
             <h2 className="section-title text-3xl font-bebas font-black uppercase">
-              ⭐ REVIEW
+              REVIEW
             </h2>
             <Link href="/review" className="text-[#ffc400] hover:text-[#ffd54f] text-sm font-bebas tracking-wider uppercase transition-colors">
               LIHAT SEMUA →

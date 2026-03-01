@@ -52,7 +52,7 @@ export default function SimilarProducts({ products, currentProductId }: SimilarP
           <Link
             key={product.id}
             href={`/review/${product.category.toLowerCase().replace(' ', '-')}/${product.id}`}
-            className="group bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)] hover:-translate-y-1"
+            className="group bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)] hover:-translate-y-1"
           >
             {/* Compact Image */}
             <div className="relative h-32 overflow-hidden">

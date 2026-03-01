@@ -179,6 +179,174 @@ export const articles: Article[] = [
     readTime: '3 min',
     views: '31.2K',
   },
+  {
+    id: '8',
+    slug: 'motogp-bagnaia-race-pace',
+    title: 'Bagnaia: "Race Pace Lebih Penting dari Kualifikasi"',
+    excerpt: 'Pecco Bagnaia fokus pada race pace untuk balapan Qatar, meski start dari posisi ketiga.',
+    content: `
+      <p>Francesco Bagnaia tidak terlalu khawatir dengan posisi start ketiga di GP Qatar. Rider juara bertahan MotoGP ini lebih fokus pada race pace dan strategi ban untuk 22 lap penuh.</p>
+      
+      <h2>Strategi Berbeda</h2>
+      <p>"Kami punya strategi ban yang berbeda. Di long run kemarin, pace kami sangat konsisten," ujar Bagnaia. "Saya yakin bisa fight untuk podium, bahkan kemenangan."</p>
+      
+      <h2>Catatan Race Simulation</h2>
+      <p>Di sesi FP2, Bagnaia mencatat average lap time 1:54.2 dalam race simulation 15 lap, hanya 0.3 detik lebih lambat dari best lap time Marquez.</p>
+    `,
+    category: 'MOTOGP',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    date: '27 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '3 min',
+    views: '24.5K',
+  },
+  {
+    id: '9',
+    slug: 'motogp-martin-aprilia',
+    title: 'Jorge Martin Masih Adaptasi dengan Karakter Aprilia',
+    excerpt: 'Jorge Martin butuh waktu lebih lama untuk beradaptasi dengan Aprilia RS-GP26, terutama di corner entry.',
+    content: `
+      <p>Jorge Martin mengakui masih butuh waktu untuk sepenuhnya beradaptasi dengan Aprilia RS-GP26. Rider yang pindah dari Ducati ini masih mencari setting ideal untuk karakternya.</p>
+      
+      <h2>Perbedaan Signifikan</h2>
+      <p>"Aprilia punya karakter sangat berbeda dari Ducati," kata Martin. "Terutama di corner entry, saya harus lebih smooth. Tapi exit traction-nya luar biasa."</p>
+      
+      <h2>Progress Positif</h2>
+      <p>Meski masih adaptasi, Martin berhasil qualify posisi 2 di Qatar, hanya 0.089 detik dari pole. "Kami di jalur yang tepat," ujarnya optimis.</p>
+    `,
+    category: 'MOTOGP',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    date: '26 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '4 min',
+    views: '18.9K',
+  },
+  {
+    id: '10',
+    slug: 'motogp-bastianini-comeback',
+    title: 'Enea Bastianini Comeback Kuat Setelah Cedera',
+    excerpt: 'Bastianini kembali dengan performa impresif setelah operasi bahu, qualify posisi 5 di Qatar.',
+    content: `
+      <p>Enea Bastianini membuktikan dirinya sudah 100% pulih dari operasi bahu dengan qualify posisi 5 di GP Qatar. Rider Ducati Factory ini menunjukkan pace sangat kompetitif.</p>
+      
+      <h2>Rehabilitasi Intensif</h2>
+      <p>"Tiga bulan rehabilitasi sangat berat, tapi sekarang saya merasa lebih kuat dari sebelumnya," ujar Bestia. "Bahu tidak ada masalah sama sekali."</p>
+      
+      <h2>Target Podium</h2>
+      <p>Bastianini menargetkan podium di race pertama musim ini. "Motor kami sangat kompetitif. Saya punya pace untuk fight di depan," katanya percaya diri.</p>
+    `,
+    category: 'MOTOGP',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    date: '26 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '3 min',
+    views: '16.2K',
+  },
+  {
+    id: '11',
+    slug: 'wsbk-phillip-island-preview',
+    title: 'WSBK Phillip Island: Trek Paling Menantang di Kalender',
+    excerpt: 'Sirkuit Phillip Island terkenal sebagai trek paling cepat dan berbahaya di WSBK, butuh keberanian ekstra.',
+    content: `
+      <p>Sirkuit Phillip Island di Australia dikenal sebagai salah satu trek paling menantang di kalender WSBK. Dengan rata-rata kecepatan 175 km/jam dan tikungan high-speed, trek ini menuntut keberanian maksimal.</p>
+      
+      <h2>Karakteristik Trek</h2>
+      <p>Trek sepanjang 4.445 km ini memiliki 12 tikungan dengan elevasi signifikan. Turn 1 (Doohan Corner) dan Turn 12 (MG) adalah dua tikungan paling ikonik dan berbahaya.</p>
+      
+      <h2>Cuaca Tidak Menentu</h2>
+      <p>Cuaca di Phillip Island sangat tidak menentu. Hujan tiba-tiba sering terjadi, membuat strategi ban menjadi krusial.</p>
+    `,
+    category: 'WSBK',
+    image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp',
+    date: '27 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '5 min',
+    views: '14.8K',
+  },
+  {
+    id: '12',
+    slug: 'wsbk-razgatlioglu-dominan',
+    title: 'Toprak Razgatlioglu Dominan di FP1 Phillip Island',
+    excerpt: 'Toprak Razgatlioglu tercepat di FP1 WSBK Phillip Island, unggul 0.4 detik dari Bautista.',
+    content: `
+      <p>Toprak Razgatlioglu menunjukkan dominasi di sesi Free Practice 1 WSBK Phillip Island dengan catatan waktu 1:30.123, unggul 0.4 detik dari Alvaro Bautista di posisi kedua.</p>
+      
+      <h2>Performa BMW Impresif</h2>
+      <p>"BMW M1000RR sangat cocok di trek ini," ujar Toprak. "Stabilitas di high-speed corner luar biasa, saya sangat percaya diri dengan motor."</p>
+      
+      <h2>Target Juara</h2>
+      <p>Toprak menargetkan triple win di Phillip Island untuk membuka musim dengan sempurna. "Kami punya pace terbaik, target saya menang semua race," katanya ambisius.</p>
+    `,
+    category: 'WSBK',
+    image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp',
+    date: '27 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '4 min',
+    views: '19.3K',
+  },
+  {
+    id: '13',
+    slug: 'wsbk-rea-yamaha-progress',
+    title: 'Jonathan Rea Puas dengan Progress Yamaha R1',
+    excerpt: 'Jonathan Rea merasa Yamaha R1 WSBK 2026 sudah jauh lebih kompetitif, terutama di corner speed.',
+    content: `
+      <p>Jonathan Rea mengaku puas dengan progress Yamaha R1 WSBK 2026. Setelah musim 2025 yang sulit, Yamaha melakukan upgrade besar-besaran di chassis dan elektronik.</p>
+      
+      <h2>Upgrade Signifikan</h2>
+      <p>"Chassis baru memberikan feeling jauh lebih baik," kata Rea. "Corner speed kami sekarang bisa menyaingi Ducati dan BMW. Ini progress besar."</p>
+      
+      <h2>Target Realistis</h2>
+      <p>Rea menargetkan minimal 3 podium di 6 race awal musim. "Kami butuh konsistensi dulu sebelum bicara gelar juara," ujarnya realistis.</p>
+    `,
+    category: 'WSBK',
+    image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp',
+    date: '26 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '3 min',
+    views: '15.7K',
+  },
+  {
+    id: '14',
+    slug: 'motogp-acosta-rookie-sensasi',
+    title: 'Pedro Acosta: Rookie Sensasi yang Bikin Veteran Khawatir',
+    excerpt: 'Pedro Acosta tampil impresif di debut MotoGP-nya, qualify posisi 4 dan mengancam para juara dunia.',
+    content: `
+      <p>Pedro Acosta, rookie KTM berusia 20 tahun, membuat kejutan besar di kualifikasi GP Qatar dengan finish di posisi 4, hanya 0.2 detik dari pole position Marc Marquez.</p>
+      
+      <h2>Debut Spektakuler</h2>
+      <p>"Saya tidak expect bisa sekencang ini di race pertama," ujar Acosta. "KTM RC16 sangat bagus, tim memberikan support luar biasa."</p>
+      
+      <h2>Ancaman untuk Veteran</h2>
+      <p>Para veteran seperti Marquez dan Bagnaia mengakui Acosta sebagai ancaman serius. "Dia punya kecepatan mentah yang luar biasa," kata Marquez.</p>
+    `,
+    category: 'MOTOGP',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    date: '27 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '4 min',
+    views: '26.8K',
+  },
+  {
+    id: '15',
+    slug: 'wsbk-bautista-target-juara',
+    title: 'Alvaro Bautista: "Target Juara Dunia Ketiga Berturut-turut"',
+    excerpt: 'Alvaro Bautista yakin bisa merebut gelar juara dunia WSBK ketiga kalinya bersama Ducati.',
+    content: `
+      <p>Alvaro Bautista optimis merebut gelar juara dunia WSBK untuk ketiga kalinya berturut-turut. Rider Ducati berusia 38 tahun ini merasa masih di performa puncak.</p>
+      
+      <h2>Konsistensi Kunci Sukses</h2>
+      <p>"Kunci juara di WSBK adalah konsistensi," ujar Bautista. "Bukan soal menang setiap race, tapi finish di podium secara konsisten."</p>
+      
+      <h2>Ducati Panigale V4R Terbaru</h2>
+      <p>Bautista akan menggunakan Ducati Panigale V4R 2026 yang telah diupgrade dengan aero package baru dan elektronik lebih canggih.</p>
+    `,
+    category: 'WSBK',
+    image: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp',
+    date: '26 Februari 2026',
+    author: 'Redaksi IndonesiaSBK',
+    readTime: '4 min',
+    views: '17.4K',
+  },
 ]
 
 // Helper function to get article by slug

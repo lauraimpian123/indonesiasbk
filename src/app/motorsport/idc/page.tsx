@@ -19,7 +19,7 @@ export default function IDCPage() {
       
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 bg-[#ff1744] rounded-xl flex items-center justify-center text-4xl">
+          <div className="w-16 h-16 bg-[#ff1744] rounded-xl flex items-center justify-center">
             🇮🇩
           </div>
           <div>

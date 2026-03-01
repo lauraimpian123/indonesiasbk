@@ -135,7 +135,7 @@ function RouteCard({ route }: { route: TouringRoute }) {
       : 'text-red-400 bg-red-500/20';
 
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#00e5ff]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#00e5ff]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]">
       <div className="relative h-56">
         <Image
           src={route.image}
@@ -201,7 +201,7 @@ export default function TouringPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -255,7 +255,7 @@ export default function TouringPage() {
             Essential Touring Tips
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🛠️</div>
               <h3 className="text-xl font-bold text-white mb-3">Pre-Departure Check</h3>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -267,7 +267,7 @@ export default function TouringPage() {
                 <li>✓ Emergency contact numbers</li>
               </ul>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🎒</div>
               <h3 className="text-xl font-bold text-white mb-3">Packing Essentials</h3>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -279,7 +279,7 @@ export default function TouringPage() {
                 <li>✓ Hydration pack</li>
               </ul>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🛡️</div>
               <h3 className="text-xl font-bold text-white mb-3">Safety on the Road</h3>
               <ul className="text-sm text-gray-400 space-y-2">

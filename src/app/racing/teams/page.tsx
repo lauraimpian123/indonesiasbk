@@ -98,7 +98,7 @@ const teams: RacingTeam[] = [
 
 function TeamCard({ team }: { team: RacingTeam }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
       <div className="flex items-start justify-between mb-4">
         <div className="text-5xl">{team.logo}</div>
         <div className="flex flex-col items-end gap-2">
@@ -162,7 +162,7 @@ export default function RacingTeamsPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -178,7 +178,6 @@ export default function RacingTeamsPage() {
       <section className="py-12 border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-6xl">🏁</span>
             <h1 className="text-5xl font-bebas text-[#ff1744] uppercase tracking-tight">
               Racing Teams & Manufacturers
             </h1>
@@ -242,22 +241,22 @@ export default function RacingTeamsPage() {
             Manufacturers in Indonesia
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
               <div className="text-4xl mb-3">🏍️</div>
               <h3 className="text-xl font-bold text-white mb-1">Honda</h3>
               <p className="text-xs text-gray-400">3 Teams</p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
               <div className="text-4xl mb-3">🏍️</div>
               <h3 className="text-xl font-bold text-white mb-1">Yamaha</h3>
               <p className="text-xs text-gray-400">2 Teams</p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
               <div className="text-4xl mb-3">🏍️</div>
               <h3 className="text-xl font-bold text-white mb-1">Kawasaki</h3>
               <p className="text-xs text-gray-400">1 Team</p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg text-center hover:border-[#ff1744]/50 transition-colors">
               <div className="text-4xl mb-3">🏍️</div>
               <h3 className="text-xl font-bold text-white mb-1">Kalex</h3>
               <p className="text-xs text-gray-400">1 Team</p>

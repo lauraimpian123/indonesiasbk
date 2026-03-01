@@ -15,7 +15,7 @@ export default function BrandFilter({ brands, selectedBrand, onBrandChange }: Br
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative px-6 py-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)] flex items-center gap-3 min-w-[200px]"
+        className="group relative px-6 py-3 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)] flex items-center gap-3 min-w-[200px]"
       >
         <span className="text-sm font-bold text-white">
           {selectedBrand || 'Semua Brand'}

@@ -143,7 +143,7 @@ const championships: Championship[] = [
 
 function ChampionshipCard({ championship }: { championship: Championship }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
       <div className="flex items-start justify-between mb-4">
         <div className="text-5xl">{championship.logo}</div>
         <span className="bg-[#ff1744]/20 text-[#ff1744] text-xs font-bold px-3 py-1 rounded-full">
@@ -184,7 +184,7 @@ export default function LivePage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -215,19 +215,19 @@ export default function LivePage() {
             hingga ARRC dan IDC dengan info subscription, schedule, dan platform terbaik untuk Indonesia.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#ff1744] mb-1">🌍 World Coverage</h3>
               <p className="text-xs text-gray-400">MotoGP, WSBK, dan championship internasional</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#ff1744] mb-1">🇮🇩 Local Racing</h3>
               <p className="text-xs text-gray-400">ARRC dan IDC dengan Indonesian riders</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#ff1744] mb-1">📱 Multiple Platforms</h3>
               <p className="text-xs text-gray-400">TV, streaming app, YouTube options</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#ff1744] mb-1">🆓 Free & Premium</h3>
               <p className="text-xs text-gray-400">Pilihan gratis dan berbayar</p>
             </div>
@@ -260,9 +260,8 @@ export default function LivePage() {
               href="https://www.motogp.com/en/videos"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-colors"
+              className="block p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-colors"
             >
-              <div className="text-4xl mb-3">🏁</div>
               <h3 className="text-xl font-bold text-white mb-2">MotoGP Official</h3>
               <p className="text-sm text-gray-400 mb-3">
                 Official MotoGP website dengan VideoPass subscription dan highlights.
@@ -274,7 +273,7 @@ export default function LivePage() {
               href="https://www.youtube.com/@ARRC"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-colors"
+              className="block p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-colors"
             >
               <div className="text-4xl mb-3">📺</div>
               <h3 className="text-xl font-bold text-white mb-2">ARRC YouTube</h3>
@@ -288,7 +287,7 @@ export default function LivePage() {
               href="https://www.visionplus.id"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-colors"
+              className="block p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg hover:border-[#ff1744]/50 transition-colors"
             >
               <div className="text-4xl mb-3">📱</div>
               <h3 className="text-xl font-bold text-white mb-2">Vision+ App</h3>
@@ -308,7 +307,7 @@ export default function LivePage() {
             Streaming Tips for Indonesia
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">📶</div>
               <h3 className="text-xl font-bold text-white mb-3">Internet Speed</h3>
               <p className="text-sm text-gray-400">
@@ -316,7 +315,7 @@ export default function LivePage() {
                 stabil untuk avoid buffering saat race.
               </p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🕐</div>
               <h3 className="text-xl font-bold text-white mb-3">Time Zone</h3>
               <p className="text-sm text-gray-400">
@@ -324,7 +323,7 @@ export default function LivePage() {
                 Asia & Australia races siang/sore (14:00-17:00 WIB).
               </p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">💰</div>
               <h3 className="text-xl font-bold text-white mb-3">Budget Options</h3>
               <p className="text-sm text-gray-400">

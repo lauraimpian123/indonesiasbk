@@ -10,7 +10,7 @@ export default function ComparisonReviewPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#00e5ff] transition-colors">
@@ -72,7 +72,7 @@ export default function ComparisonReviewPage() {
               🎯 Tipe Comparison
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
                               hover:border-[#00e5ff]/50 transition-all hover:-translate-y-1">
                 <div className="text-4xl mb-3">🏍️</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">SUPERBIKE SHOWDOWN</h3>
@@ -80,7 +80,7 @@ export default function ComparisonReviewPage() {
                   Litre bike flagship comparison
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
                               hover:border-[#00e5ff]/50 transition-all hover:-translate-y-1">
                 <div className="text-4xl mb-3">🪖</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">HELMET BATTLE</h3>
@@ -88,7 +88,7 @@ export default function ComparisonReviewPage() {
                   Premium helmet head-to-head
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
                               hover:border-[#00e5ff]/50 transition-all hover:-translate-y-1">
                 <div className="text-4xl mb-3">🧥</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">GEAR SHOWDOWN</h3>
@@ -96,7 +96,7 @@ export default function ComparisonReviewPage() {
                   Racing suit & boots comparison
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 text-center
                               hover:border-[#00e5ff]/50 transition-all hover:-translate-y-1">
                 <div className="text-4xl mb-3">🎧</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">TECH BATTLE</h3>
@@ -140,21 +140,21 @@ export default function ComparisonReviewPage() {
               🔬 Metode Comparison Kami
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6">
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6">
                 <div className="text-3xl mb-3">✅</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">OBJECTIVE DATA</h3>
                 <p className="text-sm text-gray-300">
                   Spec sheet lengkap, measurement akurat, dan benchmark test yang terukur.
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6">
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6">
                 <div className="text-3xl mb-3">🏁</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">REAL-WORLD TEST</h3>
                 <p className="text-sm text-gray-300">
                   Tes langsung di jalanan dan sirkuit Indonesia, bukan cuma baca spec sheet.
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6">
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6">
                 <div className="text-3xl mb-3">💯</div>
                 <h3 className="text-lg font-bebas text-[#00e5ff] mb-2">HONEST VERDICT</h3>
                 <p className="text-sm text-gray-300">
@@ -169,7 +169,7 @@ export default function ComparisonReviewPage() {
       {/* How Comparison Works */}
       <section className="py-12 border-t border-white/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-black/40 backdrop-blur-md border border-[#00e5ff]/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto bg-black/80 backdrop-blur-md border border-[#00e5ff]/30 rounded-lg p-8">
             <h2 className="text-2xl font-bebas text-[#00e5ff] mb-4 uppercase text-center">
               💡 Cara Membaca Comparison Kami
             </h2>

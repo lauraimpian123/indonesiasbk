@@ -40,7 +40,7 @@ export default function ProductCard({ review, onCompareToggle }: ProductCardProp
   };
 
   return (
-    <div className="group relative bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,23,68,0.4)] hover:-translate-y-2">
+    <div className="group relative bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,23,68,0.4)] hover:-translate-y-2">
       {/* Product Image */}
       <div className="relative h-56 overflow-hidden">
         <Image

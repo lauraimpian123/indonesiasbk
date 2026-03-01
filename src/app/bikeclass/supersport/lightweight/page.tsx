@@ -96,7 +96,7 @@ const unavailableBikes: Bike[] = [
 
 function BikeCard({ bike, available }: { bike: Bike; available: boolean }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#00e5ff]/50 transition-all duration-300">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#00e5ff]/50 transition-all duration-300">
       <div className="flex justify-between items-start mb-4">
         <span className={`text-xs font-bold px-3 py-1 rounded-full ${available ? 'bg-green-500/20 text-green-400 border border-green-500/50' : 'bg-gray-500/20 text-gray-400 border border-gray-500/50'}`}>
           {available ? '✓ Tersedia' : '⊗ Tidak Tersedia'}
@@ -118,7 +118,7 @@ function BikeCard({ bike, available }: { bike: Bike; available: boolean }) {
 export default function LightweightPage() {
   return (
     <main className="min-h-screen bg-black">
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">Home</Link><span>/</span>

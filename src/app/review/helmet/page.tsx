@@ -29,7 +29,7 @@ export default function HelmetReviewPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -153,19 +153,19 @@ export default function HelmetReviewPage() {
               🛡️ Helmet Safety Tips
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6">
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6">
                 <h3 className="text-lg font-bebas text-[#ff1744] mb-2">CERTIFICATION</h3>
                 <p className="text-sm text-gray-300">
                   Pastikan helmet punya sertifikasi ECE 22.06, DOT, atau Snell untuk proteksi maksimal.
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6">
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6">
                 <h3 className="text-lg font-bebas text-[#ff1744] mb-2">FIT PRESISI</h3>
                 <p className="text-sm text-gray-300">
                   Helmet harus fit ketat tapi nyaman. Jangan terlalu longgar atau terlalu ketat.
                 </p>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6">
+              <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6">
                 <h3 className="text-lg font-bebas text-[#ff1744] mb-2">GANTI 5 TAHUN</h3>
                 <p className="text-sm text-gray-300">
                   Ganti helmet setelah 5 tahun atau setelah impact keras untuk keamanan optimal.

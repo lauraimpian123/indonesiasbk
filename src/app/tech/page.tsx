@@ -152,7 +152,7 @@ function ArticleCard({ article }: { article: TechArticle }) {
   return (
     <Link
       href={`/tech/${article.id}`}
-      className="block bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ffc400]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,196,0,0.3)]"
+      className="block bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ffc400]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,196,0,0.3)]"
     >
       <div className="flex items-start gap-4 mb-4">
         <div className="text-4xl">{article.icon}</div>
@@ -196,7 +196,7 @@ export default function TechPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -273,7 +273,7 @@ export default function TechPage() {
             Popular Topics
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🔧</div>
               <h3 className="text-lg font-bold text-white mb-2">Basic Maintenance</h3>
               <p className="text-sm text-gray-400 mb-3">
@@ -281,7 +281,7 @@ export default function TechPage() {
               </p>
               <span className="text-xs text-[#ffc400]">12 Articles</span>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🏁</div>
               <h3 className="text-lg font-bold text-white mb-2">Track Day Prep</h3>
               <p className="text-sm text-gray-400 mb-3">
@@ -289,7 +289,7 @@ export default function TechPage() {
               </p>
               <span className="text-xs text-[#ffc400]">8 Articles</span>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">⚡</div>
               <h3 className="text-lg font-bold text-white mb-2">Performance Tuning</h3>
               <p className="text-sm text-gray-400 mb-3">
@@ -297,7 +297,7 @@ export default function TechPage() {
               </p>
               <span className="text-xs text-[#ffc400]">10 Articles</span>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-4xl mb-3">🛡️</div>
               <h3 className="text-lg font-bold text-white mb-2">Safety Upgrades</h3>
               <p className="text-sm text-gray-400 mb-3">
@@ -316,21 +316,21 @@ export default function TechPage() {
             Article Difficulty Guide
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-green-500/30 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-green-500/30 rounded-lg">
               <h3 className="text-xl font-bold text-green-400 mb-2">Beginner</h3>
               <p className="text-sm text-gray-400">
                 Basic maintenance tasks yang bisa dilakukan sendiri dengan tools standard. 
                 No special knowledge required.
               </p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-yellow-500/30 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-yellow-500/30 rounded-lg">
               <h3 className="text-xl font-bold text-yellow-400 mb-2">Intermediate</h3>
               <p className="text-sm text-gray-400">
                 Requires some mechanical knowledge dan specialized tools. Recommended untuk 
                 yang sudah familiar dengan basic maintenance.
               </p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-red-500/30 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-red-500/30 rounded-lg">
               <h3 className="text-xl font-bold text-red-400 mb-2">Advanced</h3>
               <p className="text-sm text-gray-400">
                 Complex procedures yang memerlukan experience, specialized tools, dan 

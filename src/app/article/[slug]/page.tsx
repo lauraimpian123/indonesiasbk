@@ -437,7 +437,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Author Info */}
-          <div className="mb-12 p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+          <div className="mb-12 p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#ff1744] to-[#ffc400] flex items-center justify-center text-2xl font-bebas">
                 KA
@@ -517,7 +517,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <Link
                   key={related.slug}
                   href={`/article/${related.slug}`}
-                  className="group bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-white/30 transition-all duration-300"
+                  className="group bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-white/30 transition-all duration-300"
                   style={{
                     boxShadow: `0 0 0 0 ${article.categoryColor}`,
                   }}

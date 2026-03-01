@@ -17,7 +17,7 @@ const bikes = [
 export default function StandardPage() {
   return (
     <main className="min-h-screen bg-black">
-      <div className="border-b border-white/10 bg-black/40"><div className="container mx-auto px-4 py-3">
+      <div className="border-b border-white/10 bg-black/80"><div className="container mx-auto px-4 py-3">
         <div className="flex gap-2 text-sm text-gray-400">
           <Link href="/">Home</Link><span>/</span><Link href="/bikeclass/naked">Naked</Link><span>/</span><span className="text-white">Standard</span>
         </div>
@@ -27,7 +27,7 @@ export default function StandardPage() {
         <p className="text-xl text-gray-300 mb-8">Naked bike middleweight dengan comfort tinggi. Perfect untuk daily commuting dan weekend rides.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {bikes.map((bike, i) => (
-            <div key={i} className="bg-black/40 border border-white/10 rounded-lg p-6">
+            <div key={i} className="bg-black/80 border border-white/10 rounded-lg p-6">
               <span className={`text-xs px-3 py-1 rounded-full mb-4 inline-block ${bike.available ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'}`}>
                 {bike.available ? '✓ Tersedia' : '⊗ Tidak Tersedia'}
               </span>

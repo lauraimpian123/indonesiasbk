@@ -140,7 +140,7 @@ const schools: RacingSchool[] = [
 
 function SchoolCard({ school }: { school: RacingSchool }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#00e5ff]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-[#00e5ff]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]">
       <div className="relative h-48">
         <Image
           src={school.image}
@@ -234,7 +234,7 @@ export default function RacingSchoolPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">
@@ -260,19 +260,19 @@ export default function RacingSchoolPage() {
             advanced race craft training di sirkuit Sentul dan Mandalika dengan instruktur profesional.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#00e5ff] mb-1">Safety First</h3>
               <p className="text-xs text-gray-400">Semua school prioritaskan keamanan rider</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#00e5ff] mb-1">Pro Instructors</h3>
               <p className="text-xs text-gray-400">Instruktur berpengalaman racing national/world</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#00e5ff] mb-1">All Levels</h3>
               <p className="text-xs text-gray-400">Dari pemula sampai advanced racer</p>
             </div>
-            <div className="p-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-sm font-bold text-[#00e5ff] mb-1">Race License</h3>
               <p className="text-xs text-gray-400">Path menuju kompetisi resmi</p>
             </div>
@@ -298,7 +298,7 @@ export default function RacingSchoolPage() {
             Kenapa Ikut Racing School?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-3xl mb-3">🛡️</div>
               <h3 className="text-xl font-bold text-white mb-2">Safety Skills</h3>
               <p className="text-sm text-gray-400">
@@ -306,15 +306,14 @@ export default function RacingSchoolPage() {
                 body position yang proper untuk menghindari crash.
               </p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
-              <div className="text-3xl mb-3">⚡</div>
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <h3 className="text-xl font-bold text-white mb-2">Lap Time Improvement</h3>
               <p className="text-sm text-gray-400">
                 Instruktur profesional akan identifikasi kesalahan dan bantu kamu improve lap time 
                 dengan teknik cornering, throttle control, dan racing line.
               </p>
             </div>
-            <div className="p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg">
+            <div className="p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
               <div className="text-3xl mb-3">🏆</div>
               <h3 className="text-xl font-bold text-white mb-2">Competition Ready</h3>
               <p className="text-sm text-gray-400">

@@ -106,7 +106,7 @@ const unavailableBikes: Bike[] = [
 
 function BikeCard({ bike, available }: { bike: Bike; available: boolean }) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,23,68,0.3)]">
       <div className="flex justify-between items-start mb-4">
         <span
           className={`text-xs font-bold px-3 py-1 rounded-full ${
@@ -151,7 +151,7 @@ export default function TrackFocusedPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Breadcrumb */}
-      <div className="border-b border-white/10 bg-black/40">
+      <div className="border-b border-white/10 bg-black/80">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#ff1744] transition-colors">

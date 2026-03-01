@@ -19,7 +19,7 @@ const unavailableBikes = [
 
 function BikeCard({ bike, available }: any) {
   return (
-    <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all">
+    <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 hover:border-[#ff1744]/50 transition-all">
       <span className={`text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block ${available ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'}`}>
         {available ? '✓ Tersedia' : '⊗ Tidak Tersedia'}
       </span>
@@ -39,7 +39,7 @@ function BikeCard({ bike, available }: any) {
 export default function MiddleweightPage() {
   return (
     <main className="min-h-screen bg-black">
-      <div className="border-b border-white/10 bg-black/40"><div className="container mx-auto px-4 py-3"><div className="flex items-center gap-2 text-sm text-gray-400">
+      <div className="border-b border-white/10 bg-black/80"><div className="container mx-auto px-4 py-3"><div className="flex items-center gap-2 text-sm text-gray-400">
         <Link href="/">Home</Link><span>/</span><Link href="/bikeclass/supersport">Supersport</Link><span>/</span><span className="text-white">Middleweight</span>
       </div></div></div>
       <section className="py-12 border-b border-white/10"><div className="container mx-auto px-4">
