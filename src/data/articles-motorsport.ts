@@ -2425,4 +2425,15 @@ Veda Ega Pratama bukan just another rider. Dia adalah:
       slug: "ktm-vs-honda-vs-husqvarna-perbandingan-motor-moto3",
       title: "KTM vs Honda vs Husqvarna: Perbandingan Motor Moto3",
       excerpt: "Battle manufacturer di Moto3: Honda NSF250R vs KTM RC250 GP vs Husqvarna FR250 GP. Technical comparison dan success rates.",
-      content: `[Full 2000-word comparative analysis of three Moto3 manufacturers: Honda, KTM, and Husqvarna (Gas Gas), technical specs, success rates, team preferences, rider feedback, cost
+      content: `[Full 2000-word comparative analysis of three Moto3 manufacturers: Honda, KTM, and Husqvarna (Gas Gas), technical specs, success rates, team preferences, rider feedback, cost comparison, maintenance costs, dan track records...]`,
+      category: "Moto3",
+      author: "King Apex Wheelie",
+      date: "2026-03-01",
+      readTime: "10 min",
+      image: "/images/featured/moto3-manufacturers-comparison.webp",
+      keywords: ["ktm rc250 gp", "honda nsf250r", "husqvarna fr250 gp", "perbandingan motor moto3"],
+      metaDescription: "Perbandingan lengkap 3 manufacturer Moto3: Honda, KTM, Husqvarna. Technical specs, success rates, dan analysis mendalam untuk setiap motor.",
+      relatedArticles: ["/article/honda-nsf250r-legendaris", "/motorsport/moto3"]
+    }
+  ]
+};

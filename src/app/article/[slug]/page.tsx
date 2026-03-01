@@ -11,7 +11,9 @@ const allArticles = [...articlesPhase2A, ...articlesPhase2B];
 // Convert array to Record for easy lookup
 const articles: Record<string, any> = {};
 allArticles.forEach(article => {
-  articles[article.slug] = article;
+  if (article && article.slug) {
+    articles[article.slug] = article;
+  }
 });
 
 // Add original hardcoded articles for backward compatibility
