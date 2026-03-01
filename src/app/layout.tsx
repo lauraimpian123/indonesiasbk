@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import RunningText from '@/components/RunningText'
+import RunningTextMotoGP from '@/components/RunningTextMotoGP'
+import RunningTextWSBK from '@/components/RunningTextWSBK'
 import MegaMenu from '@/components/MegaMenu'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -29,11 +30,13 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={inter.variable}>
-        {/* Running Text - Standings */}
-        <RunningText />
+        {/* MotoGP Running Text - Fixed at Top */}
+        <div className="sticky top-0 z-50">
+          <RunningTextMotoGP />
+        </div>
         
         {/* Main Navbar */}
-        <nav className="sticky top-0 z-40 bg-primary border-b border-default backdrop-blur-sm">
+        <nav className="sticky top-[42px] z-40 bg-primary border-b border-default backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14">
               <div className="flex items-center space-x-8">
@@ -58,9 +61,12 @@ export default function RootLayout({
         </nav>
 
         {/* Mega Menu */}
-        <div className="sticky top-14 z-30">
+        <div className="sticky top-[98px] z-30">
           <MegaMenu />
         </div>
+        
+        {/* WSBK Running Text - Below Menu */}
+        <RunningTextWSBK />
         
         <main className="min-h-screen">
           {children}

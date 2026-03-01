@@ -119,7 +119,7 @@ export default function Home() {
                 <span>•</span>
                 <span>{heroArticle.readTime} min baca</span>
                 <span>•</span>
-                <span>👁 {heroArticle.views}</span>
+                <span>{heroArticle.views} views</span>
               </div>
             </div>
           </article>
@@ -150,7 +150,7 @@ export default function Home() {
                     <div className="flex items-center space-x-3 text-xs text-subtle">
                       <span>{article.date}</span>
                       <span>•</span>
-                      <span>👁 {article.views}</span>
+                      <span>{article.views} views</span>
                     </div>
                   </div>
                 </article>
@@ -164,7 +164,7 @@ export default function Home() {
           {/* Trending */}
           <div className="card p-6">
             <h3 className="text-xl font-bold mb-4 border-l-4 border-brand pl-3">
-              🔥 Trending
+              Trending
             </h3>
             <ol className="space-y-3">
               {trendingArticles.map((article, idx) => (
@@ -175,7 +175,7 @@ export default function Home() {
                       <a href="#" className="text-sm font-semibold group-hover:text-brand transition-colors line-clamp-2">
                         {article.title}
                       </a>
-                      <p className="text-xs text-subtle mt-1">👁 {article.views}</p>
+                      <p className="text-xs text-subtle mt-1">{article.views} views</p>
                     </div>
                   </div>
                 </li>
@@ -186,7 +186,7 @@ export default function Home() {
           {/* Categories */}
           <div className="card p-6">
             <h3 className="text-xl font-bold mb-4 border-l-4 border-brand pl-3">
-              📂 Kategori
+              Kategori
             </h3>
             <ul className="space-y-2">
               {categoryStats.map((cat) => (
@@ -212,6 +212,52 @@ export default function Home() {
           </div>
         </aside>
       </div>
+
+      {/* All Categories Section */}
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold mb-6 border-l-4 border-brand pl-3">
+          Semua Kategori
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          {[
+            { name: 'WSBK', slug: 'wsbk', color: 'bg-[#E11D48]' },
+            { name: 'MotoGP', slug: 'motogp', color: 'bg-[#FF6B35]' },
+            { name: 'Moto2', slug: 'moto2', color: 'bg-[#3B82F6]' },
+            { name: 'Moto3', slug: 'moto3', color: 'bg-[#10B981]' },
+            { name: 'F1', slug: 'f1', color: 'bg-[#DC2626]' },
+            { name: 'BSB', slug: 'bsb', color: 'bg-[#E11D48]' },
+            { name: 'Superbike', slug: 'superbike', color: 'bg-[#E11D48]' },
+            { name: 'Supersport', slug: 'supersport', color: 'bg-[#3B82F6]' },
+            { name: 'Supermatic', slug: 'supermatic', color: 'bg-[#F59E0B]' },
+            { name: 'Naked Bike', slug: 'naked', color: 'bg-[#8B5CF6]' },
+            { name: 'Adventure', slug: 'adventure', color: 'bg-[#10B981]' },
+            { name: 'Cruiser', slug: 'cruiser', color: 'bg-[#DC2626]' },
+            { name: 'Review', slug: 'review', color: 'bg-[#3B82F6]' },
+            { name: 'Gear Review', slug: 'gear-review', color: 'bg-[#10B981]' },
+            { name: 'Helmet Review', slug: 'helmet-review', color: 'bg-[#F59E0B]' },
+            { name: 'Active Riders', slug: 'active-riders', color: 'bg-[#10B981]' },
+            { name: 'Retired Riders', slug: 'retired-riders', color: 'bg-[#6B7280]' },
+            { name: 'Standings', slug: 'rider-standings', color: 'bg-[#E11D48]' },
+            { name: 'Official Teams', slug: 'official-teams', color: 'bg-[#DC2626]' },
+            { name: 'Satellite Teams', slug: 'satellite-teams', color: 'bg-[#3B82F6]' },
+            { name: 'Racing School', slug: 'racing-school', color: 'bg-[#10B981]' },
+            { name: 'Workshop', slug: 'workshop', color: 'bg-[#F59E0B]' },
+            { name: 'Touring', slug: 'touring', color: 'bg-[#06B6D4]' },
+            { name: 'Event', slug: 'event', color: 'bg-[#EC4899]' },
+            { name: 'Tech & EV', slug: 'tech', color: 'bg-[#10B981]' },
+            { name: 'News', slug: 'news', color: 'bg-[#8B5CF6]' },
+            { name: 'Lifestyle', slug: 'lifestyle', color: 'bg-[#F59E0B]' },
+          ].map((cat) => (
+            <a
+              key={cat.slug}
+              href={`/${cat.slug}`}
+              className={`${cat.color} text-white rounded-lg p-4 hover:opacity-90 transition-opacity text-center`}
+            >
+              <h3 className="font-semibold text-sm">{cat.name}</h3>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   )
 }
