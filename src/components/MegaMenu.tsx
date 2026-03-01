@@ -52,20 +52,20 @@ const categoryTree = [
     ],
   },
   {
-    id: 'event',
-    name: 'Event',
-    children: [
-      { id: 'trackday', name: 'Track Day', slug: 'trackday' },
-      { id: 'race-event', name: 'Race', slug: 'race-event' },
-      { id: 'motogp-calendar', name: 'MotoGP Calendar', slug: 'motogp-calendar' },
-      { id: 'arrc-calendar', name: 'ARRC Calendar', slug: 'arrc-calendar' },
-    ],
-  },
-  {
     id: 'result-standing',
     name: 'Result & Standing',
-    slug: 'result-standing',
-    children: [],
+    children: [
+      { id: 'wsbk-results', name: 'WSBK', slug: 'wsbk-results' },
+      { id: 'motogp-results', name: 'MotoGP', slug: 'motogp-results' },
+      { id: 'moto2-results', name: 'Moto2', slug: 'moto2-results' },
+      { id: 'moto3-results', name: 'Moto3', slug: 'moto3-results' },
+      { id: 'minigp-results', name: 'MiniGP', slug: 'minigp-results' },
+      { id: 'f1-results', name: 'F1', slug: 'f1-results' },
+      { id: 'bsb-results', name: 'BSB', slug: 'bsb-results' },
+      { id: 'arrc-results', name: 'ARRC', slug: 'arrc-results' },
+      { id: 'idc-results', name: 'IDC', slug: 'idc-results' },
+      { id: 'motoe-results', name: 'MotoE', slug: 'motoe-results' },
+    ],
   },
   {
     id: 'workshop',

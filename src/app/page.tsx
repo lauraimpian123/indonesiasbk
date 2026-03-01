@@ -311,15 +311,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Event */}
+        {/* Result & Standing */}
         <div className="mb-8">
-          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Event</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Result & Standing</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2">
             {[
-              { name: 'Track Day', slug: 'trackday' },
-              { name: 'Race', slug: 'race-event' },
-              { name: 'MotoGP Calendar', slug: 'motogp-calendar' },
-              { name: 'ARRC Calendar', slug: 'arrc-calendar' },
+              { name: 'WSBK', slug: 'wsbk-results' },
+              { name: 'MotoGP', slug: 'motogp-results' },
+              { name: 'Moto2', slug: 'moto2-results' },
+              { name: 'Moto3', slug: 'moto3-results' },
+              { name: 'MiniGP', slug: 'minigp-results' },
+              { name: 'F1', slug: 'f1-results' },
+              { name: 'BSB', slug: 'bsb-results' },
+              { name: 'ARRC', slug: 'arrc-results' },
+              { name: 'IDC', slug: 'idc-results' },
+              { name: 'MotoE', slug: 'motoe-results' },
             ].map((cat) => (
               <a
                 key={cat.slug}
@@ -329,19 +335,6 @@ export default function Home() {
                 {cat.name}
               </a>
             ))}
-          </div>
-        </div>
-
-        {/* Result & Standing */}
-        <div className="mb-8">
-          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Result & Standing</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-            <a
-              href="/result-standing"
-              className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
-            >
-              View All Results & Standings
-            </a>
           </div>
         </div>
 
