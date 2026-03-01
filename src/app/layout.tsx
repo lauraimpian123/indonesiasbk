@@ -61,14 +61,13 @@ export default function RootLayout({
         </nav>
 
         {/* Mega Menu */}
-        <div className="sticky top-[98px] z-30">
+        <div className="sticky top-[98px] z-30 bg-secondary">
           <MegaMenu />
         </div>
         
-        {/* WSBK Running Text - Below Menu */}
-        <RunningTextWSBK />
-        
         <main className="min-h-screen">
+          {/* WSBK Running Text - In content area */}
+          <RunningTextWSBK />
           {children}
         </main>
         

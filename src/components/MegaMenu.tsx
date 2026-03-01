@@ -144,7 +144,7 @@ export default function MegaMenu() {
 
               {cat.children && cat.children.length > 0 && activeMenu === cat.id && (
                 <div 
-                  className="absolute top-full left-0 mt-1 bg-elevated border border-default rounded-lg shadow-lg p-3 min-w-[200px] z-50"
+                  className="absolute top-full left-0 mt-1 bg-elevated border border-default rounded-lg shadow-lg p-3 min-w-[200px] z-[100]"
                   onMouseEnter={() => setActiveMenu(cat.id)}
                   onMouseLeave={() => setActiveMenu(null)}
                 >
