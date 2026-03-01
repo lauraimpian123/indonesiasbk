@@ -50,6 +50,8 @@ const motogpArticles = [
   { id: '17', slug: 'bagnaia-target', title: 'Bagnaia: Target Minimum 5 Kemenangan di Awal Musim', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '1 hari' },
   { id: '18', slug: 'martin-aprilia', title: 'Jorge Martin ke Aprilia: Langkah Berani atau Bunuh Diri?', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
   { id: '19', slug: 'vr46-team', title: 'VR46 Racing Team: Ambisi Podium dengan Duo Rookie', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
+  { id: '20', slug: 'quartararo-yamaha', title: 'Fabio Quartararo: Yamaha 2026 Beda dari Musim Lalu', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
+  { id: '21', slug: 'espargaro-ktm', title: 'Pol Espargaro Comeback ke KTM sebagai Test Rider', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
 ]
 
 const techArticles = [
@@ -116,10 +118,10 @@ export default function Home() {
                 BERITA TERKINI
               </h2>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {latestNews.map((article) => (
                 <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-3">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -127,12 +129,12 @@ export default function Home() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <div className="mb-1 md:mb-3">
-                    <span className="text-brand text-[10px] md:text-sm font-bold uppercase tracking-wide">
+                  <div className="mb-1 md:mb-2">
+                    <span className="text-brand text-[10px] md:text-xs font-bold uppercase tracking-wide">
                       IndonesiaSBK
                     </span>
                   </div>
-                  <h3 className="text-sm md:text-xl lg:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
+                  <h3 className="text-sm md:text-base lg:text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2 md:line-clamp-3 leading-tight">
                     {article.title}
                   </h3>
                 </Link>
@@ -174,6 +176,73 @@ export default function Home() {
                   </h3>
                 </Link>
               ))}
+            </div>
+          </section>
+
+          {/* MotoGP Section - Premier Class */}
+          <section className="mb-12">
+            {/* MotoGP Running Text */}
+            <RunningTextMotoGP />
+            
+            <div className="flex items-center justify-between mb-6 mt-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-1 h-8 bg-brand"></div>
+                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
+                  <span className="text-brand">MOTO</span><span className="text-white">GP</span>
+                </h2>
+              </div>
+              <Link href="/motogp" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
+                Lihat Semua →
+              </Link>
+            </div>
+            
+            {/* Premium Grid: 1 Featured + 5 Small */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Featured Article - Takes 2 columns on desktop */}
+              <Link href={`/article/${motogpArticles[0].slug}`} className="group md:col-span-2">
+                <div className="relative aspect-video md:aspect-[21/9] rounded-lg overflow-hidden">
+                  <Image
+                    src={motogpArticles[0].image}
+                    alt={motogpArticles[0].title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <div className="mb-3">
+                      <span className="bg-brand text-white px-3 py-1.5 rounded-sm text-xs font-bold uppercase tracking-wide">
+                        MOTOGP PREMIER
+                      </span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white group-hover:text-brand transition-colors line-clamp-2 leading-tight mb-3">
+                      {motogpArticles[0].title}
+                    </h3>
+                    <span className="text-white/80 text-sm font-medium">{motogpArticles[0].time}</span>
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Grid 5 Articles - 1 column on desktop */}
+              <div className="space-y-3 md:col-span-1">
+                {motogpArticles.slice(1).map((article) => (
+                  <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-3 group">
+                    <div className="relative w-20 h-16 md:w-24 md:h-20 flex-shrink-0 rounded overflow-hidden">
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xs md:text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2 leading-snug">
+                        {article.title}
+                      </h3>
+                      <span className="text-muted text-[10px] md:text-xs mt-1 inline-block">{article.time}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </section>
 
@@ -235,50 +304,6 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
-            </div>
-          </section>
-
-          {/* MotoGP Section */}
-          <section className="mb-12">
-            {/* MotoGP Running Text */}
-            <RunningTextMotoGP />
-            
-            <div className="flex items-center justify-between mb-6 mt-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
-                  <span className="text-brand">MOTO</span><span className="text-white">GP</span>
-                </h2>
-              </div>
-              <Link href="/motogp" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            {/* Horizontal Scroll */}
-            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-              <div className="flex gap-4 pb-4">
-                {motogpArticles.map((article) => (
-                  <Link key={article.id} href={`/article/${article.slug}`} className="group flex-none w-64 md:w-72">
-                    <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                    </div>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
-                        MOTOGP
-                      </span>
-                      <span className="text-muted text-xs">{article.time}</span>
-                    </div>
-                    <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                  </Link>
-                ))}
-              </div>
             </div>
           </section>
 
