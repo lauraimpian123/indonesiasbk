@@ -90,18 +90,18 @@ export default function Home() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-                <div className="flex items-center space-x-3 mb-4">
-                  <span className="bg-brand text-white px-4 py-1.5 rounded-sm text-xs font-bold uppercase tracking-wider">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-10">
+                <div className="flex items-center space-x-2 mb-2 md:mb-4">
+                  <span className="bg-brand text-white px-3 py-1 rounded-sm text-[10px] md:text-xs font-bold uppercase tracking-wider">
                     {heroArticle.category}
                   </span>
-                  <span className="text-white/80 text-sm font-medium">{heroArticle.time}</span>
+                  <span className="text-white/80 text-xs md:text-sm font-medium">{heroArticle.time}</span>
                 </div>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+                <h1 className="text-xl md:text-5xl lg:text-6xl font-black text-white mb-2 md:mb-4 leading-tight">
                   {heroArticle.title}
                 </h1>
-                <p className="text-white/90 text-lg md:text-xl italic font-light max-w-4xl">
+                <p className="hidden md:block text-white/90 text-lg md:text-xl italic font-light max-w-4xl">
                   {heroArticle.excerpt}
                 </p>
               </div>

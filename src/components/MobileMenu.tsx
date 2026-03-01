@@ -17,13 +17,14 @@ export default function MobileMenu() {
 
   return (
     <>
-      {/* Racing Style Button */}
+      {/* Racing Style Button - Only visible on mobile */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-[100] bg-brand hover:bg-[#C73D2F] text-white p-3 rounded-none shadow-lg transition-colors"
+        className="md:hidden fixed top-4 left-4 z-[100] bg-brand hover:bg-[#C73D2F] text-white p-3 rounded-none shadow-lg transition-colors"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 90% 100%, 0% 100%)',
         }}
+        aria-label="Menu"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {isOpen ? (
