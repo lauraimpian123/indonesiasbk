@@ -82,9 +82,9 @@ export default function Home() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Main Content */}
         <main className="lg:col-span-9">
-          {/* Hero Article - World-Class Design */}
+          {/* Hero Article - Redesigned for Better Visibility */}
           <Link href={`/article/${heroArticle.slug}`} className="block mb-16 group">
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={heroArticle.image}
                 alt={heroArticle.title}
@@ -93,34 +93,38 @@ export default function Home() {
                 priority
                 quality={95}
               />
-              {/* Premium gradient overlay */}
-              <div className="absolute inset-0 gradient-overlay"></div>
+              {/* Stronger gradient for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               
-              {/* Content with refined spacing */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
-                {/* Badge with glow effect */}
-                <div className="flex items-center space-x-3 mb-4 md:mb-6">
-                  <span className="bg-brand text-white px-4 py-2 rounded-md text-xs md:text-sm font-black uppercase tracking-wider shadow-lg shadow-brand/50">
+              {/* Content repositioned - no longer covering image */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12">
+                {/* Badge with stronger background */}
+                <div className="flex items-center space-x-2 md:space-x-3 mb-3 md:mb-4">
+                  <span className="bg-brand text-white px-3 md:px-4 py-1.5 md:py-2 rounded-md text-xs md:text-sm font-black uppercase tracking-wider">
                     {heroArticle.category}
                   </span>
-                  <span className="text-white/90 text-sm md:text-base font-semibold backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full">
+                  <span className="text-white text-xs md:text-sm font-semibold bg-black/60 backdrop-blur-sm px-2 md:px-3 py-1 rounded-full">
                     {heroArticle.time}
                   </span>
                 </div>
                 
-                {/* Title with text shadow for readability */}
-                <h1 className="text-2xl md:text-5xl lg:text-7xl font-black text-white mb-3 md:mb-6 leading-[1.1] tracking-tight text-shadow">
-                  {heroArticle.title}
-                </h1>
+                {/* Title with strong contrast - white text on black background */}
+                <div className="bg-black/80 backdrop-blur-md p-4 md:p-6 rounded-lg inline-block max-w-5xl mb-3 md:mb-4">
+                  <h1 className="text-xl md:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
+                    {heroArticle.title}
+                  </h1>
+                </div>
                 
-                {/* Excerpt with backdrop blur */}
-                <p className="hidden md:block text-white/95 text-lg md:text-2xl font-light max-w-4xl leading-relaxed backdrop-blur-sm bg-black/10 px-6 py-3 rounded-xl inline-block">
-                  {heroArticle.excerpt}
-                </p>
+                {/* Excerpt with clear background (desktop only) */}
+                <div className="hidden md:block bg-black/70 backdrop-blur-md p-4 rounded-lg max-w-4xl mb-4">
+                  <p className="text-white/95 text-base md:text-lg font-light leading-relaxed">
+                    {heroArticle.excerpt}
+                  </p>
+                </div>
                 
                 {/* Read more CTA */}
-                <div className="hidden md:flex items-center space-x-2 mt-6 text-white/80 group-hover:text-white transition-colors">
-                  <span className="text-sm font-semibold uppercase tracking-wide">Baca Selengkapnya</span>
+                <div className="hidden md:flex items-center space-x-2 text-white/90 group-hover:text-brand transition-colors">
+                  <span className="text-sm font-bold uppercase tracking-wide">Baca Selengkapnya</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

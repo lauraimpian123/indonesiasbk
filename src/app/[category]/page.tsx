@@ -64,8 +64,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">{data.fullName}</h1>
-        <p className="text-muted">Season {data.currentSeason} Results & Championship Standings</p>
+        <h1 className="text-4xl font-black text-white mb-2">{data.fullName}</h1>
+        <p className="text-white/70">Season {data.currentSeason} Results & Championship Standings</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -73,7 +73,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="lg:col-span-2 space-y-6">
           {/* Current Standings */}
           <section className="card p-6">
-            <h2 className="text-2xl font-bold mb-4 border-l-4 border-brand pl-3">
+            <h2 className="text-2xl font-black text-white mb-4 border-l-4 border-brand pl-3">
               Championship Standings {data.currentSeason}
             </h2>
             <div className="overflow-x-auto">
@@ -90,9 +90,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   {data.standings.map((row: any) => (
                     <tr key={row.pos} className="hover:bg-tertiary transition-colors">
                       <td className="px-4 py-3 font-bold text-brand">{row.pos}</td>
-                      <td className="px-4 py-3 font-medium">{row.rider}</td>
-                      <td className="px-4 py-3 text-muted">{row.team}</td>
-                      <td className="px-4 py-3 text-right font-bold">{row.points}</td>
+                      <td className="px-4 py-3 font-medium text-white">{row.rider}</td>
+                      <td className="px-4 py-3 text-white/70">{row.team}</td>
+                      <td className="px-4 py-3 text-right font-bold text-white">{row.points}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
           {/* Recent Results */}
           <section className="card p-6">
-            <h2 className="text-2xl font-bold mb-4 border-l-4 border-brand pl-3">
+            <h2 className="text-2xl font-black text-white mb-4 border-l-4 border-brand pl-3">
               Recent Results
             </h2>
             <div className="space-y-3">
@@ -125,7 +125,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
           {/* Championship History */}
           <section className="card p-6">
-            <h2 className="text-2xl font-bold mb-4 border-l-4 border-brand pl-3">
+            <h2 className="text-2xl font-black text-white mb-4 border-l-4 border-brand pl-3">
               Championship History
             </h2>
             <div className="overflow-x-auto">
@@ -141,10 +141,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <tbody className="divide-y divide-default">
                   {data.history.map((row: any) => (
                     <tr key={row.year} className="hover:bg-tertiary transition-colors">
-                      <td className="px-4 py-3 font-bold">{row.year}</td>
-                      <td className="px-4 py-3 font-medium">{row.champion}</td>
-                      <td className="px-4 py-3 text-muted">{row.team}</td>
-                      <td className="px-4 py-3 text-right">{row.points}</td>
+                      <td className="px-4 py-3 font-bold text-white">{row.year}</td>
+                      <td className="px-4 py-3 font-medium text-white">{row.champion}</td>
+                      <td className="px-4 py-3 text-white/70">{row.team}</td>
+                      <td className="px-4 py-3 text-right text-white">{row.points}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -156,7 +156,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         {/* Sidebar */}
         <aside className="lg:col-span-1">
           <div className="card p-6 sticky top-24">
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-black text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#standings" className="block p-2 rounded hover:bg-tertiary transition-colors">

@@ -83,8 +83,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </span>
               </div>
 
-              {/* Title */}
-              <h1 className="text-3xl md:text-5xl font-black text-primary mb-6 leading-tight">
+              {/* Title - High Contrast */}
+              <h1 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                 {mockArticle.title}
               </h1>
 
@@ -94,8 +94,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   R
                 </div>
                 <div>
-                  <div className="font-bold text-primary">{mockArticle.author}</div>
-                  <div className="text-sm text-muted">Motorsport Journalist</div>
+                  <div className="font-bold text-white">{mockArticle.author}</div>
+                  <div className="text-sm text-white/70">Motorsport Journalist</div>
                 </div>
               </div>
 
@@ -130,7 +130,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-3 group">
                     <span className="text-brand text-2xl font-black">{idx + 1}</span>
                     <div className="flex-1">
-                      <h4 className="text-sm font-bold text-primary group-hover:text-brand transition-colors line-clamp-2">
+                      <h4 className="text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
                         {article.title}
                       </h4>
                     </div>
@@ -154,7 +154,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       />
                     </div>
                     <span className="badge-secondary text-xs">{article.category}</span>
-                    <h4 className="text-sm font-bold text-primary group-hover:text-brand transition-colors line-clamp-2 mt-2">
+                    <h4 className="text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mt-2">
                       {article.title}
                     </h4>
                   </Link>
