@@ -1,0 +1,39 @@
+# IndonesiaSBK.com - Robots.txt
+# https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://indonesiasbk.com/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+# Block common bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Disallow admin/private pages (when exist)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Allow images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Host (preferred domain)
+Host: https://indonesiasbk.com

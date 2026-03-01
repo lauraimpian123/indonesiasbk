@@ -3,32 +3,67 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://indonesiasbk.com'
   
-  const categories = [
-    'wsbk', 'motogp', 'moto2', 'moto3', 'f1', 'bsb', 'arrc', 'idc',
-    'superbike', 'supersport', 'naked',
-    'bike-review', 'gear-review', 'helmet-review'
-  ]
-  
-  const categoryPages = categories.map(cat => ({
-    url: `${baseUrl}/${cat}`,
+  // Static pages
+  const staticPages = [
+    '',
+    '/motorsport/wsbk',
+    '/motorsport/motogp',
+    '/motorsport/moto2',
+    '/motorsport/moto3',
+    '/motorsport/minigp',
+    '/motorsport/f1',
+    '/motorsport/bsb',
+    '/motorsport/arrc',
+    '/motorsport/idc',
+    '/motorsport/motoe',
+    '/bike-class/superbike',
+    '/bike-class/supersport',
+    '/bike-class/supermatic',
+    '/bike-class/naked',
+    '/bike-class/adventure',
+    '/bike-class/cruiser',
+    '/review',
+    '/review/bike',
+    '/review/gear',
+    '/review/helmet',
+    '/review/accessory',
+    '/review/comparison',
+    '/racing/teams',
+    '/racing/school',
+    '/racing/riders',
+    '/standings',
+    '/standings/motogp',
+    '/standings/wsbk',
+    '/standings/moto2',
+    '/standings/moto3',
+    '/standings/minigp',
+    '/standings/f1',
+    '/standings/bsb',
+    '/standings/arrc',
+    '/standings/idc',
+    '/standings/motoe',
+    '/workshop',
+    '/touring',
+    '/tech',
+    '/live',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: 0.8,
+    changeFrequency: route === '' ? 'hourly' : 'daily' as const,
+    priority: route === '' ? 1.0 : route.includes('/standings') ? 0.9 : 0.8,
   }))
-  
+
+  // TODO: Add dynamic article URLs from database
+  // const articles = await fetchArticlesFromDB()
+  // const articlePages = articles.map((article) => ({
+  //   url: `${baseUrl}/article/${article.slug}`,
+  //   lastModified: article.updatedAt,
+  //   changeFrequency: 'weekly' as const,
+  //   priority: 0.7,
+  // }))
+
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'hourly',
-      priority: 1,
-    },
-    ...categoryPages,
-    {
-      url: `${baseUrl}/article/ducati-panigale-v4r-2026-ultimate-superbike`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+    ...staticPages,
+    // ...articlePages,
   ]
 }
