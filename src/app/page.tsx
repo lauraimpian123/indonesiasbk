@@ -6,12 +6,12 @@ import RunningTextMotoGP from '@/components/RunningTextMotoGP'
 // Mock data - nanti diganti dari API backend
 const heroArticle = {
   id: '1',
-  slug: 'wsbk-phillip-island-toprak-dominan',
-  title: 'WSBK Phillip Island: Toprak Dominan di Race 1, Drama Ban untuk Bautista',
-  excerpt: 'Toprak Razgatlioglu memulai musim 2026 dengan sempurna sementara Alvaro Bautista terkendala masalah ban di lap terakhir.',
-  category: 'WSBK',
-  image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&h=675&fit=crop',
-  time: '2 jam lalu',
+  slug: 'ducati-panigale-v4r-2026-ultimate-superbike',
+  title: 'Ducati Panigale V4R 2026: The Ultimate Italian Superbike Masterpiece',
+  excerpt: 'Dengan 230 HP dan teknologi MotoGP terdepan, Ducati Panigale V4R 2026 menetapkan standar baru untuk superbike jalanan. Golden hour di sirkuit balap, sebuah mahakarya mesin Italia.',
+  category: 'SUPERBIKE',
+  image: '/images/ducati-hero.png',
+  time: 'Baru saja',
   author: 'Redaksi IndonesiaSBK',
 }
 
@@ -82,30 +82,49 @@ export default function Home() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Main Content */}
         <main className="lg:col-span-9">
-          {/* Hero Article */}
-          <Link href={`/article/${heroArticle.slug}`} className="block mb-12 group">
-            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          {/* Hero Article - World-Class Design */}
+          <Link href={`/article/${heroArticle.slug}`} className="block mb-16 group">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={heroArticle.image}
                 alt={heroArticle.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover will-change-transform group-hover:scale-[1.02] transition-transform duration-[800ms] ease-out"
                 priority
+                quality={95}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-10">
-                <div className="flex items-center space-x-2 mb-2 md:mb-4">
-                  <span className="bg-brand text-white px-3 py-1 rounded-sm text-[10px] md:text-xs font-bold uppercase tracking-wider">
+              {/* Premium gradient overlay */}
+              <div className="absolute inset-0 gradient-overlay"></div>
+              
+              {/* Content with refined spacing */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
+                {/* Badge with glow effect */}
+                <div className="flex items-center space-x-3 mb-4 md:mb-6">
+                  <span className="bg-brand text-white px-4 py-2 rounded-md text-xs md:text-sm font-black uppercase tracking-wider shadow-lg shadow-brand/50">
                     {heroArticle.category}
                   </span>
-                  <span className="text-white/80 text-xs md:text-sm font-medium">{heroArticle.time}</span>
+                  <span className="text-white/90 text-sm md:text-base font-semibold backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full">
+                    {heroArticle.time}
+                  </span>
                 </div>
-                <h1 className="text-xl md:text-5xl lg:text-6xl font-black text-white mb-2 md:mb-4 leading-tight">
+                
+                {/* Title with text shadow for readability */}
+                <h1 className="text-2xl md:text-5xl lg:text-7xl font-black text-white mb-3 md:mb-6 leading-[1.1] tracking-tight text-shadow">
                   {heroArticle.title}
                 </h1>
-                <p className="hidden md:block text-white/90 text-lg md:text-xl italic font-light max-w-4xl">
+                
+                {/* Excerpt with backdrop blur */}
+                <p className="hidden md:block text-white/95 text-lg md:text-2xl font-light max-w-4xl leading-relaxed backdrop-blur-sm bg-black/10 px-6 py-3 rounded-xl inline-block">
                   {heroArticle.excerpt}
                 </p>
+                
+                {/* Read more CTA */}
+                <div className="hidden md:flex items-center space-x-2 mt-6 text-white/80 group-hover:text-white transition-colors">
+                  <span className="text-sm font-semibold uppercase tracking-wide">Baca Selengkapnya</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
               </div>
             </div>
           </Link>
