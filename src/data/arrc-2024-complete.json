@@ -1,0 +1,385 @@
+{
+  "championship": "2024 IDEMITSU FIM ASIA ROAD RACING CHAMPIONSHIP",
+  "data_source": "https://asiaroadracing.com/arrcdata/result/2024.zip",
+  "extracted_date": "2026-03-01",
+  "rounds_available": ["r6"],
+  "total_pdfs": 8,
+  "categories": {
+    "AP250": {
+      "full_name": "ASIA PRODUCTION 250cc",
+      "total_riders": 45,
+      "indonesian_riders": 11,
+      "standings": [
+        {
+          "position": 1,
+          "name": "MUHAMMAD KIANDRA RAMADHIPA",
+          "nationality": "INA",
+          "team": "ASTRA HONDA RACING TEAM",
+          "bike": "HONDA CBR250 RR",
+          "number": 212,
+          "total_points": 147,
+          "indonesian": true
+        },
+        {
+          "position": 2,
+          "name": "HERJUN ATNA FIRDAUS",
+          "nationality": "INA",
+          "team": "ASTRA HONDA RACING TEAM",
+          "bike": "HONDA CBR250 RR",
+          "number": 46,
+          "total_points": 145,
+          "indonesian": true
+        },
+        {
+          "position": 3,
+          "name": "MUHAMMAD FAEROZI TOREQOTTULLAH",
+          "nationality": "INA",
+          "team": "YAMAHA Racing Indonesia",
+          "bike": "HONDA CBR250 RR",
+          "number": 36,
+          "total_points": 136,
+          "indonesian": true
+        },
+        {
+          "position": 4,
+          "name": "ARAI AGASKA DIBANI LAKSANA",
+          "nationality": "INA",
+          "team": "YAMAHA Racing Indonesia",
+          "bike": "HONDA CBR250 RR",
+          "number": 38,
+          "total_points": 109,
+          "indonesian": true
+        },
+        {
+          "position": 10,
+          "name": "REYNALDO C. RATUKORE",
+          "nationality": "INA",
+          "team": "YAMAHA Racing Indonesia",
+          "bike": "HONDA CBR250 RR",
+          "number": 25,
+          "total_points": 43,
+          "indonesian": true
+        },
+        {
+          "position": 15,
+          "name": "CANDRA HERMAWAN",
+          "nationality": "INA",
+          "team": "YAMAHA Racing Indonesia",
+          "bike": "HONDA CBR250 RR",
+          "number": 88,
+          "total_points": 31,
+          "indonesian": true
+        },
+        {
+          "position": 18,
+          "name": "MUHAMMAD DIANDRA TRIHARDIKA",
+          "nationality": "INA",
+          "team": "Motul Sniper Manual Tech",
+          "bike": "YAMAHA YZF-R3",
+          "number": 51,
+          "total_points": 20,
+          "indonesian": true
+        },
+        {
+          "position": 19,
+          "name": "GERRY SALIM",
+          "nationality": "INA",
+          "team": "HONDA NWN SCK RACING TEAM",
+          "bike": "YAMAHA YZF-R3",
+          "number": 21,
+          "total_points": 19,
+          "indonesian": true
+        },
+        {
+          "position": 22,
+          "name": "IRFAN ARDIANSYAH",
+          "nationality": "INA",
+          "team": "",
+          "bike": "YAMAHA YZF-R3",
+          "number": 62,
+          "total_points": 16,
+          "indonesian": true
+        },
+        {
+          "position": 25,
+          "name": "GALANG HENDRA PRATAMA",
+          "nationality": "INA",
+          "team": "",
+          "bike": "YAMAHA YZF-R3",
+          "number": 68,
+          "total_points": 11,
+          "indonesian": true
+        },
+        {
+          "position": 40,
+          "name": "RAMA PUTRA",
+          "nationality": "INA",
+          "team": "MsGlowForMen Racing Team",
+          "bike": "HONDA CBR250 RR",
+          "number": 15,
+          "total_points": 0,
+          "indonesian": true
+        }
+      ]
+    },
+    "ASB1000": {
+      "full_name": "ASIA SUPERBIKE 1000cc",
+      "total_riders": 23,
+      "indonesian_riders": 2,
+      "standings": [
+        {
+          "position": 1,
+          "name": "ANDI FARID IZDIHAR",
+          "nationality": "INA",
+          "team": "Honda Asia-Dream Racing with Astemo",
+          "bike": "HONDA CBR1000RR R",
+          "number": 23,
+          "total_points": 165,
+          "indonesian": true
+        },
+        {
+          "position": 19,
+          "name": "ERIC SAPUTRA",
+          "nationality": "INA",
+          "team": "YAMAHA CARGLOSS RRS",
+          "bike": "YAMAHA YZF-R1M",
+          "number": 77,
+          "total_points": 9,
+          "indonesian": true
+        }
+      ]
+    },
+    "SS600": {
+      "full_name": "SUPERSPORTS 600cc",
+      "total_riders": 21,
+      "indonesian_riders": 6,
+      "standings": [
+        {
+          "position": 2,
+          "name": "MOHAMMAD ADENANTA PUTRA",
+          "nationality": "INA",
+          "team": "ASTRA HONDA RACING TEAM",
+          "bike": "HONDA CBR600RR",
+          "number": 21,
+          "total_points": 161,
+          "indonesian": true
+        },
+        {
+          "position": 6,
+          "name": "VEDA EGA PRATAMA",
+          "nationality": "INA",
+          "team": "ASTRA HONDA RACING TEAM",
+          "bike": "HONDA CBR600RR",
+          "number": 54,
+          "total_points": 96,
+          "indonesian": true
+        },
+        {
+          "position": 8,
+          "name": "RHEZA DANICA AHRENS",
+          "nationality": "INA",
+          "team": "ASTRA HONDA RACING TEAM",
+          "bike": "HONDA CBR600RR",
+          "number": 123,
+          "total_points": 77,
+          "indonesian": true
+        },
+        {
+          "position": 10,
+          "name": "WAHYU NUGROHO",
+          "nationality": "INA",
+          "team": "YAMAHA Racing Indonesia",
+          "bike": "YAMAHA YZF-R6",
+          "number": 89,
+          "total_points": 69,
+          "indonesian": true
+        },
+        {
+          "position": 14,
+          "name": "FADILLAH ARBI ADITAMA",
+          "nationality": "INA",
+          "team": "ASTRA HONDA RACING TEAM",
+          "bike": "HONDA CBR600RR",
+          "number": 93,
+          "total_points": 19,
+          "indonesian": true
+        },
+        {
+          "position": 21,
+          "name": "DIMAS EKKY PRATAMA",
+          "nationality": "INA",
+          "team": "MsGlowForMen Racing Team",
+          "bike": "HONDA CBR600RR",
+          "number": 99,
+          "total_points": 0,
+          "indonesian": true
+        }
+      ]
+    },
+    "UB150": {
+      "full_name": "UNDERBONE 150cc",
+      "total_riders": 36,
+      "indonesian_riders": 16,
+      "standings": [
+        {
+          "position": 1,
+          "name": "FAHMI BASAM",
+          "nationality": "INA",
+          "team": "YAMAHA LFN HP969 INDONESIA Racing Team",
+          "bike": "YAMAHA MX KING 150",
+          "number": 222,
+          "total_points": 128,
+          "indonesian": true
+        },
+        {
+          "position": 2,
+          "name": "ADYTYA FAUZI",
+          "nationality": "INA",
+          "team": "PitsBike OneWay JRT Tech2 Racing Team",
+          "bike": "YAMAHA Y15 ZR",
+          "number": 177,
+          "total_points": 123,
+          "indonesian": true
+        },
+        {
+          "position": 3,
+          "name": "M. MUROBBIL VITTONI",
+          "nationality": "INA",
+          "team": "4S1M EVO YAMAHA Racing Team",
+          "bike": "YAMAHA MX KING 150",
+          "number": 157,
+          "total_points": 117,
+          "indonesian": true
+        },
+        {
+          "position": 6,
+          "name": "GUPITA KRESNA WARDHANA",
+          "nationality": "INA",
+          "team": "YAMAHA LFN HP969 INDONESIA Racing Team",
+          "bike": "YAMAHA SNIPER 150",
+          "number": 1,
+          "total_points": 94,
+          "indonesian": true
+        },
+        {
+          "position": 7,
+          "name": "HUSNI ZAINUL FUADZY",
+          "nationality": "INA",
+          "team": "RACETECH SIXTY Racing Team",
+          "bike": "YAMAHA MX KING 150",
+          "number": 23,
+          "total_points": 71,
+          "indonesian": true
+        },
+        {
+          "position": 9,
+          "name": "WAHYU AJI TRILAKSANA",
+          "nationality": "INA",
+          "team": "G-Ren Koby Motor Oil Racing",
+          "bike": "YAMAHA Y15 ZR",
+          "number": 60,
+          "total_points": 61,
+          "indonesian": true
+        },
+        {
+          "position": 13,
+          "name": "REYKAT YUSUF FADILAH",
+          "nationality": "INA",
+          "team": "PitsBike OneWay JRT Tech2 Racing Team",
+          "bike": "YAMAHA SNIPER 150",
+          "number": 14,
+          "total_points": 43,
+          "indonesian": true
+        },
+        {
+          "position": 18,
+          "name": "DIMAS JULI ATMOKO",
+          "nationality": "INA",
+          "team": "YAMAHA LFN HP969 INDONESIA Racing Team",
+          "bike": "YAMAHA Y15 ZR",
+          "number": 202,
+          "total_points": 36,
+          "indonesian": true
+        },
+        {
+          "position": 21,
+          "name": "ALDIAZ AQSAL ISMAYA",
+          "nationality": "INA",
+          "team": "GG Galak Galak x GDT Racing Team",
+          "bike": "HONDA RSX150 R",
+          "number": 69,
+          "total_points": 17,
+          "indonesian": true
+        },
+        {
+          "position": 22,
+          "name": "HAFIZD FAHRIL RASYADAN",
+          "nationality": "INA",
+          "team": "YAMAHA LFN HP969 INDONESIA Racing Team",
+          "bike": "YAMAHA SNIPER 150",
+          "number": 96,
+          "total_points": 16,
+          "indonesian": true
+        },
+        {
+          "position": 23,
+          "name": "FELIX PUTRA MULYA",
+          "nationality": "INA",
+          "team": "YAMAHA Yamalube ZIEAR LFN HP969 RBT34 ARL The Strokes55",
+          "bike": "YAMAHA SNIPER 150",
+          "number": 306,
+          "total_points": 15,
+          "indonesian": true
+        },
+        {
+          "position": 25,
+          "name": "HAFID PRATAMADITYA NURSANDI",
+          "nationality": "INA",
+          "team": "SCK HONDA Racing Team",
+          "bike": "HONDA RSX150 R",
+          "number": 42,
+          "total_points": 8,
+          "indonesian": true
+        },
+        {
+          "position": 26,
+          "name": "KIKI SUDARMAN MANURUNG",
+          "nationality": "INA",
+          "team": "YAMAHA LFN HP969 INDONESIA Racing Team",
+          "bike": "YAMAHA SNIPER 150",
+          "number": 178,
+          "total_points": 8,
+          "indonesian": true
+        },
+        {
+          "position": 29,
+          "name": "RIZAL FERIYADI",
+          "nationality": "INA",
+          "team": "YAMAHA TEKHNE AHM MOTOR SPORTS",
+          "bike": "YAMAHA MX KING 150",
+          "number": 53,
+          "total_points": 4,
+          "indonesian": true
+        },
+        {
+          "position": 33,
+          "name": "MD ADIB ARSYAD MD HISAM",
+          "nationality": "INA",
+          "team": "MERAK RACETECH Racing Team",
+          "bike": "YAMAHA MX KING 150",
+          "number": 88,
+          "total_points": 0,
+          "indonesian": true
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_categories": 4,
+    "total_pdfs_extracted": 8,
+    "total_riders_across_all_categories": 125,
+    "total_indonesian_riders": 35,
+    "rounds_with_data": 1,
+    "data_completeness": "Only Round 6 (r6) contains standings PDFs. Rounds r0-r5 directories are empty."
+  }
+}

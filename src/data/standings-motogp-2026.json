@@ -1,0 +1,72 @@
+[
+  {
+    "position": 1,
+    "rider": {
+      "name": "Pedro Acosta",
+      "number": 31,
+      "nationality": "Spain",
+      "team": "Red Bull KTM Factory Racing",
+      "bike": "KTM RC16"
+    },
+    "points": 37,
+    "wins": 0,
+    "podiums": 2,
+    "poles": 0
+  },
+  {
+    "position": 2,
+    "rider": {
+      "name": "Marco Bezzecchi",
+      "number": 72,
+      "nationality": "Italy",
+      "team": "Aprilia Racing",
+      "bike": "Aprilia RS-GP26"
+    },
+    "points": 37,
+    "wins": 1,
+    "podiums": 1,
+    "poles": 1
+  },
+  {
+    "position": 3,
+    "rider": {
+      "name": "Marc Marquez",
+      "number": 93,
+      "nationality": "Spain",
+      "team": "Ducati Lenovo Team",
+      "bike": "Ducati Desmosedici GP26"
+    },
+    "points": 25,
+    "wins": 0,
+    "podiums": 1,
+    "poles": 0
+  },
+  {
+    "position": 4,
+    "rider": {
+      "name": "Jorge Martin",
+      "number": 89,
+      "nationality": "Spain",
+      "team": "Aprilia Racing",
+      "bike": "Aprilia RS-GP26"
+    },
+    "points": 20,
+    "wins": 0,
+    "podiums": 1,
+    "poles": 0
+  },
+  {
+    "position": 5,
+    "rider": {
+      "name": "Francesco Bagnaia",
+      "number": 1,
+      "nationality": "Italy",
+      "team": "Ducati Lenovo Team",
+      "bike": "Ducati Desmosedici GP26"
+    },
+    "points": 12,
+    "wins": 1,
+    "podiums": 1,
+    "poles": 0
+  }
+]

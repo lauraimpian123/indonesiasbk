@@ -48,6 +48,7 @@ const config: Config = {
         'float2': 'float2 4s ease-in-out infinite',
         'loader-fill': 'loader-fill 1.2s ease forwards',
         'loader-pulse': 'loader-pulse 0.8s ease-in-out infinite',
+        'fadeIn': 'fadeIn 0.3s ease-in-out',
       },
       keyframes: {
         blink: {
@@ -73,6 +74,10 @@ const config: Config = {
         'loader-pulse': {
           '0%, 100%': { opacity: '0.4' },
           '50%': { opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
