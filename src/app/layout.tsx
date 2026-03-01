@@ -4,6 +4,7 @@ import './globals.css'
 import RunningTextMotoGP from '@/components/RunningTextMotoGP'
 import RunningTextWSBK from '@/components/RunningTextWSBK'
 import MegaMenu from '@/components/MegaMenu'
+import MobileMenu from '@/components/MobileMenu'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -30,6 +31,9 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={inter.variable}>
+        {/* Mobile Menu Button */}
+        <MobileMenu />
+        
         {/* MotoGP Running Text - Fixed at Top */}
         <div className="sticky top-0 z-50">
           <RunningTextMotoGP />
@@ -61,8 +65,8 @@ export default function RootLayout({
           </div>
         </nav>
 
-        {/* Mega Menu */}
-        <div className="sticky top-[98px] z-[60] bg-secondary">
+        {/* Mega Menu - Hidden on Mobile */}
+        <div className="hidden md:block sticky top-[98px] z-[60] bg-secondary">
           <MegaMenu />
         </div>
         
