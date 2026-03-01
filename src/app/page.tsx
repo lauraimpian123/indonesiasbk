@@ -116,10 +116,10 @@ export default function Home() {
                 BERITA TERKINI
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 md:gap-6">
               {latestNews.map((article) => (
                 <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-4">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -127,12 +127,12 @@ export default function Home() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <div className="mb-3">
-                    <span className="text-brand text-sm font-bold uppercase tracking-wide">
+                  <div className="mb-1 md:mb-3">
+                    <span className="text-brand text-[10px] md:text-sm font-bold uppercase tracking-wide">
                       IndonesiaSBK
                     </span>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
+                  <h3 className="text-sm md:text-xl lg:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
                     {article.title}
                   </h3>
                 </Link>
@@ -279,10 +279,10 @@ export default function Home() {
                 Lihat Semua →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 md:gap-6">
               {reviewArticles.map((article) => (
                 <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-4">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -290,12 +290,12 @@ export default function Home() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <div className="mb-3">
-                    <span className="text-brand text-sm font-bold uppercase tracking-wide">
+                  <div className="mb-1 md:mb-3">
+                    <span className="text-brand text-[10px] md:text-sm font-bold uppercase tracking-wide">
                       IndonesiaSBK
                     </span>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
+                  <h3 className="text-sm md:text-xl lg:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
                     {article.title}
                   </h3>
                 </Link>
