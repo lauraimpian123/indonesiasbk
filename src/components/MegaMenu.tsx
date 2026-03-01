@@ -115,54 +115,63 @@ export default function MegaMenu() {
   return (
     <div className="bg-secondary border-b border-default">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex overflow-x-auto category-pills py-2 space-x-1">
-          {categoryTree.map((cat) => (
-            <div
-              key={cat.id}
-              className="relative group"
-            >
-              <a
-                href={cat.slug ? `/${cat.slug}` : '#'}
-                onMouseEnter={() => cat.children && cat.children.length > 0 && setActiveMenu(cat.id)}
-                onMouseLeave={() => setActiveMenu(null)}
-                className={`
-                  flex items-center space-x-1.5 px-4 py-2 rounded-lg text-sm font-semibold 
-                  whitespace-nowrap transition-colors
-                  ${activeMenu === cat.id 
-                    ? 'bg-brand text-white' 
-                    : 'text-muted hover:bg-tertiary hover:text-primary'
-                  }
-                `}
+        {/* Wrapper with overflow-x-auto for horizontal scroll */}
+        <div className="overflow-x-auto">
+          {/* Inner flex container with relative positioning */}
+          <div className="flex py-2 space-x-1 relative">
+            {categoryTree.map((cat) => (
+              <div
+                key={cat.id}
+                className="relative"
               >
-                <span>{cat.name}</span>
-                {cat.children && cat.children.length > 0 && (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                )}
-              </a>
-
-              {cat.children && cat.children.length > 0 && activeMenu === cat.id && (
-                <div 
-                  className="absolute top-full left-0 mt-1 bg-elevated border border-default rounded-lg shadow-lg p-3 min-w-[200px] z-[100]"
-                  onMouseEnter={() => setActiveMenu(cat.id)}
+                <a
+                  href={cat.slug ? `/${cat.slug}` : '#'}
+                  onMouseEnter={() => cat.children && cat.children.length > 0 && setActiveMenu(cat.id)}
                   onMouseLeave={() => setActiveMenu(null)}
+                  className={`
+                    flex items-center space-x-1.5 px-4 py-2 rounded-lg text-sm font-semibold 
+                    whitespace-nowrap transition-colors
+                    ${activeMenu === cat.id 
+                      ? 'bg-brand text-white' 
+                      : 'text-muted hover:bg-tertiary hover:text-primary'
+                    }
+                  `}
                 >
-                  <div className="space-y-1">
-                    {cat.children.map((child) => (
-                      <a
-                        key={child.id}
-                        href={`/${child.slug}`}
-                        className="block px-3 py-2 rounded text-sm text-muted hover:bg-tertiary hover:text-primary transition-colors"
-                      >
-                        {child.name}
-                      </a>
-                    ))}
+                  <span>{cat.name}</span>
+                  {cat.children && cat.children.length > 0 && (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </a>
+
+                {/* Dropdown - positioned absolute with very high z-index */}
+                {cat.children && cat.children.length > 0 && activeMenu === cat.id && (
+                  <div 
+                    className="fixed mt-1 bg-elevated border border-default rounded-lg shadow-xl p-3 min-w-[200px]"
+                    style={{ 
+                      zIndex: 9999,
+                      position: 'fixed'
+                    }}
+                    onMouseEnter={() => setActiveMenu(cat.id)}
+                    onMouseLeave={() => setActiveMenu(null)}
+                  >
+                    <div className="space-y-1">
+                      {cat.children.map((child) => (
+                        <a
+                          key={child.id}
+                          href={`/${child.slug}`}
+                          className="block px-3 py-2 rounded text-sm text-muted hover:bg-tertiary hover:text-primary transition-colors"
+                        >
+                          {child.name}
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

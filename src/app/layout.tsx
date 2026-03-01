@@ -61,7 +61,7 @@ export default function RootLayout({
         </nav>
 
         {/* Mega Menu */}
-        <div className="sticky top-[98px] z-30 bg-secondary">
+        <div className="sticky top-[98px] z-[60] bg-secondary">
           <MegaMenu />
         </div>
         
