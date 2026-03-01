@@ -3,19 +3,18 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import RunningTextMotoGP from '@/components/RunningTextMotoGP'
 import RunningTextWSBK from '@/components/RunningTextWSBK'
-import MegaMenu from '@/components/MegaMenu'
-import MobileMenu from '@/components/MobileMenu'
+import MegaMenuNavbar from '@/components/MegaMenuNavbar'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'IndonesiaSBK — Berita Otomotif, SBK, MotoGP, F1',
-  description: 'Portal berita otomotif terlengkap. SBK, MotoGP, F1, review mobil & motor, teknologi EV, dan lifestyle automotive.',
-  keywords: 'sbk, wsbk, motogp, f1, superbike, review mobil, review motor, otomotif indonesia, berita otomotif',
+  title: 'IndonesiaSBK — Portal Motorsport Indonesia',
+  description: 'Berita motorsport terlengkap di Indonesia. WSBK, MotoGP, F1, review motor, gear, dan teknologi otomotif terdepan.',
+  keywords: 'sbk, wsbk, motogp, f1, superbike, supersport, review motor, berita balap, motorsport indonesia',
   authors: [{ name: 'Tim IndonesiaSBK' }],
   openGraph: {
-    title: 'IndonesiaSBK — Berita Otomotif Terlengkap',
-    description: 'SBK, MotoGP, F1, Review, News, Tech & Lifestyle',
+    title: 'IndonesiaSBK — Portal Motorsport Indonesia',
+    description: 'WSBK, MotoGP, F1, Review, Tech & Racing Lifestyle',
     url: 'https://indonesiasbk.com',
     siteName: 'IndonesiaSBK',
     locale: 'id_ID',
@@ -31,76 +30,55 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={inter.variable}>
-        {/* Mobile Menu Button */}
-        <MobileMenu />
+        {/* New Mega Menu Navbar */}
+        <MegaMenuNavbar />
         
-        {/* Main Navbar */}
-        <nav className="sticky top-0 z-50 bg-primary border-b border-default backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-14">
-              <div className="flex items-center space-x-8">
-                <a href="/" className="text-2xl font-bold tracking-tight">
-                  <span className="text-white">INDONESIA</span>
-                  <span className="text-brand">SBK</span>
-                </a>
-                <div className="hidden lg:flex space-x-6">
-                  <a href="/" className="text-muted hover:text-primary transition-colors text-sm">Home</a>
-                  <a href="/about" className="text-muted hover:text-primary transition-colors text-sm">Tentang</a>
-                  <a href="/contact" className="text-muted hover:text-primary transition-colors text-sm">Kontak</a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <button className="text-muted hover:text-primary">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        {/* Mega Menu - Hidden on Mobile */}
-        <div className="hidden md:block sticky top-[56px] z-40 bg-secondary">
-          <MegaMenu />
+        {/* Running Text Bars */}
+        <div className="sticky top-16 z-40">
+          <RunningTextMotoGP />
+          <RunningTextWSBK />
         </div>
         
-        <main className="min-h-screen">
+        {/* Main Content */}
+        <main className="min-h-screen pt-4">
           {children}
         </main>
         
         {/* Footer */}
-        <footer className="bg-secondary border-t border-default mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <footer className="bg-black border-t border-white/10 mt-16">
+          <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
-                <h3 className="text-xl font-bold text-brand mb-4">INDONESIASBK</h3>
-                <p className="text-muted max-w-md">
-                  Portal berita otomotif terlengkap. Dari paddock SBK, MotoGP, F1 sampai jalanan Indonesia. 
+                <h3 className="text-2xl font-black text-white mb-4">
+                  <span className="text-white">INDONESIA</span>
+                  <span className="text-[#ff1744]">SBK</span>
+                </h3>
+                <p className="text-white/60 max-w-md leading-relaxed">
+                  Portal berita motorsport terlengkap di Indonesia. Dari paddock WSBK, MotoGP, F1 sampai jalanan Indonesia. 
                   Review jujur, berita cepat, analisis mendalam.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Motorsport</h4>
-                <ul className="space-y-2 text-muted text-sm">
-                  <li><a href="/sbk" className="hover:text-primary transition-colors">SBK / WSBK</a></li>
-                  <li><a href="/motogp" className="hover:text-primary transition-colors">MotoGP</a></li>
-                  <li><a href="/f1" className="hover:text-primary transition-colors">Formula 1</a></li>
-                  <li><a href="/moto2" className="hover:text-primary transition-colors">Moto2 & Moto3</a></li>
+                <h4 className="font-bold text-white mb-4 uppercase tracking-wide">Motorsport</h4>
+                <ul className="space-y-2 text-white/60 text-sm">
+                  <li><a href="/motorsport/wsbk" className="hover:text-[#ff1744] transition-colors">WSBK / Superbike</a></li>
+                  <li><a href="/motorsport/motogp" className="hover:text-[#ff1744] transition-colors">MotoGP</a></li>
+                  <li><a href="/motorsport/f1" className="hover:text-[#ff1744] transition-colors">Formula 1</a></li>
+                  <li><a href="/standings" className="hover:text-[#ff1744] transition-colors">Standings</a></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Konten</h4>
-                <ul className="space-y-2 text-muted text-sm">
-                  <li><a href="/review" className="hover:text-primary transition-colors">Review & Test</a></li>
-                  <li><a href="/news" className="hover:text-primary transition-colors">Berita Terkini</a></li>
-                  <li><a href="/tech" className="hover:text-primary transition-colors">Tech & EV</a></li>
-                  <li><a href="/lifestyle" className="hover:text-primary transition-colors">Lifestyle</a></li>
+                <h4 className="font-bold text-white mb-4 uppercase tracking-wide">Konten</h4>
+                <ul className="space-y-2 text-white/60 text-sm">
+                  <li><a href="/review" className="hover:text-[#ff1744] transition-colors">Review & Test</a></li>
+                  <li><a href="/bike-class" className="hover:text-[#ff1744] transition-colors">Bike Class</a></li>
+                  <li><a href="/tech" className="hover:text-[#ff1744] transition-colors">Tech & EV</a></li>
+                  <li><a href="/touring" className="hover:text-[#ff1744] transition-colors">Touring</a></li>
                 </ul>
               </div>
             </div>
-            <div className="mt-8 pt-8 border-t border-default text-center text-subtle text-sm">
-              © {new Date().getFullYear()} IndonesiaSBK. All rights reserved.
+            <div className="mt-8 pt-8 border-t border-white/10 text-center text-white/40 text-sm">
+              © {new Date().getFullYear()} IndonesiaSBK. Made with ❤️ for motorsport fans.
             </div>
           </div>
         </footer>
