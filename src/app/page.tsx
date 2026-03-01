@@ -203,6 +203,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Result & Standing Section */}
+      <section className="mb-16">
+        <div className="flex items-center space-x-3 mb-6">
+          <div className="w-1 h-8 bg-brand"></div>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white">
+            RESULT & STANDING
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          {[
+            { name: 'WSBK', slug: 'wsbk-results' },
+            { name: 'MotoGP', slug: 'motogp-results' },
+            { name: 'Moto2', slug: 'moto2-results' },
+            { name: 'Moto3', slug: 'moto3-results' },
+            { name: 'MiniGP', slug: 'minigp-results' },
+            { name: 'F1', slug: 'f1-results' },
+            { name: 'BSB', slug: 'bsb-results' },
+            { name: 'ARRC', slug: 'arrc-results' },
+            { name: 'IDC', slug: 'idc-results' },
+            { name: 'MotoE', slug: 'motoe-results' },
+          ].map((cat) => (
+            <a
+              key={cat.slug}
+              href={`/${cat.slug}`}
+              className="bg-secondary border border-default hover:border-brand text-white hover:text-brand transition-all p-6 rounded text-center font-bold uppercase text-sm tracking-wide group"
+            >
+              <div className="text-base md:text-lg">{cat.name}</div>
+              <div className="text-xs text-muted group-hover:text-brand/80 mt-1">Results</div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       {/* All Categories - Simplified */}
       <section className="mt-16 border-t border-[#1F1F1F] pt-12">
         <div className="flex items-center space-x-3 mb-8">
@@ -215,7 +249,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {[
             'WSBK', 'MotoGP', 'Moto2', 'Moto3', 'F1', 'BSB',
-            'Superbike', 'Supersport', 'Review', 'Riders', 'Teams', 'Results'
+            'Superbike', 'Supersport', 'Review', 'Riders', 'Teams'
           ].map((cat) => (
             <a
               key={cat}
