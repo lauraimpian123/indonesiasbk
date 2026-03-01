@@ -1,502 +1,509 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import RunningTextWSBK from '@/components/RunningTextWSBK'
-import RunningTextMotoGP from '@/components/RunningTextMotoGP'
-
-// Mock data - nanti diganti dari API backend
-const heroArticle = {
-  id: '1',
-  slug: 'ducati-panigale-v4r-2026-ultimate-superbike',
-  title: 'Ducati Panigale V4R 2026: The Ultimate Italian Superbike Masterpiece',
-  excerpt: 'Dengan 230 HP dan teknologi MotoGP terdepan, Ducati Panigale V4R 2026 menetapkan standar baru untuk superbike jalanan. Golden hour di sirkuit balap, sebuah mahakarya mesin Italia.',
-  category: 'SUPERBIKE',
-  image: '/images/ducati-hero.png',
-  time: 'Baru saja',
-  author: 'Redaksi IndonesiaSBK',
-}
-
-const latestNews = [
-  { id: '2', slug: 'motogp-losail', title: 'MotoGP Qatar: Marc Marquez Pole Position, Pecco Start Ketiga', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '30 min' },
-  { id: '3', slug: 'ducati-panigale-v4r', title: 'Ducati Panigale V4R 2026: 230 HP, Teknologi MotoGP', category: 'SUPERBIKE', image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop', time: '1 jam' },
-  { id: '4', slug: 'f1-bahrain', title: 'F1 Bahrain: Hamilton Kuasai FP1, Leclerc Kedua', category: 'F1', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 jam' },
-  { id: '5', slug: 'yamaha-r9-2026', title: 'Yamaha R9 2026: Pengganti R1 Resmi Meluncur', category: 'BIKE NEWS', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 jam' },
-  { id: '6', slug: 'kawasaki-zx-10rr', title: 'Kawasaki ZX-10RR 2026: Lebih Ringan 5kg, Lebih Garang', category: 'SUPERBIKE', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '4 jam' },
-  { id: '7', slug: 'motogp-marquez', title: 'Marquez: "Ducati Sempurna, Target Juara Dunia Realistis"', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '5 jam' },
-]
-
-const motorArticles = [
-  { id: '100', slug: 'ducati-panigale-v4r-2026', title: 'Ducati Panigale V4R 2026: 230 HP, Teknologi MotoGP Turun ke Jalan', category: 'SUPERBIKE', image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop', time: '2 jam' },
-  { id: '101', slug: 'yamaha-r9-launched', title: 'Yamaha R9 2026 Resmi Meluncur: Harga Rp 250 Jutaan', category: 'SUPERSPORT', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '4 jam' },
-  { id: '102', slug: 'honda-cbr1000rr-2026', title: 'Honda CBR1000RR-R 2026: Lebih Agresif, Lebih Aerodynamic', category: 'SUPERBIKE', image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop', time: '6 jam' },
-  { id: '103', slug: 'kawasaki-ninja-zx-4rr', title: 'Kawasaki Ninja ZX-4RR: 4 Silinder Kecil yang Menggelegar', category: 'SUPERSPORT', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '8 jam' },
-]
-
-const wsbkArticles = [
-  { id: '8', slug: 'wsbk-toprak-interview', title: 'Toprak: "Phillip Island Trek Favorit, Target Podium Terus"', category: 'WSBK', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '6 jam' },
-  { id: '9', slug: 'wsbk-bautista-analisis', title: 'Bautista Analisis Masalah Ban: Kesalahan Setup atau Keberuntungan?', category: 'WSBK', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '8 jam' },
-  { id: '10', slug: 'wsbk-rea-yamaha', title: 'Jonathan Rea: Adaptasi Yamaha Lebih Cepat dari Ekspektasi', category: 'WSBK', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '10 jam' },
-  { id: '11', slug: 'wsbk-calendar-2026', title: 'Kalender WSBK 2026: Mandalika Konfirmasi Round 4', category: 'WSBK', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '12 jam' },
-]
-
-const reviewArticles = [
-  { id: '12', slug: 'ducati-v4-review', title: 'Review: Ducati Panigale V4 2026 - 215 HP Beast dari Bologna', excerpt: 'Kami test Panigale V4 terbaru di Sentul Circuit. Lebih ringan 2kg, lebih kencang, lebih gila.', category: 'BIKE REVIEW', image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop', time: '1 hari' },
-  { id: '13', slug: 'r1-vs-zx10r', title: 'Yamaha R1 vs Kawasaki ZX-10R 2026: Mana Lebih Worth It?', excerpt: 'Head-to-head dua superbike legendaris Jepang. Performa, handling, harga.', category: 'COMPARISON', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
-  { id: '14', slug: 'shoei-x15', title: 'Review Helm Shoei X-Fifteen: Worth Harga Premium?', excerpt: 'Helm flagship Shoei terbaru. Aero, safety, comfort - semua diuji.', category: 'HELMET REVIEW', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
-  { id: '15', slug: 'alpinestars-suit', title: 'Alpinestars GP Pro v3: Racing Suit untuk Track Day', excerpt: 'Suit racing kelas MotoGP dengan harga masuk akal. Protection maksimal.', category: 'GEAR REVIEW', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '4 hari' },
-]
-
-const motogpArticles = [
-  { id: '16', slug: 'motogp-marquez-fastest', title: 'MotoGP Pre-Season: Marquez Tercepat, Ducati Dominan', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '1 hari' },
-  { id: '17', slug: 'bagnaia-target', title: 'Bagnaia: Target Minimum 5 Kemenangan di Awal Musim', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '1 hari' },
-  { id: '18', slug: 'martin-aprilia', title: 'Jorge Martin ke Aprilia: Langkah Berani atau Bunuh Diri?', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
-  { id: '19', slug: 'vr46-team', title: 'VR46 Racing Team: Ambisi Podium dengan Duo Rookie', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
-  { id: '20', slug: 'quartararo-yamaha', title: 'Fabio Quartararo: Yamaha 2026 Beda dari Musim Lalu', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
-  { id: '21', slug: 'espargaro-ktm', title: 'Pol Espargaro Comeback ke KTM sebagai Test Rider', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
-]
-
-const techArticles = [
-  { id: '20', slug: 'ev-battery-tech', title: 'Teknologi Baterai Solid-State: Masa Depan Motor Listrik', excerpt: 'Energi 2x lipat, charge 10 menit, aman. Game changer?', category: 'TECH', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '1 hari' },
-  { id: '21', slug: 'ducati-desmo', title: 'Ducati Desmodromic: Kenapa Masih Dipertahankan?', excerpt: 'Engineering deep-dive sistem valve unik Ducati.', category: 'TECH', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
-  { id: '22', slug: 'abs-cornering', title: 'Cornering ABS vs IMU: Mana Lebih Efektif?', excerpt: 'Teknologi safety modern dijelaskan secara sederhana.', category: 'TECH', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
-  { id: '23', slug: 'quickshifter', title: 'Quickshifter Explained: Up/Down, Bi-Directional', excerpt: 'Cara kerja, jenis-jenis, worth it atau gimmick?', category: 'TECH', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '4 hari' },
-]
-
-const lifestyleArticles = [
-  { id: '24', slug: 'touring-bali', title: '5 Rute Touring Bali Paling Instagrammable', excerpt: 'Dari pantai hingga pegunungan. Motor apa yang cocok?', category: 'TOURING', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '1 hari' },
-  { id: '25', slug: 'modif-r15', title: 'Modifikasi Yamaha R15: Budget 10 Juta, Hasil WOW', excerpt: 'Dari look standar jadi racing replica. Step by step.', category: 'MODIFIKASI', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '2 hari' },
-  { id: '26', slug: 'cafe-racer-jakarta', title: '7 Kafe & Kongkow Spot Bikers di Jakarta', excerpt: 'Community hub, kopi enak, vibes racing.', category: 'LIFESTYLE', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '3 hari' },
-  { id: '27', slug: 'riding-gear-101', title: 'Riding Gear 101: Apa Aja yang Wajib Punya?', excerpt: 'Safety first, style second. Panduan lengkap pemula.', category: 'LIFESTYLE', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '4 hari' },
-]
-
-const trendingArticles = [
-  { id: '28', slug: 'marquez-ducati', title: 'Marquez ke Ducati: Keputusan Terbaik Karir?', views: '125K' },
-  { id: '29', slug: 'r1-discontinued', title: 'Yamaha R1 Discontinue: Akhir dari Era?', views: '98K' },
-  { id: '30', slug: 'wsbk-mandalika', title: 'WSBK Mandalika 2026: Tiket Mulai Rp500K', views: '87K' },
-  { id: '31', slug: 'ducati-v4-crash', title: 'Crash Test Ducati V4: Seberapa Aman?', views: '76K' },
-  { id: '32', slug: 'fuel-octane', title: 'Pertamax vs Pertamax Turbo: Bedanya Apa?', views: '65K' },
-]
+import { useEffect, useRef } from 'react'
 
 export default function Home() {
+  const heroRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Scroll reveal animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+
+    // Custom cursor
+    const cursor = document.createElement('div')
+    cursor.className = 'custom-cursor'
+    document.body.appendChild(cursor)
+
+    const cursorRing = document.createElement('div')
+    cursorRing.className = 'custom-cursor-ring'
+    document.body.appendChild(cursorRing)
+
+    let mouseX = 0, mouseY = 0
+    let ringX = 0, ringY = 0
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+      cursor.style.left = mouseX + 'px'
+      cursor.style.top = mouseY + 'px'
+    })
+
+    const animateRing = () => {
+      ringX += (mouseX - ringX) * 0.12
+      ringY += (mouseY - ringY) * 0.12
+      cursorRing.style.left = ringX + 'px'
+      cursorRing.style.top = ringY + 'px'
+      requestAnimationFrame(animateRing)
+    }
+    animateRing()
+
+    // Cursor hover effects
+    const hoverElements = document.querySelectorAll('a, button, .card')
+    hoverElements.forEach((el) => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-hover')
+        cursorRing.classList.add('cursor-hover')
+      })
+      el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-hover')
+        cursorRing.classList.remove('cursor-hover')
+      })
+    })
+
+    return () => {
+      cursor.remove()
+      cursorRing.remove()
+    }
+  }, [])
+
   return (
-    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* Main Content */}
-        <main className="lg:col-span-9">
-          {/* Hero Article - Redesigned for Better Visibility */}
-          <Link href={`/article/${heroArticle.slug}`} className="block mb-16 group">
-            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl">
+    <>
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+        :root {
+          --black: #0a0a0f;
+          --void: #050508;
+          --dark: #12121a;
+          --panel: #1a1a26;
+          --surface: #22222e;
+          --line: #2a2a3a;
+          
+          --red: #ff1744;
+          --red-hot: #ff4569;
+          --red-deep: #a00020;
+          --red-glow: rgba(255, 23, 68, 0.15);
+          
+          --blue: #00e5ff;
+          --blue-dark: #0077aa;
+          
+          --purple: #9c27b0;
+          --purple-light: #ce93d8;
+          
+          --gold: #ffc400;
+          --gold-light: #ffd54f;
+          
+          --green: #76ff03;
+          
+          --white: #f5f5fa;
+          --silver: #c0c0d0;
+          --dim: #70708a;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          cursor: none !important;
+        }
+
+        body {
+          background: var(--black);
+          color: var(--white);
+          font-family: 'DM Sans', sans-serif;
+          overflow-x: hidden;
+        }
+
+        /* Noise Overlay */
+        body::before {
+          content: '';
+          position: fixed;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+          pointer-events: none;
+          z-index: 9999;
+          opacity: 0.4;
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+          width: 8px;
+          height: 8px;
+          background: var(--red);
+          border-radius: 50%;
+          position: fixed;
+          pointer-events: none;
+          z-index: 10000;
+          transform: translate(-50%, -50%);
+          transition: width 0.2s, height 0.2s;
+          mix-blend-mode: difference;
+        }
+
+        .custom-cursor-ring {
+          width: 32px;
+          height: 32px;
+          border: 1px solid var(--red);
+          border-radius: 50%;
+          position: fixed;
+          pointer-events: none;
+          z-index: 9999;
+          transform: translate(-50%, -50%);
+          transition: width 0.3s, height 0.3s, opacity 0.3s;
+          opacity: 0.5;
+        }
+
+        .custom-cursor.cursor-hover {
+          width: 4px;
+          height: 4px;
+        }
+
+        .custom-cursor-ring.cursor-hover {
+          width: 48px;
+          height: 48px;
+          opacity: 0.8;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: var(--void);
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: var(--red);
+          border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: var(--red-hot);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Bebas Neue', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 700;
+        }
+
+        .mono {
+          font-family: 'Space Mono', monospace;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+          opacity: 0;
+          transform: translateY(40px);
+          transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Glass Morphism */
+        .glass {
+          background: rgba(26, 26, 38, 0.8);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gradient Mesh Background */
+        .gradient-mesh {
+          background: 
+            radial-gradient(circle at 20% 30%, rgba(255, 23, 68, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(0, 229, 255, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(156, 39, 176, 0.04) 0%, transparent 50%);
+        }
+      `}</style>
+
+      {/* Hero Section - Asymmetric Layout */}
+      <section ref={heroRef} className="relative min-h-screen flex items-center gradient-mesh overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/2026-03-01-20-21-10-hero-motogp.webp"
+            alt="MotoGP Racing Hero"
+            fill
+            className="object-cover opacity-40"
+            priority
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 max-w-[1800px] mx-auto px-6 lg:px-12 py-32">
+          <div className="max-w-3xl">
+            {/* Eyebrow */}
+            <div className="flex items-center space-x-4 mb-6 reveal">
+              <span className="bg-red px-4 py-2 text-xs font-black mono tracking-widest">
+                🏁 MOTOGP QATAR
+              </span>
+              <span className="text-dim text-sm mono">2 jam lalu</span>
+            </div>
+
+            {/* Title - Asymmetric */}
+            <h1 className="text-6xl lg:text-8xl leading-[0.95] mb-8 reveal" style={{ transitionDelay: '0.1s' }}>
+              <span className="block text-white">MARC MARQUEZ</span>
+              <span className="block text-red italic">POLE POSITION</span>
+              <span className="block text-white opacity-30" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)', color: 'transparent' }}>
+                LOSAIL 2026
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-xl text-silver leading-relaxed mb-8 max-w-2xl reveal" style={{ transitionDelay: '0.2s' }}>
+              Marquez mencetak lap tercepat 1:53.247 dan mengklaim pole position perdana bersama Ducati di Qatar. 
+              Bagnaia start ketiga, Martin ketujuh setelah insiden di tikungan 10.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-4 reveal" style={{ transitionDelay: '0.3s' }}>
+              <Link href="/article/marquez-pole-qatar" className="group px-8 py-4 bg-red hover:bg-red-hot transition-all rounded-sm font-black text-sm tracking-wider">
+                BACA SELENGKAPNYA
+                <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+              <Link href="/live" className="px-8 py-4 glass hover:border-red transition-all rounded-sm font-bold text-sm tracking-wider">
+                ▶ WATCH HIGHLIGHTS
+              </Link>
+            </div>
+          </div>
+
+          {/* Floating Data Cards - Asymmetric */}
+          <div className="absolute right-12 bottom-32 space-y-3 hidden lg:block reveal" style={{ transitionDelay: '0.4s' }}>
+            <div className="glass p-6 rounded-lg min-w-[200px]">
+              <div className="text-4xl font-black text-red mono">1:53.247</div>
+              <div className="text-xs text-dim mono mt-1">BEST LAP TIME</div>
+            </div>
+            <div className="glass p-6 rounded-lg min-w-[200px]">
+              <div className="text-4xl font-black mono">185</div>
+              <div className="text-xs text-dim mono mt-1">CHAMPIONSHIP PTS</div>
+            </div>
+            <div className="glass p-6 rounded-lg min-w-[200px]">
+              <div className="text-4xl font-black text-gold mono">230HP</div>
+              <div className="text-xs text-dim mono mt-1">DUCATI GP26</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-dim text-xs mono tracking-wider">SCROLL</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-red to-transparent"></div>
+        </div>
+      </section>
+
+      {/* Featured News Grid */}
+      <section className="max-w-[1800px] mx-auto px-6 lg:px-12 py-24">
+        <div className="flex items-end justify-between mb-12 reveal">
+          <div>
+            <span className="text-red text-sm mono tracking-widest block mb-2">— TERBARU</span>
+            <h2 className="text-5xl">BERITA <span className="text-red">TERKINI</span></h2>
+          </div>
+          <Link href="/news" className="text-red hover:text-red-hot transition-colors text-sm font-bold mono tracking-wider">
+            SEMUA BERITA →
+          </Link>
+        </div>
+
+        {/* Asymmetric Grid */}
+        <div className="grid grid-cols-12 gap-6">
+          {/* Big Card */}
+          <Link href="/article/wsbk-toprak" className="col-span-12 lg:col-span-7 card group reveal">
+            <div className="relative aspect-[16/10] lg:aspect-[21/10] rounded-2xl overflow-hidden">
               <Image
-                src={heroArticle.image}
-                alt={heroArticle.title}
+                src="/images/hero/2026-03-01-20-21-15-hero-wsbk.webp"
+                alt="WSBK Phillip Island"
                 fill
-                className="object-cover will-change-transform group-hover:scale-[1.02] transition-transform duration-[800ms] ease-out"
-                priority
-                quality={95}
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              {/* Stronger gradient for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
-              
-              {/* Content repositioned - no longer covering image */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12">
-                {/* Badge with stronger background */}
-                <div className="flex items-center space-x-2 md:space-x-3 mb-3 md:mb-4">
-                  <span className="bg-brand text-white px-3 md:px-4 py-1.5 md:py-2 rounded-md text-xs md:text-sm font-black uppercase tracking-wider">
-                    {heroArticle.category}
-                  </span>
-                  <span className="text-white text-xs md:text-sm font-semibold bg-black/60 backdrop-blur-sm px-2 md:px-3 py-1 rounded-full">
-                    {heroArticle.time}
-                  </span>
-                </div>
-                
-                {/* Title with strong contrast - white text on black background */}
-                <div className="bg-black/80 backdrop-blur-md p-4 md:p-6 rounded-lg inline-block max-w-5xl mb-3 md:mb-4">
-                  <h1 className="text-xl md:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
-                    {heroArticle.title}
-                  </h1>
-                </div>
-                
-                {/* Excerpt with clear background (desktop only) */}
-                <div className="hidden md:block bg-black/70 backdrop-blur-md p-4 rounded-lg max-w-4xl mb-4">
-                  <p className="text-white/95 text-base md:text-lg font-light leading-relaxed">
-                    {heroArticle.excerpt}
-                  </p>
-                </div>
-                
-                {/* Read more CTA */}
-                <div className="hidden md:flex items-center space-x-2 text-white/90 group-hover:text-brand transition-colors">
-                  <span className="text-sm font-bold uppercase tracking-wide">Baca Selengkapnya</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <span className="bg-blue text-black px-3 py-1 text-xs font-black mono mb-3 inline-block">
+                  WSBK · FEATURE
+                </span>
+                <h3 className="text-3xl lg:text-4xl mb-3 group-hover:text-blue transition-colors">
+                  Toprak Razgatlioglu: "Phillip Island adalah circuit paling menyenangkan di dunia"
+                </h3>
+                <p className="text-silver text-sm max-w-2xl">
+                  Juara dunia WSBK berbicara tentang persiapan untuk round pembuka, ambisi mempertahankan gelar, dan hubungannya dengan Yamaha.
+                </p>
               </div>
             </div>
           </Link>
 
-          {/* Latest News Grid */}
-          <section className="mb-12">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-1 h-8 bg-brand"></div>
-              <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">
-                BERITA TERKINI
-              </h2>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              {latestNews.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-3">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                  <div className="mb-1 md:mb-2">
-                    <span className="text-brand text-[10px] md:text-xs font-bold uppercase tracking-wide">
-                      IndonesiaSBK
-                    </span>
-                  </div>
-                  <h3 className="text-sm md:text-base lg:text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2 md:line-clamp-3 leading-tight">
-                    {article.title}
+          {/* Medium Cards */}
+          <div className="col-span-12 lg:col-span-5 grid grid-cols-1 gap-6">
+            <Link href="/article/f1-hamilton" className="card group reveal" style={{ transitionDelay: '0.1s' }}>
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <Image
+                  src="/images/hero/2026-03-01-20-21-20-hero-f1.webp"
+                  alt="F1 Bahrain"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="bg-purple text-white px-3 py-1 text-xs font-black mono mb-2 inline-block">
+                    F1
+                  </span>
+                  <h3 className="text-2xl group-hover:text-purple-light transition-colors">
+                    Hamilton Kuasai FP1 Bahrain, Ferrari Mengintai di Posisi Dua
                   </h3>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* Motor Section - Vertical Cards */}
-          <section className="mb-12">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">
-                  MOTOR
-                </h2>
-              </div>
-              <Link href="/motor" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {motorArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-square rounded-lg overflow-hidden mb-3">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-2 left-2">
-                      <span className="bg-brand/90 text-white px-2 py-1 rounded-sm text-[9px] md:text-[10px] font-bold uppercase">
-                        {article.category}
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="text-xs md:text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
-                    {article.title}
-                  </h3>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* MotoGP Section - Premier Class */}
-          <section className="mb-12">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-3">
-                <div className="accent-line"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
-                  <span className="text-brand">MOTO</span><span className="text-white">GP</span>
-                </h2>
-              </div>
-              <Link href="/motogp" className="text-brand hover:text-brand-secondary text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            
-            {/* Running Text Below Title */}
-            <RunningTextMotoGP />
-            <div className="h-4"></div>
-            
-            {/* Premium Grid: 1 Featured + 5 Small */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* Featured Article - Takes 2 columns on desktop */}
-              <Link href={`/article/${motogpArticles[0].slug}`} className="group md:col-span-2">
-                <div className="relative aspect-video md:aspect-[21/9] rounded-lg overflow-hidden">
-                  <Image
-                    src={motogpArticles[0].image}
-                    alt={motogpArticles[0].title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <div className="mb-3">
-                      <span className="bg-brand text-white px-3 py-1.5 rounded-sm text-xs font-bold uppercase tracking-wide">
-                        MOTOGP PREMIER
-                      </span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white group-hover:text-brand transition-colors line-clamp-2 leading-tight mb-3">
-                      {motogpArticles[0].title}
-                    </h3>
-                    <span className="text-white/80 text-sm font-medium">{motogpArticles[0].time}</span>
-                  </div>
                 </div>
-              </Link>
-              
-              {/* Grid 5 Articles - 1 column on desktop */}
-              <div className="space-y-3 md:col-span-1">
-                {motogpArticles.slice(1).map((article) => (
-                  <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-3 group">
-                    <div className="relative w-20 h-16 md:w-24 md:h-20 flex-shrink-0 rounded overflow-hidden">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-xs md:text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2 leading-snug">
-                        {article.title}
-                      </h3>
-                      <span className="text-muted text-[10px] md:text-xs mt-1 inline-block">{article.time}</span>
-                    </div>
-                  </Link>
-                ))}
               </div>
-            </div>
-          </section>
+            </Link>
 
-          {/* WSBK Section */}
-          <section className="mb-12">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-3">
-                <div className="accent-line"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
-                  <span className="text-brand">WS</span><span className="text-white">BK</span>
-                </h2>
-              </div>
-              <Link href="/wsbk" className="text-brand hover:text-brand-secondary text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            
-            {/* Running Text Below Title */}
-            <RunningTextWSBK />
-            <div className="h-4"></div>
-            {/* Magazine Style: 1 Featured + 3 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Featured Article */}
-              <Link href={`/article/${wsbkArticles[0].slug}`} className="group md:row-span-2">
-                <div className="relative aspect-[4/3] md:aspect-[3/4] rounded-lg overflow-hidden mb-3">
-                  <Image
-                    src={wsbkArticles[0].image}
-                    alt={wsbkArticles[0].title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="bg-brand text-white px-2 py-1 rounded-sm text-[10px] font-bold uppercase mb-2 inline-block">
-                      {wsbkArticles[0].category}
-                    </span>
-                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
-                      {wsbkArticles[0].title}
-                    </h3>
-                  </div>
-                </div>
-              </Link>
-              
-              {/* Grid Articles */}
-              {wsbkArticles.slice(1).map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-3 group">
-                  <div className="relative w-24 h-20 md:w-32 md:h-24 flex-shrink-0 rounded-lg overflow-hidden">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-muted text-xs">{article.time}</span>
-                    <h3 className="text-sm md:text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mt-1">
-                      {article.title}
-                    </h3>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* Review Section */}
-          <section className="mb-12">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">
-                  REVIEW
-                </h2>
-              </div>
-              <Link href="/review" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-6">
-              {reviewArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-4">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                  <div className="mb-1 md:mb-3">
-                    <span className="text-brand text-[10px] md:text-sm font-bold uppercase tracking-wide">
-                      IndonesiaSBK
-                    </span>
-                  </div>
-                  <h3 className="text-sm md:text-xl lg:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
-                    {article.title}
+            <Link href="/article/ducati-v4r" className="card group reveal" style={{ transitionDelay: '0.2s' }}>
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <Image
+                  src="/images/hero/2026-03-01-20-21-25-hero-superbike.webp"
+                  alt="Ducati Panigale V4R"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="bg-red text-white px-3 py-1 text-xs font-black mono mb-2 inline-block">
+                    SUPERBIKE
+                  </span>
+                  <h3 className="text-2xl group-hover:text-gold transition-colors">
+                    Ducati Panigale V4R 2026: 230HP, Teknologi MotoGP Turun ke Jalan
                   </h3>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* Tech Section - Numbered List */}
-          <section className="mb-12">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">
-                  TECH
-                </h2>
+                </div>
               </div>
-              <Link href="/tech" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            <div className="space-y-4">
-              {techArticles.map((article, idx) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group border-b border-default pb-4 last:border-0">
-                  <div className="flex-shrink-0">
-                    <span className="text-brand text-4xl font-black">{idx + 1}</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base md:text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mb-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-muted text-sm line-clamp-2">{article.excerpt}</p>
-                    <span className="text-muted text-xs mt-1 inline-block">{article.time}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
+            </Link>
+          </div>
+        </div>
+      </section>
 
-          {/* Lifestyle Section - 3-Column Grid */}
-          <section className="mb-12">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
-                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">
-                  LIFESTYLE
-                </h2>
-              </div>
-              <Link href="/lifestyle" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
-                Lihat Semua →
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {lifestyleArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mb-3">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <span className="text-brand text-[9px] md:text-[10px] font-bold uppercase mb-1 block">
-                        {article.category}
-                      </span>
-                      <h3 className="text-xs md:text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
-                        {article.title}
-                      </h3>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        </main>
-
-        {/* Sidebar */}
-        <aside className="lg:col-span-3">
-          <div className="sticky top-24 space-y-8">
-            {/* Trending */}
-            <div className="bg-secondary border border-default rounded-lg p-6">
-              <h3 className="text-xl font-black uppercase mb-4 text-white flex items-center space-x-2">
-                <span className="text-brand">🔥</span>
-                <span>TRENDING</span>
-              </h3>
-              <div className="space-y-4">
-                {trendingArticles.map((article, idx) => (
-                  <Link key={article.id} href={`/article/${article.slug}`} className="block group">
-                    <div className="flex items-start space-x-3">
-                      <span className="text-brand text-2xl font-black">{idx + 1}</span>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mb-1">
-                          {article.title}
-                        </h4>
-                        <span className="text-muted text-xs">{article.views} views</span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Categories */}
-            <div className="bg-secondary border border-default rounded-lg p-6">
-              <h3 className="text-xl font-black uppercase mb-4 text-white">KATEGORI</h3>
-              <div className="grid grid-cols-2 gap-2">
-                {['WSBK', 'MotoGP', 'F1', 'Review', 'Tech', 'Lifestyle'].map((cat) => (
-                  <Link
-                    key={cat}
-                    href={`/${cat.toLowerCase()}`}
-                    className="bg-tertiary border border-default hover:border-brand text-white hover:text-brand transition-all px-3 py-2 rounded text-center font-bold uppercase text-xs"
-                  >
-                    {cat}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Newsletter */}
-            <div className="bg-brand border border-[#C73D2F] rounded-lg p-6">
-              <h3 className="text-xl font-black uppercase mb-2 text-white">NEWSLETTER</h3>
-              <p className="text-white/90 text-sm mb-4">Berita terbaru langsung ke inbox kamu!</p>
-              <input
-                type="email"
-                placeholder="Email kamu"
-                className="w-full bg-white text-black px-4 py-2 rounded mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button className="w-full bg-black hover:bg-white hover:text-brand text-white font-bold px-4 py-2 rounded text-sm uppercase transition-colors">
-                Subscribe
-              </button>
+      {/* Standings Section - Glass Morphism */}
+      <section className="max-w-[1800px] mx-auto px-6 lg:px-12 py-24">
+        <div className="glass rounded-3xl p-12">
+          <div className="flex items-end justify-between mb-12 reveal">
+            <div>
+              <span className="text-red text-sm mono tracking-widest block mb-2">— MUSIM 2026</span>
+              <h2 className="text-5xl">KLASEMEN <span className="text-red">TERKINI</span></h2>
             </div>
           </div>
-        </aside>
-      </div>
-    </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 reveal" style={{ transitionDelay: '0.1s' }}>
+            {/* MotoGP Standings */}
+            <div>
+              <h3 className="text-2xl text-red mb-6 mono">MOTOGP</h3>
+              <div className="space-y-3">
+                {[
+                  { pos: 1, name: 'Marc Marquez', team: 'Gresini Racing · Ducati', flag: '🇪🇸', pts: 185 },
+                  { pos: 2, name: 'Pecco Bagnaia', team: 'Ducati Lenovo Team', flag: '🇮🇹', pts: 178 },
+                  { pos: 3, name: 'Jorge Martin', team: 'Aprilia Racing', flag: '🇪🇸', pts: 165 },
+                  { pos: 4, name: 'Brad Binder', team: 'Red Bull KTM Factory', flag: '🇿🇦', pts: 142 },
+                  { pos: 5, name: 'Fabio Quartararo', team: 'Monster Energy Yamaha', flag: '🇫🇷', pts: 138 },
+                ].map((rider) => (
+                  <div key={rider.pos} className={`glass p-4 rounded-lg flex items-center gap-4 hover:border-red transition-all group ${rider.pos === 1 ? 'bg-red/10' : ''}`}>
+                    <div className={`text-3xl font-black mono ${rider.pos === 1 ? 'text-gold' : 'text-dim'}`}>
+                      {rider.pos}
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-bold text-lg">{rider.name}</div>
+                      <div className="text-sm text-dim mono">{rider.team}</div>
+                    </div>
+                    <div className="text-2xl">{rider.flag}</div>
+                    <div className={`text-3xl font-black mono ${rider.pos === 1 ? 'text-red' : ''}`}>
+                      {rider.pts}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* WSBK Standings */}
+            <div>
+              <h3 className="text-2xl text-blue mb-6 mono">WSBK</h3>
+              <div className="space-y-3">
+                {[
+                  { pos: 1, name: 'Toprak Razgatlioglu', team: 'Pata Yamaha Prometeon', flag: '🇹🇷', pts: 142 },
+                  { pos: 2, name: 'Alvaro Bautista', team: 'Aruba.it Racing Ducati', flag: '🇪🇸', pts: 135 },
+                  { pos: 3, name: 'Jonathan Rea', team: 'Pata Yamaha Prometeon', flag: '🇬🇧', pts: 128 },
+                  { pos: 4, name: 'Alex Lowes', team: 'Kawasaki Racing Team', flag: '🇬🇧', pts: 98 },
+                  { pos: 5, name: 'Andrea Locatelli', team: 'Pata Yamaha Prometeon', flag: '🇮🇹', pts: 92 },
+                ].map((rider) => (
+                  <div key={rider.pos} className={`glass p-4 rounded-lg flex items-center gap-4 hover:border-blue transition-all group ${rider.pos === 1 ? 'bg-blue/10' : ''}`}>
+                    <div className={`text-3xl font-black mono ${rider.pos === 1 ? 'text-gold' : 'text-dim'}`}>
+                      {rider.pos}
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-bold text-lg">{rider.name}</div>
+                      <div className="text-sm text-dim mono">{rider.team}</div>
+                    </div>
+                    <div className="text-2xl">{rider.flag}</div>
+                    <div className={`text-3xl font-black mono ${rider.pos === 1 ? 'text-blue' : ''}`}>
+                      {rider.pts}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trending Section */}
+      <section className="max-w-[1800px] mx-auto px-6 lg:px-12 py-24">
+        <div className="flex items-end justify-between mb-12 reveal">
+          <div>
+            <span className="text-red text-sm mono tracking-widest block mb-2">— PALING BANYAK DIBACA</span>
+            <h2 className="text-5xl">🔥 <span className="text-red">TRENDING</span></h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {[
+            { num: 1, cat: 'MOTOGP', title: 'Marquez ke Ducati: Keputusan Terbaik Karir?', views: '125K' },
+            { num: 2, cat: 'MOTOR', title: 'Yamaha R1 Discontinue: Akhir dari Era Supersport', views: '98K' },
+            { num: 3, cat: 'INDONESIA', title: 'WSBK Mandalika 2026: Tiket, Hotel & Panduan Lengkap', views: '87K' },
+            { num: 4, cat: 'REVIEW', title: 'Ducati V4 vs BMW M1000RR: Mana Raja Sebenarnya?', views: '76K' },
+            { num: 5, cat: 'TECH', title: 'Pertamax vs Pertamax Turbo untuk Superbike: Bedanya?', views: '65K' },
+          ].map((item, idx) => (
+            <Link href={`/article/${item.num}`} key={item.num} className="card group reveal" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div className="glass p-6 rounded-xl hover:border-red transition-all">
+                <div className="text-6xl font-black text-dark group-hover:text-red/20 transition-colors mb-3">
+                  {item.num}
+                </div>
+                <div className="text-red text-xs font-black mono mb-2">{item.cat}</div>
+                <h3 className="text-lg font-bold mb-3 group-hover:text-red transition-colors">
+                  {item.title}
+                </h3>
+                <div className="text-dim text-sm mono">👁 {item.views} views</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'IndonesiaSBK',
+            url: 'https://indonesiasbk.com',
+            logo: 'https://indonesiasbk.com/logo.png',
+            description: 'Portal berita motorsport terlengkap di Indonesia',
+            sameAs: [
+              'https://twitter.com/indonesiasbk',
+              'https://instagram.com/indonesiasbk',
+              'https://youtube.com/@indonesiasbk'
+            ]
+          })
+        }}
+      />
+    </>
   )
 }
