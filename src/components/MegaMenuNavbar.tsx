@@ -22,12 +22,12 @@ const menuStructure = {
   bikeClass: {
     title: 'BIKE CLASS',
     items: [
-      { name: 'Superbike', href: '/bike-class/superbike', emoji: '🔴' },
-      { name: 'Supersport', href: '/bike-class/supersport', emoji: '🔵' },
-      { name: 'Supermatic', href: '/bike-class/supermatic', emoji: '⚙️' },
-      { name: 'Naked Bike', href: '/bike-class/naked', emoji: '🟢' },
-      { name: 'Adventure', href: '/bike-class/adventure', emoji: '🗻' },
-      { name: 'Cruiser', href: '/bike-class/cruiser', emoji: '🛣️' },
+      { name: 'Superbike', href: '/bikeclass/superbike', emoji: '🔴' },
+      { name: 'Supersport', href: '/bikeclass/supersport', emoji: '🔵' },
+      { name: 'Supermatic', href: '/bikeclass/supermatic', emoji: '⚙️' },
+      { name: 'Naked Bike', href: '/bikeclass/naked', emoji: '🟢' },
+      { name: 'Adventure', href: '/bikeclass/adventure', emoji: '🗻' },
+      { name: 'Cruiser', href: '/bikeclass/cruiser', emoji: '🛣️' },
     ],
   },
   review: {
