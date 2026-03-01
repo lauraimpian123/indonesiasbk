@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const categories = [
   { name: 'Motorsport', items: ['WSBK', 'MotoGP', 'Moto2', 'Moto3', 'F1'] },
-  { name: 'Bike Class', items: ['Superbike', 'Supersport', 'Supermatic'] },
+  { name: 'Motor', items: ['Superbike', 'Supersport', 'Supermatic'] },
   { name: 'Review', items: ['Bike Review', 'Gear Review', 'Helmet Review'] },
   { name: 'Racing', items: ['Teams', 'School', 'Riders'] },
   { name: 'Result & Standing', items: ['WSBK', 'MotoGP', 'F1'] },

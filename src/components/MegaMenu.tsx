@@ -20,8 +20,8 @@ const categoryTree = [
     ],
   },
   {
-    id: 'bike-class',
-    name: 'Bike Class',
+    id: 'motor',
+    name: 'Motor',
     children: [
       { id: 'superbike', name: 'Superbike', slug: 'superbike' },
       { id: 'supersport', name: 'Supersport', slug: 'supersport' },

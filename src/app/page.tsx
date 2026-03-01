@@ -24,6 +24,13 @@ const latestNews = [
   { id: '7', slug: 'motogp-marquez', title: 'Marquez: "Ducati Sempurna, Target Juara Dunia Realistis"', category: 'MOTOGP', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '5 jam' },
 ]
 
+const motorArticles = [
+  { id: '100', slug: 'ducati-panigale-v4r-2026', title: 'Ducati Panigale V4R 2026: 230 HP, Teknologi MotoGP Turun ke Jalan', category: 'SUPERBIKE', image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop', time: '2 jam' },
+  { id: '101', slug: 'yamaha-r9-launched', title: 'Yamaha R9 2026 Resmi Meluncur: Harga Rp 250 Jutaan', category: 'SUPERSPORT', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '4 jam' },
+  { id: '102', slug: 'honda-cbr1000rr-2026', title: 'Honda CBR1000RR-R 2026: Lebih Agresif, Lebih Aerodynamic', category: 'SUPERBIKE', image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop', time: '6 jam' },
+  { id: '103', slug: 'kawasaki-ninja-zx-4rr', title: 'Kawasaki Ninja ZX-4RR: 4 Silinder Kecil yang Menggelegar', category: 'SUPERSPORT', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '8 jam' },
+]
+
 const wsbkArticles = [
   { id: '8', slug: 'wsbk-toprak-interview', title: 'Toprak: "Phillip Island Trek Favorit, Target Podium Terus"', category: 'WSBK', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '6 jam' },
   { id: '9', slug: 'wsbk-bautista-analisis', title: 'Bautista Analisis Masalah Ban: Kesalahan Setup atau Keberuntungan?', category: 'WSBK', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', time: '8 jam' },
@@ -129,6 +136,46 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
                     {article.title}
                   </h3>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Motor Section */}
+          <section className="mb-12">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-1 h-8 bg-brand"></div>
+                <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">
+                  MOTOR
+                </h2>
+              </div>
+              <Link href="/motor" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
+                Lihat Semua →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {motorArticles.map((article) => (
+                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group">
+                  <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
+                        {article.category}
+                      </span>
+                      <span className="text-muted text-xs">{article.time}</span>
+                    </div>
+                    <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                  </div>
                 </Link>
               ))}
             </div>
