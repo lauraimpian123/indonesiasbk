@@ -116,24 +116,23 @@ export default function Home() {
                 BERITA TERKINI
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {latestNews.map((article) => (
                 <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
                     <Image
                       src={article.image}
                       alt={article.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="bg-brand text-white px-2 py-1 rounded-sm text-[10px] font-bold uppercase">
-                      {article.category}
+                  <div className="mb-3">
+                    <span className="text-brand text-sm font-bold uppercase tracking-wide">
+                      IndonesiaSBK
                     </span>
-                    <span className="text-muted text-xs">{article.time}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
                     {article.title}
                   </h3>
                 </Link>
@@ -283,24 +282,22 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {reviewArticles.map((article) => (
                 <Link key={article.id} href={`/article/${article.slug}`} className="group">
-                  <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
                     <Image
                       src={article.image}
                       alt={article.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="bg-brand text-white px-2 py-1 rounded-sm text-[10px] font-bold uppercase">
-                      {article.category}
+                  <div className="mb-3">
+                    <span className="text-brand text-sm font-bold uppercase tracking-wide">
+                      IndonesiaSBK
                     </span>
-                    <span className="text-muted text-xs">{article.time}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-brand transition-colors line-clamp-3 leading-tight">
                     {article.title}
                   </h3>
-                  <p className="text-muted text-sm line-clamp-2">{article.excerpt}</p>
                 </Link>
               ))}
             </div>
