@@ -200,20 +200,21 @@ export default function Home() {
 
           {/* MotoGP Section - Premier Class */}
           <section className="mb-12">
-            {/* MotoGP Running Text */}
-            <RunningTextMotoGP />
-            
-            <div className="flex items-center justify-between mb-6 mt-6">
+            <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
+                <div className="accent-line"></div>
                 <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
                   <span className="text-brand">MOTO</span><span className="text-white">GP</span>
                 </h2>
               </div>
-              <Link href="/motogp" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
+              <Link href="/motogp" className="text-brand hover:text-brand-secondary text-sm font-bold uppercase transition-colors">
                 Lihat Semua →
               </Link>
             </div>
+            
+            {/* Running Text Below Title */}
+            <RunningTextMotoGP />
+            <div className="h-4"></div>
             
             {/* Premium Grid: 1 Featured + 5 Small */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -267,20 +268,21 @@ export default function Home() {
 
           {/* WSBK Section */}
           <section className="mb-12">
-            {/* WSBK Running Text */}
-            <RunningTextWSBK />
-            
-            <div className="flex items-center justify-between mb-6 mt-6">
+            <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-3">
-                <div className="w-1 h-8 bg-brand"></div>
+                <div className="accent-line"></div>
                 <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
                   <span className="text-brand">WS</span><span className="text-white">BK</span>
                 </h2>
               </div>
-              <Link href="/wsbk" className="text-brand hover:text-white text-sm font-bold uppercase transition-colors">
+              <Link href="/wsbk" className="text-brand hover:text-brand-secondary text-sm font-bold uppercase transition-colors">
                 Lihat Semua →
               </Link>
             </div>
+            
+            {/* Running Text Below Title */}
+            <RunningTextWSBK />
+            <div className="h-4"></div>
             {/* Magazine Style: 1 Featured + 3 Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Featured Article */}
