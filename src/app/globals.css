@@ -2,31 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sophisticated Dark Theme Color Palette */
+/* AGGRESSIVE RACING THEME - Dark & Fierce! */
 :root {
-  /* Background layers */
-  --background-primary: #0B0C10;
-  --background-secondary: #1A1D29;
-  --background-elevated: #252A3A;
+  /* Pure Black Racing Background */
+  --bg-pure-black: #000000;
+  --bg-deep-black: #0A0A0A;
+  --bg-carbon: #121212;
+  --bg-charcoal: #1C1C1C;
   
-  /* Brand colors - Racing inspired */
-  --brand-primary: #FF3366;
-  --brand-secondary: #FF6B9D;
-  --brand-accent: #FFD700;
+  /* Racing Red - Aggressive & Bold */
+  --racing-red: #FF0000;
+  --racing-red-dark: #CC0000;
+  --racing-red-glow: rgba(255, 0, 0, 0.5);
   
-  /* Text colors */
-  --text-primary: #FFFFFF;
-  --text-secondary: #B8C5D6;
-  --text-muted: #6B7280;
+  /* Performance Yellow - Speed Accent */
+  --speed-yellow: #FFD700;
+  --speed-orange: #FF8C00;
   
-  /* Border & dividers */
-  --border-subtle: #1F2937;
-  --border-default: #374151;
+  /* Text - High Contrast */
+  --text-pure-white: #FFFFFF;
+  --text-racing-white: #F5F5F5;
+  --text-silver: #CCCCCC;
+  --text-gray: #999999;
   
-  /* Semantic colors */
-  --success: #10B981;
-  --warning: #F59E0B;
-  --error: #EF4444;
+  /* Borders */
+  --border-red: #FF0000;
+  --border-dark: #2A2A2A;
+  --border-carbon: #1A1A1A;
 }
 
 * {
@@ -39,67 +41,81 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 body {
-  color: var(--text-primary);
-  background: var(--background-primary);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-pure-white);
+  background: var(--bg-pure-black);
+  font-family: var(--font-inter), -apple-system, sans-serif;
   line-height: 1.6;
 }
 
-/* Premium Transitions */
+/* AGGRESSIVE TRANSITIONS */
 a, button, .group {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Refined Cards */
+/* RACING CARDS */
 .card {
-  background: var(--background-secondary);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(8px);
+  background: var(--bg-carbon);
+  border: 2px solid var(--border-dark);
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--racing-red), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .card:hover {
-  border-color: var(--border-default);
-  box-shadow: 0 8px 24px rgba(255, 51, 102, 0.12);
-  transform: translateY(-2px);
+  border-color: var(--racing-red);
+  background: var(--bg-charcoal);
+  box-shadow: 
+    0 0 30px var(--racing-red-glow),
+    0 8px 32px rgba(0, 0, 0, 0.8);
+  transform: translateY(-4px);
 }
 
-/* Smooth Image Rendering */
-img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+.card:hover::before {
+  opacity: 1;
 }
 
-/* Better Focus States */
-:focus-visible {
-  outline: 2px solid var(--brand-primary);
-  outline-offset: 3px;
-  border-radius: 6px;
+/* HIGH CONTRAST HOVER - FIXED! */
+a:hover,
+.group:hover h3,
+.group:hover h2 {
+  color: var(--racing-red) !important;
+  text-shadow: 0 0 20px var(--racing-red-glow);
 }
 
-/* Custom Scrollbar - Racing Theme */
-.overflow-x-auto::-webkit-scrollbar {
-  height: 6px;
+/* SCROLLBAR - Racing Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.overflow-x-auto::-webkit-scrollbar-track {
-  background: var(--background-secondary);
-  border-radius: 3px;
+::-webkit-scrollbar-track {
+  background: var(--bg-deep-black);
 }
 
-.overflow-x-auto::-webkit-scrollbar-thumb {
-  background: var(--brand-primary);
-  border-radius: 3px;
+::-webkit-scrollbar-thumb {
+  background: var(--racing-red);
+  border-radius: 4px;
 }
 
-.overflow-x-auto::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-secondary);
+::-webkit-scrollbar-thumb:hover {
+  background: var(--racing-red-dark);
+  box-shadow: 0 0 10px var(--racing-red-glow);
 }
 
-/* Running Text Animation */
+/* RUNNING TEXT - Neon Effect */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -116,15 +132,16 @@ img {
 
 .running-text:hover {
   animation-play-state: paused;
+  color: var(--speed-yellow);
 }
 
-/* Premium Gradient Overlays */
+/* GRADIENT OVERLAYS - Aggressive */
 .gradient-overlay-hero {
   background: linear-gradient(
     to top,
-    rgba(11, 12, 16, 0.95) 0%,
-    rgba(11, 12, 16, 0.7) 30%,
-    rgba(11, 12, 16, 0.4) 60%,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.5) 60%,
     transparent 100%
   );
 }
@@ -132,62 +149,191 @@ img {
 .gradient-overlay-card {
   background: linear-gradient(
     to top,
-    rgba(11, 12, 16, 0.85) 0%,
-    rgba(11, 12, 16, 0.3) 70%,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
     transparent 100%
   );
 }
 
-/* Text Shadows for Readability */
+/* TEXT SHADOWS - Racing Glow */
 .text-shadow-strong {
   text-shadow: 
-    0 2px 12px rgba(0, 0, 0, 0.9),
-    0 4px 24px rgba(0, 0, 0, 0.6);
+    0 0 30px rgba(255, 0, 0, 0.6),
+    0 4px 20px rgba(0, 0, 0, 0.9),
+    0 2px 4px rgba(0, 0, 0, 1);
 }
 
 .text-shadow-subtle {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(255, 0, 0, 0.3);
 }
 
-/* Glow Effects */
+/* GLOW EFFECTS - Racing Neon */
 .glow-brand {
   box-shadow: 
-    0 0 20px rgba(255, 51, 102, 0.3),
-    0 0 40px rgba(255, 51, 102, 0.1);
+    0 0 30px var(--racing-red-glow),
+    0 0 60px rgba(255, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 0, 0, 0.1);
 }
 
 .glow-accent {
   box-shadow: 
-    0 0 20px rgba(255, 215, 0, 0.3),
-    0 0 40px rgba(255, 215, 0, 0.1);
+    0 0 30px rgba(255, 215, 0, 0.5),
+    0 0 60px rgba(255, 215, 0, 0.2);
 }
 
-/* Premium Typography */
+/* TYPOGRAPHY - Bold & Aggressive */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-  color: var(--text-primary);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text-pure-white);
+  text-transform: uppercase;
 }
 
-/* Button Styles */
+/* BUTTONS - Racing Style */
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+  background: linear-gradient(135deg, var(--racing-red), var(--racing-red-dark));
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 700;
+  padding: 1rem 2rem;
+  border: 2px solid var(--racing-red);
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 51, 102, 0.4);
+  border-color: var(--speed-yellow);
+  box-shadow: 
+    0 0 40px var(--racing-red-glow),
+    0 8px 32px rgba(255, 0, 0, 0.4);
+  transform: translateY(-3px) scale(1.05);
 }
 
-/* Loading States */
+/* WIDGETS - Carbon Fiber Look */
+.widget {
+  background: var(--bg-carbon);
+  border: 2px solid var(--border-dark);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.widget::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 0, 0, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.widget:hover::after {
+  left: 100%;
+}
+
+.widget:hover {
+  border-color: var(--racing-red);
+  box-shadow: 0 0 30px var(--racing-red-glow);
+}
+
+/* BADGES - Racing Numbers */
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0.25rem;
+}
+
+.badge-primary {
+  background: var(--racing-red);
+  color: white;
+  border: 2px solid var(--racing-red-dark);
+  box-shadow: 
+    0 0 20px var(--racing-red-glow),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.badge-secondary {
+  background: var(--bg-charcoal);
+  color: var(--text-silver);
+  border: 2px solid var(--border-dark);
+}
+
+/* ACCENT LINE - Racing Stripe */
+.accent-line {
+  width: 6px;
+  height: 3rem;
+  background: linear-gradient(
+    to bottom,
+    var(--racing-red),
+    var(--racing-red-dark)
+  );
+  box-shadow: 0 0 20px var(--racing-red-glow);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--racing-red-glow);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--racing-red-glow);
+  }
+}
+
+/* HOVER LIFT - Aggressive */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 0 40px var(--racing-red-glow),
+    0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* FOCUS STATES - High Visibility */
+:focus-visible {
+  outline: 3px solid var(--racing-red);
+  outline-offset: 4px;
+  box-shadow: 0 0 20px var(--racing-red-glow);
+}
+
+/* SKELETON LOADING - Carbon Effect */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -200,70 +346,20 @@ h1, h2, h3, h4, h5, h6 {
 .skeleton {
   background: linear-gradient(
     90deg,
-    var(--background-secondary) 0%,
-    var(--background-elevated) 50%,
-    var(--background-secondary) 100%
+    var(--bg-carbon) 0%,
+    var(--bg-charcoal) 50%,
+    var(--bg-carbon) 100%
   );
   background-size: 1000px 100%;
   animation: shimmer 2s infinite;
 }
 
-/* Performance Optimizations */
+/* PERFORMANCE */
 .will-change-transform {
   will-change: transform;
 }
 
-/* Widget Styles */
-.widget {
-  background: var(--background-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  backdrop-filter: blur(12px);
-}
-
-.widget:hover {
-  border-color: var(--brand-primary);
-  box-shadow: 0 8px 32px rgba(255, 51, 102, 0.15);
-}
-
-/* Badge Styles */
-.badge {
-  display: inline-block;
-  padding: 0.375rem 0.875rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-radius: 0.375rem;
-}
-
-.badge-primary {
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
-  color: white;
-  box-shadow: 0 4px 12px rgba(255, 51, 102, 0.3);
-}
-
-.badge-secondary {
-  background: var(--background-elevated);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-default);
-}
-
-/* Accent Line */
-.accent-line {
-  width: 4px;
-  height: 2rem;
-  background: linear-gradient(to bottom, var(--brand-primary), var(--brand-secondary));
-  border-radius: 2px;
-}
-
-/* Premium Hover Effects */
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
