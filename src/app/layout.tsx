@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, DM_Sans, Space_Mono } from 'next/font/google'
 import './globals.css'
-import RunningTextMotoGP from '@/components/RunningTextMotoGP'
-import RunningTextWSBK from '@/components/RunningTextWSBK'
 import MegaMenuNavbar from '@/components/MegaMenuNavbar'
 import { WebVitals } from '@/components/WebVitals'
 
@@ -195,12 +193,6 @@ export default function RootLayout({
         
         {/* Mega Menu Navbar */}
         <MegaMenuNavbar />
-        
-        {/* Running Text Bars */}
-        <div className="sticky top-16 z-40">
-          <RunningTextMotoGP />
-          <RunningTextWSBK />
-        </div>
         
         {/* Main Content */}
         <main className="min-h-screen pt-4">
