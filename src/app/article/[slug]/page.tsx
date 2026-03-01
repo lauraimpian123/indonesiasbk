@@ -2,19 +2,29 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { articlesPhase2A } from '@/data/articles-phase2a';
+import { articlesPhase2B } from '@/data/articles-phase2b';
 
-// Article database (in real app, this would come from PostgreSQL)
-const articles: Record<string, any> = {
-  'ducati-vs-bmw-superbike': {
-    title: 'Ducati Panigale V4 vs BMW S1000RR: Duel Superbike Eropa',
-    category: 'Superbike',
-    categoryColor: '#ff1744',
-    author: 'King Apex Wheelie',
-    date: '2026-03-01',
-    readingTime: '8 min',
-    heroImage: '/images/hero/2026-03-01-20-21-10-hero-motogp.webp',
-    excerpt: 'Dua superbike Eropa terbaik berhadapan langsung. Mana yang lebih unggul: tenaga V4 Ducati atau elektronik canggih BMW?',
-    content: `
+// Combine all articles into one database
+const allArticles = [...articlesPhase2A, ...articlesPhase2B];
+
+// Convert array to Record for easy lookup
+const articles: Record<string, any> = {};
+allArticles.forEach(article => {
+  articles[article.slug] = article;
+});
+
+// Add original hardcoded articles for backward compatibility
+articles['ducati-vs-bmw-superbike'] = {
+  title: 'Ducati Panigale V4 vs BMW S1000RR: Duel Superbike Eropa',
+  category: 'Superbike',
+  categoryColor: '#ff1744',
+  author: 'King Apex Wheelie',
+  date: '2026-03-01',
+  readingTime: '8 min',
+  heroImage: '/images/hero/2026-03-01-20-21-10-hero-motogp.webp',
+  excerpt: 'Dua superbike Eropa terbaik berhadapan langsung. Mana yang lebih unggul: tenaga V4 Ducati atau elektronik canggih BMW?',
+  content: `
 ## Pendahuluan: Clash of Titans
 
 Ducati Panigale V4 dan BMW S1000RR adalah dua nama yang selalu muncul ketika membahas superbike terbaik di dunia. Kedua motor ini mewakili filosofi engineering yang berbeda: Ducati dengan mesin V4 khas MotoGP, BMW dengan teknologi elektronik terdepan.
@@ -78,297 +88,272 @@ Ducati menawarkan **prestige**. Brand heritage MotoGP, sound V4 yang unique, dan
 
 **Pilih BMW S1000RR jika**:
 - Budget lebih rasional
-- Ingin elektronik terbaik di kelasnya
-- Butuh motor daily-rideable (relatif)
-- Servis cost jadi pertimbangan
-- Prioritas performa + practicality
-
-Kedua motor ini **sama-sama luar biasa**. Tidak ada pilihan salah. Cuma soal preferensi: emosi (Ducati) atau logika (BMW).
-
-Yang jelas, kalau punya budget segitu... **beli keduanya!** 😎
-    `,
-  },
-  
-  'honda-adv-160-review': {
-    title: 'Honda ADV 160: Skutik Adventure Terlaris Indonesia',
-    category: 'Supermatic',
-    categoryColor: '#9c27b0',
-    author: 'King Apex Wheelie',
-    date: '2026-02-28',
-    readingTime: '6 min',
-    heroImage: '/images/hero/2026-03-01-20-21-25-hero-superbike.webp',
-    excerpt: 'Kenapa Honda ADV 160 jadi skutik adventure terlaris? Review lengkap fitur, performa, dan value for money.',
-    content: `
-## Fenomena ADV 160 di Indonesia
-
-Honda ADV 160 adalah **skutik adventure paling laris** di Indonesia sejak launching 2020. Penjualan konsisten 5,000+ unit/bulan, mengalahkan kompetitor seperti Yamaha Aerox dan PCX 160.
-
-Kenapa? Kombinasi **practicality + adventure styling + reliability Honda**.
-
-Harga **Rp 39 jutaan** (OTR Jakarta) memang premium untuk skutik 160cc, tapi masih terjangkau untuk middle-class riders yang ingin naik kelas dari Vario/Beat.
-
-## Mesin: Cukup untuk Daily Riding
-
-Engine 156cc eSP+ menghasilkan **15.8 HP @ 8,500 rpm** dan **13.8 Nm @ 6,500 rpm**. Bukan angka yang bikin wow, tapi **cukup banget** untuk:
-- Commuting Jakarta-Bekasi setiap hari
-- Touring weekend ke Puncak/Bandung
-- Isi triple (bonceng + barang belanjaan)
-
-> "ADV 160 itu motor yang bikin kamu confident kemana-mana. Gak cepet, tapi gak lemot. Just right." — ADV 160 owner testimonial
-
-Akselerasi 0-60 km/h dalam **6.2 detik**. Top speed **120 km/h** (GPS-verified). Konsumsi BBM rata-rata **38-42 km/liter** (riding style moderate).
-
-## Fitur: Adventure dalam Skutik
-
-Inilah yang bikin ADV 160 beda:
-
-### 1. Ground Clearance 16.5 cm
-Tertinggi di kelas skutik 160cc. Berani lewat banjir 10-15 cm, polisi tidur tinggi, atau jalan rusak.
-
-### 2. Ban Dual-Purpose
-Ukuran **110/80-14 (depan)** dan **120/80-14 (belakang)** dengan pattern semi-knobby. Grip bagus di aspal basah, bisa diajak offroad ringan (tanah/kerikil).
-
-### 3. Smart Key System
-Keyless entry dengan proximity sensor. Bawa kunci di kantong, pencet tombol starter, motor nyala. Fitur premium yang seharusnya jadi standard semua motor.
-
-### 4. LCD Speedometer
-Full digital dengan:
-- Speedometer + odometer + trip meter
-- Fuel gauge akurat (bukan estimasi)
-- Eco indicator (riding efficiency)
-- Service reminder
-
-### 5. USB Charger
-Di bawah stang, protected dari hujan. Bisa charge HP sambil riding—must-have untuk ojol atau riders yang depend on GPS.
-
-## Riding Experience: Comfort & Confidence
-
-Posisi riding **upright** dengan handebar tinggi. Tidak se-aggresif Aerox, tidak se-relax PCX. **Goldilocks zone** untuk touring + city riding.
-
-Suspensi **telescopic fork (depan)** dan **twin shock (belakang)** dengan travel cukup panjang. Nyaman di jalan rusak, stabil di highway.
-
-Ground clearance tinggi bikin **confidence boost** saat hujan atau lewat jalan jelek. Gak perlu mikir polisi tidur, langsung gas aja.
-
-## Kompetitor: ADV 160 vs The Rest
-
-### ADV 160 vs Yamaha Aerox 155
-- **ADV**: Ground clearance tinggi, adventure styling, practical
-- **Aerox**: Top speed lebih tinggi, handling sporty, lebih fun to ride
-- **Verdict**: ADV untuk daily + touring, Aerox untuk fun riding
-
-### ADV 160 vs Honda PCX 160
-- **ADV**: Ground clearance, adventure look, all-terrain capability
-- **PCX**: Lebih premium, lebih halus, lebih cocok city cruising
-- **Verdict**: ADV untuk riders aktif, PCX untuk comfort seekers
-
-### ADV 160 vs Forza 250
-- **Forza**: Lebih kencang, lebih premium, maxi-scooter
-- **ADV**: Lebih terjangkau, lebih lincah, lebih fuel efficient
-- **Verdict**: Forza untuk highway touring, ADV untuk mixed use
-
-## Kekurangan: Nothing's Perfect
-
-### 1. Under-seat Storage Terbatas
-Hanya muat helm half-face + jas hujan. Gak cukat untuk helm full-face. Solusi: pakai box belakang aftermarket.
-
-### 2. Tidak Ada ABS
-Hanya CBS (Combi Brake System). Di harga Rp 39 juta, ABS seharusnya jadi standard. Kompetitor kayak PCX 160 CBS sudah kasih ABS.
-
-### 3. Plastik Body Agak Flimsy
-Panel body gampang penyok kalau kena benturan ringan. Perlu extra careful saat parkir.
-
-## Kesimpulan: Worth It atau Tidak?
-
-**Honda ADV 160 adalah skutik terbaik untuk Indonesian riders** yang butuh motor:
-- ✅ Daily commuting reliable
-- ✅ Weekend touring capable
-- ✅ All-terrain confidence
-- ✅ Resale value tinggi (Honda brand)
-- ✅ Suku cadang murah & gampang
-
-Apakah worth Rp 39 juta? **YES**, kalau kamu butuh motor versatile yang bisa jadi "only bike" untuk semua kebutuhan.
-
-Apakah ada yang lebih baik? Depends on needs:
-- **Fun riding**: Yamaha Aerox 155
-- **Premium comfort**: Honda PCX 160
-- **Speed demon**: Yamaha NMAX Turbo
-
-Tapi untuk **all-around best**? ADV 160 still the king. 👑
-    `,
-  },
-
-  'z900-vs-mt09': {
-    title: 'Kawasaki Z900 vs Yamaha MT-09: Duel Naked Bike',
-    category: 'Naked Bike',
-    categoryColor: '#ffc400',
-    author: 'King Apex Wheelie',
-    date: '2026-02-27',
-    readingTime: '7 min',
-    heroImage: '/images/hero/2026-03-01-20-21-15-hero-wsbk.webp',
-    excerpt: 'Perbandingan lengkap dua naked bike terbaik di kelasnya. Inline-4 Kawasaki vs Triple Yamaha—mana yang lebih fun?',
-    content: `
-## Naked Bike Wars: 4-Cylinder vs 3-Cylinder
-
-Kawasaki Z900 dan Yamaha MT-09 adalah **dua naked bike paling populer** di segment menengah-atas. Keduanya dijual resmi di Indonesia dengan harga bersaing: **Z900 Rp 280 juta**, **MT-09 Rp 310 juta**.
-
-Filosofi engineering berbeda: **Z900** pakai inline-4 (smooth & high-revving), **MT-09** pakai triple (torquey & characterful).
-
-## Engine: Smoothness vs Character
-
-### Kawasaki Z900: 948cc Inline-4
-Mesin **948cc inline-4** menghasilkan **125 HP @ 9,500 rpm** dan **98.6 Nm @ 7,700 rpm**. Power delivery **linear dan smooth** seperti superbike—predictable, easy to control.
-
-Sound engine? **Screaming inline-4**. Di 10,000 rpm, suara Z900 bikin bulu kuduk merinding. Exhaust aftermarket (Akrapovic/Yoshimura) bikin makin ganas.
-
-Redline di **11,000 rpm**. Rev range lebar, bisa cruising santai 3,000 rpm atau attack corners di 9,000+ rpm.
-
-### Yamaha MT-09: 890cc CP3 Triple
-Mesin **890cc crossplane triple** (CP3) menghasilkan **119 HP @ 10,000 rpm** dan **93 Nm @ 7,000 rpm**. Tenaga lebih kecil dari Z900, tapi **torque curve lebih gemuk** di low-mid range.
-
-Yang bikin MT-09 spesial adalah **crossplane crankshaft**—teknologi dari YZF-R1. Firing order irregular (0°-270°-180°-270°) menciptakan **karakter unique**: sound seperti V-twin, power delivery seperti inline-4.
-
-> "The CP3 engine is pure emotion. Every throttle input feels alive, raw, connected." — MT-09 review, Motorcycle News UK
-
-## Performa: Speed vs Agility
-
-### Akselerasi
-- **Z900**: 0-100 km/h dalam **3.1 detik**
-- **MT-09**: 0-100 km/h dalam **3.3 detik**
-
-Z900 sedikit lebih cepat karena power lebih besar, tapi perbedaan 0.2 detik hampir tidak terasa di real-world riding.
-
-### Top Speed
-- **Z900**: **240 km/h** (GPS-verified)
-- **MT-09**: **235 km/h** (GPS-verified)
-
-Keduanya electronically limited. Dengan ECU flash + full exhaust, bisa tembus 250+ km/h.
-
-### Wheelie Capability
-MT-09 **lebih gampang wheelie** karena torque bawah lebih besar. Z900 butuh rev lebih tinggi untuk angkat roda depan.
-
-## Handling: Stability vs Playfulness
-
-### Kawasaki Z900
-Wheelbase **1,450 mm** (lebih panjang) bikin motor lebih **stable** di kecepatan tinggi. Cocok untuk:
-- Highway cruising
-- Long-distance touring
-- Riders yang prioritas comfort + stability
-
-Rake angle **24.5°** dan trail **104 mm**—setup neutral yang confidence-inspiring.
-
-### Yamaha MT-09
-Wheelbase **1,430 mm** (lebih pendek) bikin motor lebih **agile**. Rasanya seperti naked bike ukuran 600cc—super lincah, turn-in cepat.
-
-Cocok untuk:
-- City riding (lane-splitting)
-- Twisty mountain roads
-- Riders yang suka flick-flick cornering
-
-Tapi di highway 140+ km/h, MT-09 sedikit kurang stable. Perlu grip stang lebih kencang.
-
-## Elektronik: Old-School vs Modern
-
-### Kawasaki Z900
-- **Riding Modes**: 4 (Sport, Road, Rain, Manual)
-- **Traction Control**: 3 level + off
-- **ABS**: Dual-channel (non-cornering)
-- **TFT Display**: 4.3" full-color
-
-Sistem elektronik **adequate** tapi tidak cutting-edge. Kawasaki lebih fokus ke "raw riding experience" daripada elektronik canggih.
-
-### Yamaha MT-09
-- **Riding Modes**: 3 (Sport, Street, Rain) + 2 custom
-- **Traction Control**: Adjustable (IMU-based)
-- **Slide Control**: Yes (IMU-based)
-- **Quickshifter**: Bi-directional (up/down)
-- **ABS**: Cornering ABS (IMU-based)
-- **TFT Display**: 3.5" full-color
-
-MT-09 gen terbaru (2021+) punya **6-axis IMU** yang enable cornering ABS, slide control, dan wheelie control. Jauh lebih advanced dari Z900.
-
-## Harga & Value
-
-| Spesifikasi | Kawasaki Z900 | Yamaha MT-09 |
-|-------------|---------------|--------------|
-| Harga | Rp 280 jt | Rp 310 jt |
-| Tenaga | 125 HP | 119 HP |
-| Torsi | 98.6 Nm | 93 Nm |
-| Bobot | 210 kg | 189 kg |
-| Elektronik | Good | Excellent |
-| Quickshifter | Optional | Standard |
-
-MT-09 lebih mahal **Rp 30 juta**, tapi dapat:
-- ✅ IMU 6-axis + cornering ABS
-- ✅ Quickshifter bi-directional
-- ✅ 21 kg lebih ringan
-- ✅ CP3 engine yang unique
-
-Z900 lebih murah, dapat:
-- ✅ Inline-4 smooth & high-revving
-- ✅ 6 HP lebih besar
-- ✅ Lebih stable di highway
-
-## Kesimpulan: Pilih Mana?
-
-**Pilih Kawasaki Z900 jika**:
-- Suka smooth inline-4 engine
-- Prioritas stability + comfort
-- Budget lebih hemat Rp 30 juta
-- Riding style smooth & predictable
-- Banyak highway cruising
-
-**Pilih Yamaha MT-09 jika**:
-- Suka engine berkarakter (CP3 triple)
-- Prioritas agility + fun factor
-- Budget cukup untuk elektronik canggih
-- Riding style aggressive & playful
-- Banyak twisty roads / city riding
-
-Personally? **MT-09 all day.** Engine CP3 terlalu addictive, handling terlalu fun. Tapi Z900 tetap excellent choice—especially untuk touring atau riders yang baru naik dari 600cc.
-
-Either way, **you can't go wrong.** Keduanya adalah naked bike terbaik di kelasnya. 🏍️
-    `,
-  },
+- Ingin elektronik terdepan
+- Prioritas comfort untuk long-distance
+- Biaya servis jadi pertimbangan
+- Value for money penting
+
+Kedua motor ini **phenomenal** di kelasnya masing-masing. Pilihan akhir tergantung prioritas dan budget kamu. Test ride keduanya sebelum decide—karena feeling saat naik motor itu personal.
+  `
 };
 
-// Generate static paths for all articles
-export async function generateStaticParams() {
-  return Object.keys(articles).map((slug) => ({
-    slug,
-  }));
-}
+articles['marc-marquez-2026'] = {
+  title: 'Marc Márquez di Ducati 2026: Era Baru Sang Alien',
+  category: 'MotoGP',
+  categoryColor: '#ff1744',
+  author: 'King Apex Wheelie',
+  date: '2026-02-28',
+  readingTime: '10 min',
+  heroImage: '/images/hero/2026-03-01-20-21-10-hero-motogp.webp',
+  excerpt: 'Perpindahan Marc Márquez ke Ducati mengubah lanskap MotoGP. Apakah kombinasi 8x world champion dan motor terbaik grid akan unstoppable?',
+  content: `
+## The Biggest Transfer in MotoGP History
 
-// Generate metadata for each article
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
+Ketika Marc Márquez mengumumkan kepindahannya dari Honda ke Ducati untuk musim 2026, dunia MotoGP terguncang. Ini bukan sekadar perpindahan rider biasa—ini adalah **8-time world champion** yang meninggalkan tim tempat dia meraih semua gelar, untuk bergabung dengan rival terbesar mereka.
+
+## Kenapa Márquez Pindah?
+
+Honda RC213V yang dulunya dominan di era 2013-2019 kini jadi motor paling sulit di grid. Márquez mengalami **3 musim terburuk** kariernya (2021-2023), dengan injuries yang terus berulang akibat crashes mencoba kompensasi motor yang underperforming.
+
+Di sisi lain, Ducati Desmosedici GP26 adalah **motor terbaik** di grid 3 tahun berturut-turut. 6 dari 8 rider Ducati finish di top 10 championship 2025. Matematik sederhana: Márquez butuh motor yang bisa menang, Ducati punya motor itu.
+
+## Adaptasi ke Desmosedici: Cepat & Impressive
+
+Tes Valencia Desember 2025 membuktikan skeptis salah. Márquez langsung **3rd fastest** di hari pertama, hanya 0.2 detik dari pole position time race sebelumnya. Crew chief Frankie Carchedi (mantan engineer Bagnaia) terkesima:
+
+> "Marc adapted to the Ducati in 15 laps. Most riders need a full season. He's a freak of nature."
+
+Yang bikin impressive: Márquez langsung **comfortable with rear grip character** Desmosedici yang sangat berbeda dari Honda. RC213V terkenal dengan front-end feel yang tajam, Desmosedici sebaliknya—rear traction luar biasa kuat, tapi front feel lebih muted.
+
+## Racing Style: Will It Work on Ducati?
+
+Márquez terkenal dengan **aggressive save** dan late braking yang spectacular. Ducati lebih rewarding untuk **smooth, calculated riding** ala Bagnaia atau Martin.
+
+Tapi data tes menunjukkan Márquez sudah adjust:
+- **Braking points** 5-10 meter lebih dalam dari Bagnaia (signature MM93)
+- **Corner entry speed** 3-5 km/jam lebih tinggi (masih aggressive)
+- **Throttle application** lebih smooth dari era Honda (adaptasi!)
+
+Kombinasi **Márquez aggression + Ducati stability** bisa jadi formula yang belum pernah ada sebelumnya.
+
+## Factory Ducati vs Gresini: The Politics
+
+Márquez tidak langsung ke Factory Ducati. Dia start di **Gresini Racing** (satellite team) untuk musim 2026, dengan **full factory support**—motor spec identik dengan Bagnaia.
+
+Ini strategi cerdas Ducati:
+1. **Test the waters**: Lihat apakah Márquez bisa adapt sebelum komit full factory seat
+2. **Manage internal rivalry**: Hindari konflik Márquez-Bagnaia terlalu dini
+3. **Commercial genius**: Gresini dapat boost exposure, Ducati dapat flexibilitas
+
+Tapi semua orang tahu: kalau Márquez menang atau fight for championship 2026, **dia naik ke Factory 2027**.
+
+## Predictions: Can Márquez Win #9?
+
+**The Case FOR:**
+✓ Motor terbaik di grid (Desmosedici GP26)
+✓ Full factory support (bukan satellite treatment)
+✓ Márquez masih **31 tahun**, prime age untuk MotoGP
+✓ Crew chief experienced (Frankie Carchedi)
+✓ Motivation tinggi (prove Honda wrong)
+
+**The Case AGAINST:**
+✗ 3 tahun tanpa podium (2021-2023)—confidence bisa jadi issue
+✗ Body masih belum 100% (arm pump occasional, shoulder mobility limited)
+✗ Kompetisi brutal: Bagnaia, Martin, Bastianini, Acosta semua punya motor menang
+✗ Adaptasi mid-season sulit (trek baru, setup baru, team baru)
+
+**Realistic prediction:** Márquez akan **top 5 championship 2026**, dengan **2-3 race wins**. Championship #9 lebih realistis untuk **2027** kalau dia naik Factory dan sudah full adapt.
+
+## Impact on MotoGP: The Márquez Effect
+
+Perpindahan ini mengubah **power dynamics** paddock:
+- **Honda** desperate, butuh rebuild total (rumor datangkan Joan Mir tidak cukup)
+- **Ducati** punya 3 world champions (Bagnaia, Márquez, Bastianini)—internal rivalry tinggi
+- **Aprilia & KTM** tertekan—harus kompetisi dengan Ducati armada
+- **Sponsorship** meledak—Gresini Racing naik value 200% karena Márquez
+
+Dan yang paling penting: **ratings naik**. Fans Honda akan nonton Ducati sekarang. Rivalitas Márquez-Bagnaia = **box office**.
+
+## Kesimpulan: A New Chapter
+
+Marc Márquez di Ducati adalah **gamble** untuk keduanya. Tapi early signs sangat positif. Kalau Márquez bisa adapt penuh dan stay healthy, kita akan saksikan **salah satu comeback terbesar** dalam sejarah motorsport.
+
+**The Alien is back. And this time, he's riding red.**
+  `
+};
+
+articles['motogp-calendar-2026'] = {
+  title: 'Kalender MotoGP 2026: 22 Seri, 2 Sirkuit Baru',
+  category: 'MotoGP',
+  categoryColor: '#ff1744',
+  author: 'King Apex Wheelie',
+  date: '2026-02-25',
+  readingTime: '7 min',
+  heroImage: '/images/hero/2026-03-01-20-21-10-hero-motogp.webp',
+  excerpt: '22 race dalam 9 bulan. Dari Losail hingga Valencia, termasuk debut sirkuit Kazakhstan dan kembalinya India GP. Ini kalender paling padat dalam sejarah MotoGP.',
+  content: `
+## 22 Races, 9 Months, Pure Adrenaline
+
+MotoGP 2026 adalah **musim terpanjang** dalam sejarah championship. 22 seri di 17 negara, dengan **2 sirkuit baru** dan kembalinya beberapa trek klasik. Dorna Sports push limit untuk ekspansi global, tapi apakah ini terlalu much?
+
+## Highlights: What's New in 2026?
+
+### 🆕 Kazakhstan GP (Sokol International Circuit)
+Debut di bulan Juli. Sirkuit 4.5 km di Almaty dengan **18 corner** dan straight 1.2 km. FIM homologation selesai November 2025. Expected lap time: ~1:42. Climate challenge: altitude 900m, udara tipis = less power.
+
+### 🔙 India GP Returns (Buddh International Circuit)
+Setelah hiatus 2 tahun karena pandemi, India GP kembali. Buddh Circuit (5.1 km, 16 corner) adalah salah satu **fastest track** di kalender. Sektor 1-2 high-speed, sektor 3 technical. Lap record: 1:25 (Marini, 2023).
+
+### 📅 22 Races: The Full Calendar
+
+**March:**
+- 9 Mar: Qatar GP (Losail) — Night race, season opener
+- 23 Mar: Indonesia GP (Mandalika) 🇮🇩
+- 30 Mar: Argentina GP (Termas de Río Hondo)
+
+**April:**
+- 13 Apr: Americas GP (COTA, Texas)
+- 27 Apr: Portugal GP (Portimão)
+
+**May:**
+- 11 May: Spain GP (Jerez)
+- 18 May: France GP (Le Mans)
+- 25 May: Italy GP (Mugello)
+
+**June:**
+- 8 Jun: Catalunya GP (Barcelona)
+- 22 Jun: Germany GP (Sachsenring)
+- 29 Jun: Netherlands GP (Assen) — "Cathedral of Speed"
+
+**July:**
+- 13 Jul: Kazakhstan GP (Sokol) 🆕
+- 20 Jul: Great Britain GP (Silverstone)
+
+**August:**
+- 10 Aug: Austria GP (Red Bull Ring)
+- 17 Aug: India GP (Buddh) 🔙
+- 31 Aug: San Marino GP (Misano)
+
+**September:**
+- 14 Sep: Aragon GP (MotorLand Aragón)
+- 21 Sep: Japan GP (Motegi)
+
+**October:**
+- 5 Oct: Australia GP (Phillip Island)
+- 19 Oct: Thailand GP (Buriram)
+- 26 Oct: Malaysia GP (Sepang)
+
+**November:**
+- 9 Nov: Valencia GP (Circuit Ricardo Tormo) — Season finale
+
+## The Grind: Is 22 Races Too Much?
+
+**Riders divided:**
+
+**Pro-expansion camp** (Bagnaia, Márquez):
+- More races = more chances to recover from bad weekends
+- Financial benefit (bonuses per race)
+- Global exposure untuk sponsors
+
+**Anti-expansion camp** (Quartararo, Miller):
+- Physical toll terlalu tinggi (risk of burnout)
+- Less time untuk testing & development
+- Travel schedule brutal (3 flyaway races back-to-back di Oktober)
+
+**Crew chiefs mostly against**: 22 races = mechanics bekerja 280+ hari setahun. Turnover tinggi, quality of life menurun.
+
+## Indonesia GP: Home Race yang Special
+
+**Mandalika** (23 Maret) jadi sorotan karena:
+- Mario Suryo Aji debut full-season di Moto2 (Idemitsu Honda Team Asia)
+- Veda Ega Pratama rookie di Moto3 (Honda Team Asia)
+- Expected crowd: **150,000+ spectators** (terbesar di Asia Tenggara)
+
+Turn 10-11 (downhill left-right combo) adalah **signature corner** Mandalika—high-speed, butuh balls of steel. Crash rate tertinggi di situ.
+
+## Circuit Insights: Fastest vs Most Technical
+
+**Fastest circuits** (avg speed >160 km/jam):
+1. **Phillip Island** (Australia) — 169 km/jam avg
+2. **Mugello** (Italy) — 166 km/jam avg
+3. **Red Bull Ring** (Austria) — 164 km/jam avg
+
+**Most technical** (cornering precision critical):
+1. **Sachsenring** (Germany) — 13 corner, 10 left-hander
+2. **Jerez** (Spain) — Low-speed corners, rear grip critical
+3. **Valencia** (Ricardo Tormo) — Tight, slow, overtaking difficult
+
+**Best for overtaking:**
+1. **Losail** (Qatar) — Long back straight, 3 DRS zones
+2. **COTA** (USA) — Multiple lines di Turn 1, 11, 12
+3. **Sepang** (Malaysia) — Wide track, heavy braking zones
+
+## Weather Wild Cards
+
+**High rain risk:**
+- **Le Mans** (France, May) — 60% historical rain chance
+- **Silverstone** (UK, July) — British weather unpredictable
+- **Phillip Island** (Australia, October) — Spring season, coastal wind
+
+**Extreme heat:**
+- **Losail** (Qatar) — Night race untuk avoid 45°C day heat
+- **Sepang** (Malaysia) — 35°C + 80% humidity = physical hell
+- **Buriram** (Thailand) — Dehydration risk tinggi
+
+## Championship Implications
+
+Dengan 22 races, **consistency > speed**. Di era 19-20 races, rider bisa afford 2-3 DNF dan masih fight for title. Sekarang? **Maximum 1 DNF** kalau mau realistic shot.
+
+Math: 22 races × 25 points = **550 points maximum**. Historical data: championship winner butuh ~420-450 points (76-82% dari max). Artinya kamu harus **podium 18 dari 22 races**.
+
+**Pressure tinggi. Margin error kecil. Mental strength jadi factor.**
+
+## Kesimpulan: Embrace the Chaos
+
+22 races adalah **marathon, not a sprint**. Rider harus manage:
+- Physical fitness (endurance training critical)
+- Mental resilience (avoid mid-season burnout)
+- Team coordination (mechanics rotation untuk avoid exhaustion)
+
+Untuk fans? **9 bulan non-stop MotoGP action**. Weekends tanpa racing jadi rare. Ideal untuk addicts, overwhelming untuk casual viewers.
+
+**Buckle up. 2026 will be a wild ride.**
+  `
+};
+
+// Generate metadata for SEO
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
   const { slug } = await params;
   const article = articles[slug];
   
   if (!article) {
     return {
-      title: 'Article Not Found',
+      title: 'Article Not Found | IndonesiaSBK',
     };
   }
 
   return {
     title: `${article.title} | IndonesiaSBK`,
-    description: article.excerpt,
-    keywords: `${article.category.toLowerCase()}, ${article.title.toLowerCase()}`,
+    description: article.excerpt || article.metaDescription || article.title,
+    keywords: article.keywords || [],
     openGraph: {
       title: article.title,
-      description: article.excerpt,
-      images: [article.heroImage],
+      description: article.excerpt || article.metaDescription || article.title,
       type: 'article',
       publishedTime: article.date,
       authors: [article.author],
+      images: article.image || article.heroImage,
     },
   };
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ArticlePage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
   const { slug } = await params;
   const article = articles[slug];
 
@@ -376,212 +361,109 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  // Related articles (same category, excluding current)
-  const relatedArticles = Object.entries(articles)
-    .filter(([articleSlug, a]) => a.category === article.category && articleSlug !== slug)
-    .slice(0, 3)
-    .map(([slug, a]) => ({ slug, ...a }));
-
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] md:h-[70vh]">
+      <div className="relative h-[60vh] min-h-[400px]">
         <Image
-          src={article.heroImage}
+          src={article.image || article.heroImage}
           alt={article.title}
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
         
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
-          <div className="container mx-auto max-w-4xl">
-            <Link
-              href={`/${article.category.toLowerCase().replace(' ', '-')}`}
-              className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
-              style={{
-                backgroundColor: `${article.categoryColor}20`,
-                color: article.categoryColor,
-                border: `1px solid ${article.categoryColor}50`,
-              }}
-            >
-              {article.category}
-            </Link>
+        {/* Article Header */}
+        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-4 mb-4 text-sm">
+              <span 
+                className="px-3 py-1 rounded-full font-bold uppercase tracking-wider"
+                style={{ 
+                  backgroundColor: article.categoryColor || '#ff1744',
+                  color: '#000'
+                }}
+              >
+                {article.category}
+              </span>
+              <span className="text-gray-400">{article.date}</span>
+              <span className="text-gray-400">•</span>
+              <span className="text-gray-400">{article.readTime || article.readingTime}</span>
+            </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bebas text-white leading-tight mb-4">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight font-['Bebas_Neue']">
               {article.title}
             </h1>
             
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span className="flex items-center gap-2">
-                <span>✍️</span>
-                <span>{article.author}</span>
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-2">
-                <span>📅</span>
-                <span>{new Date(article.date).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-2">
-                <span>⏱️</span>
-                <span>{article.readingTime} read</span>
-              </span>
+            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+              {article.excerpt}
+            </p>
+            
+            <div className="flex items-center gap-3 text-gray-400">
+              <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-purple-600 rounded-full flex items-center justify-center font-bold text-white">
+                {article.author.split(' ').map((n: string) => n[0]).join('')}
+              </div>
+              <span className="font-semibold">{article.author}</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Article Content */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          {/* Author Info */}
-          <div className="mb-12 p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#ff1744] to-[#ffc400] flex items-center justify-center text-2xl font-bebas">
-                KA
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">{article.author}</h3>
-                <p className="text-sm text-gray-400">
-                  Mantan pembalap profesional, jurnalis motorsport, dan enthusiast sejati.
-                </p>
-              </div>
-            </div>
-          </div>
+      <article className="max-w-4xl mx-auto px-6 py-12 md:py-16">
+        <div 
+          className="prose prose-invert prose-lg max-w-none
+            prose-headings:font-['Bebas_Neue'] prose-headings:tracking-wide
+            prose-h2:text-4xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-red-500
+            prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-cyan-400
+            prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
+            prose-strong:text-white prose-strong:font-bold
+            prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:text-cyan-300
+            prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-400
+            prose-ul:list-disc prose-ul:ml-6 prose-ul:text-gray-300
+            prose-ol:list-decimal prose-ol:ml-6 prose-ol:text-gray-300
+            prose-li:mb-2
+            prose-code:bg-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-cyan-400
+            prose-table:border prose-table:border-gray-700
+            prose-th:bg-gray-800 prose-th:p-3 prose-th:text-left
+            prose-td:p-3 prose-td:border-t prose-td:border-gray-700"
+          dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }}
+        />
 
-          {/* Article Body */}
-          <article 
-            className="prose prose-invert prose-lg max-w-none
-              prose-headings:font-bebas prose-headings:text-white prose-headings:uppercase prose-headings:tracking-tight
-              prose-h2:text-4xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
-              prose-strong:text-white prose-strong:font-bold
-              prose-blockquote:border-l-4 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-400
-              prose-ul:text-gray-300 prose-ol:text-gray-300
-              prose-li:mb-2
-              prose-table:border-collapse prose-table:border prose-table:border-white/20
-              prose-th:border prose-th:border-white/20 prose-th:px-4 prose-th:py-2 prose-th:bg-white/5
-              prose-td:border prose-td:border-white/20 prose-td:px-4 prose-td:py-2"
-            style={{
-              '--tw-prose-quote-borders': article.categoryColor,
-            } as any}
-            dangerouslySetInnerHTML={{ __html: article.content.split('\n').map((line: string) => {
-              if (line.startsWith('## ')) {
-                return `<h2>${line.slice(3)}</h2>`;
-              } else if (line.startsWith('### ')) {
-                return `<h3>${line.slice(4)}</h3>`;
-              } else if (line.startsWith('> ')) {
-                return `<blockquote><p>${line.slice(2)}</p></blockquote>`;
-              } else if (line.startsWith('| ')) {
-                // Simple table handling (would need proper markdown parser in production)
-                return line;
-              } else if (line.trim().startsWith('-')) {
-                return `<li>${line.trim().slice(2)}</li>`;
-              } else if (line.trim()) {
-                return `<p>${line}</p>`;
-              }
-              return '';
-            }).join('') }}
-          />
-
-          {/* Share Buttons */}
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <p className="text-sm text-gray-400 mb-4">Bagikan artikel ini:</p>
-            <div className="flex gap-4">
-              <button className="px-6 py-2 bg-[#1DA1F2]/20 border border-[#1DA1F2]/50 text-[#1DA1F2] rounded-lg hover:bg-[#1DA1F2]/30 transition-all duration-300">
-                Twitter
-              </button>
-              <button className="px-6 py-2 bg-[#25D366]/20 border border-[#25D366]/50 text-[#25D366] rounded-lg hover:bg-[#25D366]/30 transition-all duration-300">
-                WhatsApp
-              </button>
-              <button className="px-6 py-2 bg-[#0088cc]/20 border border-[#0088cc]/50 text-[#0088cc] rounded-lg hover:bg-[#0088cc]/30 transition-all duration-300">
-                Telegram
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Articles */}
-      {relatedArticles.length > 0 && (
-        <section className="py-12 border-t border-white/10">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bebas text-white mb-8 uppercase tracking-tight">
-              Artikel {article.category} Lainnya
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedArticles.map((related) => (
-                <Link
-                  key={related.slug}
-                  href={`/article/${related.slug}`}
-                  className="group bg-black/80 backdrop-blur-md border border-white/10 rounded-lg overflow-hidden hover:border-white/30 transition-all duration-300"
-                  style={{
-                    boxShadow: `0 0 0 0 ${article.categoryColor}`,
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = `0 0 20px ${article.categoryColor}40`;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = `0 0 0 0 ${article.categoryColor}`;
-                  }}
+        {/* Tags/Keywords */}
+        {article.keywords && article.keywords.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-gray-800">
+            <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-4">Tags:</h3>
+            <div className="flex flex-wrap gap-2">
+              {article.keywords.map((keyword: string, index: number) => (
+                <span 
+                  key={index}
+                  className="px-3 py-1 bg-gray-800 hover:bg-gray-700 rounded-full text-sm text-gray-300 transition-colors cursor-pointer"
                 >
-                  <div className="relative h-48">
-                    <Image
-                      src={related.heroImage}
-                      alt={related.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2 group-hover:text-[--color]"
-                        style={{ '--color': article.categoryColor } as any}>
-                      {related.title}
-                    </h3>
-                    <p className="text-sm text-gray-400 mb-3 line-clamp-2">
-                      {related.excerpt}
-                    </p>
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <span>{related.readingTime} read</span>
-                    </div>
-                  </div>
-                </Link>
+                  {keyword}
+                </span>
               ))}
             </div>
           </div>
-        </section>
-      )}
+        )}
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: article.title,
-            image: article.heroImage,
-            datePublished: article.date,
-            dateModified: article.date,
-            author: {
-              '@type': 'Person',
-              name: article.author,
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'IndonesiaSBK',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://indonesiasbk.com/logo.png',
-              },
-            },
-            description: article.excerpt,
-          }),
-        }}
-      />
+        {/* Share & Back */}
+        <div className="mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">
+          <Link 
+            href="/"
+            className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-colors"
+          >
+            ← Kembali ke Home
+          </Link>
+          
+          <div className="flex gap-4">
+            <button className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+              Share
+            </button>
+          </div>
+        </div>
+      </article>
     </main>
   );
 }
