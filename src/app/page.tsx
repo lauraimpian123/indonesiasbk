@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import RunningTextWSBK from '@/components/RunningTextWSBK'
+import RunningTextMotoGP from '@/components/RunningTextMotoGP'
 
 // Mock data - nanti diganti dari API backend
 const heroArticle = {
@@ -134,7 +136,10 @@ export default function Home() {
 
           {/* WSBK Section */}
           <section className="mb-12">
-            <div className="flex items-center justify-between mb-6">
+            {/* WSBK Running Text */}
+            <RunningTextWSBK />
+            
+            <div className="flex items-center justify-between mb-6 mt-6">
               <div className="flex items-center space-x-3">
                 <div className="w-1 h-8 bg-brand"></div>
                 <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
@@ -174,7 +179,10 @@ export default function Home() {
 
           {/* MotoGP Section */}
           <section className="mb-12">
-            <div className="flex items-center justify-between mb-6">
+            {/* MotoGP Running Text */}
+            <RunningTextMotoGP />
+            
+            <div className="flex items-center justify-between mb-6 mt-6">
               <div className="flex items-center space-x-3">
                 <div className="w-1 h-8 bg-brand"></div>
                 <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">

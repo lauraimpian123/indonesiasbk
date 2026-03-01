@@ -34,13 +34,8 @@ export default function RootLayout({
         {/* Mobile Menu Button */}
         <MobileMenu />
         
-        {/* MotoGP Running Text - Fixed at Top */}
-        <div className="sticky top-0 z-50">
-          <RunningTextMotoGP />
-        </div>
-        
         {/* Main Navbar */}
-        <nav className="sticky top-[42px] z-40 bg-primary border-b border-default backdrop-blur-sm">
+        <nav className="sticky top-0 z-50 bg-primary border-b border-default backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14">
               <div className="flex items-center space-x-8">
@@ -66,13 +61,11 @@ export default function RootLayout({
         </nav>
 
         {/* Mega Menu - Hidden on Mobile */}
-        <div className="hidden md:block sticky top-[98px] z-[60] bg-secondary">
+        <div className="hidden md:block sticky top-[56px] z-40 bg-secondary">
           <MegaMenu />
         </div>
         
         <main className="min-h-screen">
-          {/* WSBK Running Text - In content area */}
-          <RunningTextWSBK />
           {children}
         </main>
         
