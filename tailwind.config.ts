@@ -9,37 +9,71 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Pure Black Racing Backgrounds
-        primary: '#000000',
-        'deep-black': '#0A0A0A',
-        secondary: '#121212',
-        'charcoal': '#1C1C1C',
-        elevated: '#1C1C1C',
+        black: '#060608',
+        void: '#0a0a0f',
+        dark: '#0f0f16',
+        panel: '#14141e',
+        surface: '#1a1a26',
+        line: '#252535',
+        muted: '#3a3a52',
+        red: '#e8001a',
+        'red-hot': '#ff1a30',
+        'red-deep': '#8a0010',
+        'red-glow': 'rgba(232,0,26,0.15)',
+        white: '#f0f0f5',
+        silver: '#b8b8cc',
+        dim: '#6a6a88',
+        gold: '#c8a020',
+        'gold-light': '#f0c030',
         
-        // Racing Red - Aggressive
-        brand: '#FF0000',
-        'brand-dark': '#CC0000',
-        'brand-secondary': '#FF3333',
-        
-        // Performance Accents
-        accent: '#FFD700',
-        'speed-orange': '#FF8C00',
-        
-        // Text - High Contrast
-        muted: '#999999',
-        subtle: '#CCCCCC',
-        'racing-white': '#F5F5F5',
-        
-        // Borders
-        default: '#2A2A2A',
-        tertiary: '#1A1A1A',
+        // Aliases for compatibility
+        primary: '#060608',
+        secondary: '#0f0f16',
+        tertiary: '#14141e',
+        brand: '#e8001a',
+        'brand-secondary': '#ff1a30',
+        default: '#252535',
+        subtle: '#b8b8cc',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        head: ['var(--font-barlow-condensed)', 'sans-serif'],
+        body: ['var(--font-barlow)', 'sans-serif'],
+        mono: ['var(--font-share-tech)', 'monospace'],
+        sans: ['var(--font-barlow)', 'sans-serif'],
       },
-      boxShadow: {
-        'glow-red': '0 0 30px rgba(255, 0, 0, 0.5)',
-        'glow-yellow': '0 0 30px rgba(255, 215, 0, 0.5)',
+      animation: {
+        'blink': 'blink 1s infinite',
+        'ticker': 'ticker 30s linear infinite',
+        'float': 'float 2s ease-in-out infinite',
+        'float2': 'float2 4s ease-in-out infinite',
+        'loader-fill': 'loader-fill 1.2s ease forwards',
+        'loader-pulse': 'loader-pulse 0.8s ease-in-out infinite',
+      },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.2' },
+        },
+        ticker: {
+          'from': { transform: 'translateX(0)' },
+          'to': { transform: 'translateX(-50%)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateX(-50%) translateY(0)' },
+          '50%': { transform: 'translateX(-50%) translateY(6px)' },
+        },
+        float2: {
+          '0%, 100%': { transform: 'rotate(-15deg) translateY(0)' },
+          '50%': { transform: 'rotate(-15deg) translateY(-12px)' },
+        },
+        'loader-fill': {
+          'from': { width: '0' },
+          'to': { width: '100%' },
+        },
+        'loader-pulse': {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '1' },
+        },
       },
     },
   },
