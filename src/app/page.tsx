@@ -213,49 +213,117 @@ export default function Home() {
         </aside>
       </div>
 
-      {/* All Categories Section */}
+      {/* Categories Section - Structured by Groups */}
       <section className="mt-12">
-        <h2 className="text-2xl font-bold mb-6 border-l-4 border-brand pl-3">
-          Semua Kategori
+        <h2 className="text-2xl font-bold mb-8 border-l-4 border-brand pl-3">
+          Jelajahi Kategori
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {[
-            { name: 'WSBK', slug: 'wsbk', color: 'bg-[#E11D48]' },
-            { name: 'MotoGP', slug: 'motogp', color: 'bg-[#FF6B35]' },
-            { name: 'Moto2', slug: 'moto2', color: 'bg-[#3B82F6]' },
-            { name: 'Moto3', slug: 'moto3', color: 'bg-[#10B981]' },
-            { name: 'F1', slug: 'f1', color: 'bg-[#DC2626]' },
-            { name: 'BSB', slug: 'bsb', color: 'bg-[#E11D48]' },
-            { name: 'Superbike', slug: 'superbike', color: 'bg-[#E11D48]' },
-            { name: 'Supersport', slug: 'supersport', color: 'bg-[#3B82F6]' },
-            { name: 'Supermatic', slug: 'supermatic', color: 'bg-[#F59E0B]' },
-            { name: 'Naked Bike', slug: 'naked', color: 'bg-[#8B5CF6]' },
-            { name: 'Adventure', slug: 'adventure', color: 'bg-[#10B981]' },
-            { name: 'Cruiser', slug: 'cruiser', color: 'bg-[#DC2626]' },
-            { name: 'Review', slug: 'review', color: 'bg-[#3B82F6]' },
-            { name: 'Gear Review', slug: 'gear-review', color: 'bg-[#10B981]' },
-            { name: 'Helmet Review', slug: 'helmet-review', color: 'bg-[#F59E0B]' },
-            { name: 'Active Riders', slug: 'active-riders', color: 'bg-[#10B981]' },
-            { name: 'Retired Riders', slug: 'retired-riders', color: 'bg-[#6B7280]' },
-            { name: 'Standings', slug: 'rider-standings', color: 'bg-[#E11D48]' },
-            { name: 'Official Teams', slug: 'official-teams', color: 'bg-[#DC2626]' },
-            { name: 'Satellite Teams', slug: 'satellite-teams', color: 'bg-[#3B82F6]' },
-            { name: 'Racing School', slug: 'racing-school', color: 'bg-[#10B981]' },
-            { name: 'Workshop', slug: 'workshop', color: 'bg-[#F59E0B]' },
-            { name: 'Touring', slug: 'touring', color: 'bg-[#06B6D4]' },
-            { name: 'Event', slug: 'event', color: 'bg-[#EC4899]' },
-            { name: 'Tech & EV', slug: 'tech', color: 'bg-[#10B981]' },
-            { name: 'News', slug: 'news', color: 'bg-[#8B5CF6]' },
-            { name: 'Lifestyle', slug: 'lifestyle', color: 'bg-[#F59E0B]' },
-          ].map((cat) => (
-            <a
-              key={cat.slug}
-              href={`/${cat.slug}`}
-              className={`${cat.color} text-white rounded-lg p-4 hover:opacity-90 transition-opacity text-center`}
-            >
-              <h3 className="font-semibold text-sm">{cat.name}</h3>
-            </a>
-          ))}
+
+        {/* Motorsport Racing */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Motorsport</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            {['WSBK', 'MotoGP', 'Moto2', 'Moto3', 'F1', 'BSB'].map((name) => (
+              <a
+                key={name}
+                href={`/${name.toLowerCase()}`}
+                className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+              >
+                {name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Bike Classes */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Bike Class</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            {[
+              { name: 'Superbike', slug: 'superbike' },
+              { name: 'Supersport', slug: 'supersport' },
+              { name: 'Supermatic', slug: 'supermatic' },
+              { name: 'Naked Bike', slug: 'naked' },
+              { name: 'Adventure', slug: 'adventure' },
+              { name: 'Cruiser', slug: 'cruiser' },
+            ].map((cat) => (
+              <a
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+              >
+                {cat.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Review */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Review</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2">
+            {[
+              { name: 'Bike Review', slug: 'bike-review' },
+              { name: 'Gear Review', slug: 'gear-review' },
+              { name: 'Helmet Review', slug: 'helmet-review' },
+              { name: 'Accessory', slug: 'accessory-review' },
+              { name: 'Comparison', slug: 'comparison' },
+            ].map((cat) => (
+              <a
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+              >
+                {cat.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Riders & Teams */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Riders & Teams</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+            {[
+              { name: 'Active Riders', slug: 'active-riders' },
+              { name: 'Retired Riders', slug: 'retired-riders' },
+              { name: 'Standings', slug: 'rider-standings' },
+              { name: 'Official Teams', slug: 'official-teams' },
+              { name: 'Satellite Teams', slug: 'satellite-teams' },
+            ].map((cat) => (
+              <a
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+              >
+                {cat.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Content & Community */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Content & Community</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+            {[
+              { name: 'News', slug: 'news' },
+              { name: 'Tech & EV', slug: 'tech' },
+              { name: 'Racing School', slug: 'racing-school' },
+              { name: 'Workshop', slug: 'workshop' },
+              { name: 'Touring', slug: 'touring' },
+              { name: 'Event', slug: 'event' },
+              { name: 'Lifestyle', slug: 'lifestyle' },
+            ].map((cat) => (
+              <a
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+              >
+                {cat.name}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </div>
