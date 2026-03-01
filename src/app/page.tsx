@@ -280,16 +280,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Riders & Teams */}
+        {/* Racing */}
         <div className="mb-8">
-          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Riders & Teams</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Racing</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
             {[
+              { name: 'Official Teams', slug: 'official-teams' },
+              { name: 'Satellite Teams', slug: 'satellite-teams' },
+              { name: 'Racing School', slug: 'racing-school' },
               { name: 'Active Riders', slug: 'active-riders' },
               { name: 'Retired Riders', slug: 'retired-riders' },
               { name: 'Standings', slug: 'rider-standings' },
-              { name: 'Official Teams', slug: 'official-teams' },
-              { name: 'Satellite Teams', slug: 'satellite-teams' },
             ].map((cat) => (
               <a
                 key={cat.slug}
@@ -302,17 +303,28 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Event */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Event</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            <a
+              href="/event"
+              className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+            >
+              Event Calendar
+            </a>
+          </div>
+        </div>
+
         {/* Content & Community */}
         <div className="mb-8">
           <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Content & Community</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
             {[
               { name: 'News', slug: 'news' },
               { name: 'Tech & EV', slug: 'tech' },
-              { name: 'Racing School', slug: 'racing-school' },
               { name: 'Workshop', slug: 'workshop' },
               { name: 'Touring', slug: 'touring' },
-              { name: 'Event', slug: 'event' },
               { name: 'Lifestyle', slug: 'lifestyle' },
             ].map((cat) => (
               <a

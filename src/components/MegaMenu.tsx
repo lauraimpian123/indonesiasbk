@@ -42,27 +42,21 @@ const categoryTree = [
     ],
   },
   {
-    id: 'rider',
-    name: 'Rider',
-    children: [
-      { id: 'active-riders', name: 'Active Riders', slug: 'active-riders' },
-      { id: 'retired-riders', name: 'Retired Riders', slug: 'retired-riders' },
-      { id: 'rider-standings', name: 'Rider Standings', slug: 'rider-standings' },
-    ],
-  },
-  {
-    id: 'team',
-    name: 'Team',
+    id: 'racing',
+    name: 'Racing',
     children: [
       { id: 'official-teams', name: 'Official Teams', slug: 'official-teams' },
       { id: 'satellite-teams', name: 'Satellite Teams', slug: 'satellite-teams' },
-      { id: 'team-news', name: 'Team News', slug: 'team-news' },
+      { id: 'racing-school', name: 'Racing School', slug: 'racing-school' },
+      { id: 'active-riders', name: 'Active Riders', slug: 'active-riders' },
+      { id: 'retired-riders', name: 'Retired Riders', slug: 'retired-riders' },
+      { id: 'rider-standings', name: 'Standings', slug: 'rider-standings' },
     ],
   },
   {
-    id: 'racing-school',
-    name: 'Racing School',
-    slug: 'racing-school',
+    id: 'event',
+    name: 'Event',
+    slug: 'event',
     children: [],
   },
   {
