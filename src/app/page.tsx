@@ -223,13 +223,24 @@ export default function Home() {
         <div className="mb-8">
           <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Motorsport</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
-            {['WSBK', 'MotoGP', 'Moto2', 'Moto3', 'F1', 'BSB'].map((name) => (
+            {[
+              { name: 'WSBK', slug: 'wsbk' },
+              { name: 'MotoGP', slug: 'motogp' },
+              { name: 'Moto2', slug: 'moto2' },
+              { name: 'Moto3', slug: 'moto3' },
+              { name: 'MiniGP', slug: 'minigp' },
+              { name: 'F1', slug: 'f1' },
+              { name: 'BSB', slug: 'bsb' },
+              { name: 'ARRC', slug: 'arrc' },
+              { name: 'IDC', slug: 'idc' },
+              { name: 'MotoE', slug: 'motoe' },
+            ].map((cat) => (
               <a
-                key={name}
-                href={`/${name.toLowerCase()}`}
+                key={cat.slug}
+                href={`/${cat.slug}`}
                 className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
               >
-                {name}
+                {cat.name}
               </a>
             ))}
           </div>
@@ -283,14 +294,11 @@ export default function Home() {
         {/* Racing */}
         <div className="mb-8">
           <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Racing</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2">
             {[
-              { name: 'Official Teams', slug: 'official-teams' },
-              { name: 'Satellite Teams', slug: 'satellite-teams' },
-              { name: 'Racing School', slug: 'racing-school' },
-              { name: 'Active Riders', slug: 'active-riders' },
-              { name: 'Retired Riders', slug: 'retired-riders' },
-              { name: 'Standings', slug: 'rider-standings' },
+              { name: 'Teams', slug: 'official-teams' },
+              { name: 'School', slug: 'racing-school' },
+              { name: 'Riders', slug: 'active-riders' },
             ].map((cat) => (
               <a
                 key={cat.slug}
@@ -306,12 +314,33 @@ export default function Home() {
         {/* Event */}
         <div className="mb-8">
           <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Event</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2">
+            {[
+              { name: 'Track Day', slug: 'trackday' },
+              { name: 'Race', slug: 'race-event' },
+              { name: 'MotoGP Calendar', slug: 'motogp-calendar' },
+              { name: 'ARRC Calendar', slug: 'arrc-calendar' },
+            ].map((cat) => (
+              <a
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
+              >
+                {cat.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Result & Standing */}
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Result & Standing</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             <a
-              href="/event"
+              href="/result-standing"
               className="bg-secondary border border-default hover:border-brand text-primary hover:text-brand transition-all p-3 rounded text-center font-medium text-sm"
             >
-              Event Calendar
+              View All Results & Standings
             </a>
           </div>
         </div>
