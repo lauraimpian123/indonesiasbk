@@ -342,9 +342,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const article = articles[params.slug];
+  const { slug } = await params;
+  const article = articles[slug];
   
   if (!article) {
     return {
@@ -367,8 +368,9 @@ export async function generateMetadata({
   };
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = articles[params.slug];
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = articles[slug];
 
   if (!article) {
     notFound();
@@ -376,7 +378,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   // Related articles (same category, excluding current)
   const relatedArticles = Object.entries(articles)
-    .filter(([slug, a]) => a.category === article.category && slug !== params.slug)
+    .filter(([articleSlug, a]) => a.category === article.category && articleSlug !== slug)
     .slice(0, 3)
     .map(([slug, a]) => ({ slug, ...a }));
 
