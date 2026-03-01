@@ -80,12 +80,6 @@ const categoryTree = [
     children: [],
   },
   {
-    id: 'event',
-    name: 'Event',
-    slug: 'event',
-    children: [],
-  },
-  {
     id: 'live',
     name: 'Live',
     slug: 'live',
