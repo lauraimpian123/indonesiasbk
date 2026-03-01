@@ -341,13 +341,11 @@ export default function Home() {
         {/* Content & Community */}
         <div className="mb-8">
           <h3 className="text-lg font-bold mb-3 text-muted uppercase tracking-wider text-sm">Content & Community</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2">
             {[
               { name: 'News', slug: 'news' },
-              { name: 'Tech & EV', slug: 'tech' },
               { name: 'Workshop', slug: 'workshop' },
               { name: 'Touring', slug: 'touring' },
-              { name: 'Lifestyle', slug: 'lifestyle' },
             ].map((cat) => (
               <a
                 key={cat.slug}

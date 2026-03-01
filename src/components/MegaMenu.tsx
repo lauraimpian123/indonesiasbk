@@ -91,18 +91,6 @@ const categoryTree = [
     slug: 'news',
     children: [],
   },
-  {
-    id: 'tech',
-    name: 'Tech & EV',
-    slug: 'tech',
-    children: [],
-  },
-  {
-    id: 'lifestyle',
-    name: 'Lifestyle',
-    slug: 'lifestyle',
-    children: [],
-  },
 ]
 
 export default function MegaMenu() {
