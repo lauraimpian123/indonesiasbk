@@ -40,8 +40,9 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14">
               <div className="flex items-center space-x-8">
-                <a href="/" className="text-2xl font-bold text-brand">
-                  INDONESIASBK
+                <a href="/" className="text-2xl font-bold tracking-tight">
+                  <span className="text-white">INDONESIA</span>
+                  <span className="text-brand">SBK</span>
                 </a>
                 <div className="hidden lg:flex space-x-6">
                   <a href="/" className="text-muted hover:text-primary transition-colors text-sm">Home</a>

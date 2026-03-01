@@ -102,18 +102,18 @@ const articlesByCategory = {
 
 function CategoryBadge({ category }: { category: string }) {
   const colors: Record<string, string> = {
-    wsbk: 'bg-[#E11D48] text-white',
-    motogp: 'bg-[#FF6B35] text-white',
-    f1: 'bg-[#DC2626] text-white',
-    arrc: 'bg-[#F59E0B] text-white',
-    'bike-review': 'bg-[#3B82F6] text-white',
-    'helmet-review': 'bg-[#F59E0B] text-white',
-    comparison: 'bg-[#DC2626] text-white',
-    'team-news': 'bg-[#DC2626] text-white',
-    'racing-school': 'bg-[#10B981] text-white',
+    wsbk: 'bg-brand text-white',
+    motogp: 'bg-brand text-white',
+    f1: 'bg-brand text-white',
+    arrc: 'bg-brand text-white',
+    'bike-review': 'bg-brand text-white',
+    'helmet-review': 'bg-brand text-white',
+    comparison: 'bg-brand text-white',
+    'team-news': 'bg-brand text-white',
+    'racing-school': 'bg-brand text-white',
   }
   return (
-    <span className={`inline-block px-2 py-1 rounded text-xs font-semibold uppercase ${colors[category] || 'bg-gray-500 text-white'}`}>
+    <span className={`inline-block px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider ${colors[category] || 'bg-brand text-white'}`}>
       {category.replace('-', ' ')}
     </span>
   )
@@ -125,8 +125,11 @@ export default function Home() {
       {/* Motorsport Section */}
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold border-l-4 border-brand pl-3">Motorsport</h2>
-          <a href="/motorsport" className="text-brand hover:text-[#BE123C] font-semibold transition-colors">
+          <h2 className="text-4xl font-black uppercase tracking-tight">
+            <span className="text-brand">MOTOR</span>
+            <span className="text-white">SPORT</span>
+          </h2>
+          <a href="/motorsport" className="text-brand hover:text-white font-bold transition-colors uppercase text-sm tracking-wider">
             Lihat Semua →
           </a>
         </div>
@@ -163,8 +166,10 @@ export default function Home() {
       {/* Review Section */}
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold border-l-4 border-brand pl-3">Review</h2>
-          <a href="/review" className="text-brand hover:text-[#BE123C] font-semibold transition-colors">
+          <h2 className="text-4xl font-black uppercase tracking-tight text-white">
+            REVIEW
+          </h2>
+          <a href="/review" className="text-brand hover:text-white font-bold transition-colors uppercase text-sm tracking-wider">
             Lihat Semua →
           </a>
         </div>
@@ -201,8 +206,10 @@ export default function Home() {
       {/* Racing Section */}
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold border-l-4 border-brand pl-3">Racing</h2>
-          <a href="/racing" className="text-brand hover:text-[#BE123C] font-semibold transition-colors">
+          <h2 className="text-4xl font-black uppercase tracking-tight text-brand">
+            RACING
+          </h2>
+          <a href="/racing" className="text-brand hover:text-white font-bold transition-colors uppercase text-sm tracking-wider">
             Lihat Semua →
           </a>
         </div>

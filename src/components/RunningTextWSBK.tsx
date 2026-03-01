@@ -12,7 +12,7 @@ export default function RunningTextWSBK() {
   const wsbkText = wsbkStandings.map(s => `${s.pos}. ${s.rider} (${s.points}pts)`).join(' • ')
   
   return (
-    <div className="bg-[#DC2626] text-white py-2 overflow-hidden border-b border-[#991B1B]">
+    <div className="bg-[#C73D2F] text-white py-2 overflow-hidden border-b border-[#A0332A]">
       <div className="running-text whitespace-nowrap">
         <div className="inline-block px-4">
           <span className="font-bold">WSBK 2026 Standings:</span> {wsbkText}
