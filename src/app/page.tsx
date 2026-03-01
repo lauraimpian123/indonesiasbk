@@ -140,7 +140,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Motor Section */}
+          {/* Motor Section - Vertical Cards */}
           <section className="mb-12">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-3">
@@ -153,28 +153,25 @@ export default function Home() {
                 Lihat Semua →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {motorArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group">
-                  <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                <Link key={article.id} href={`/article/${article.slug}`} className="group">
+                  <div className="relative aspect-square rounded-lg overflow-hidden mb-3">
                     <Image
                       src={article.image}
                       alt={article.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
+                    <div className="absolute top-2 left-2">
+                      <span className="bg-brand/90 text-white px-2 py-1 rounded-sm text-[9px] md:text-[10px] font-bold uppercase">
                         {article.category}
                       </span>
-                      <span className="text-muted text-xs">{article.time}</span>
                     </div>
-                    <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
                   </div>
+                  <h3 className="text-xs md:text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
                 </Link>
               ))}
             </div>
@@ -196,10 +193,33 @@ export default function Home() {
                 Lihat Semua →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {wsbkArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group">
-                  <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+            {/* Magazine Style: 1 Featured + 3 Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Featured Article */}
+              <Link href={`/article/${wsbkArticles[0].slug}`} className="group md:row-span-2">
+                <div className="relative aspect-[4/3] md:aspect-[3/4] rounded-lg overflow-hidden mb-3">
+                  <Image
+                    src={wsbkArticles[0].image}
+                    alt={wsbkArticles[0].title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <span className="bg-brand text-white px-2 py-1 rounded-sm text-[10px] font-bold uppercase mb-2 inline-block">
+                      {wsbkArticles[0].category}
+                    </span>
+                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
+                      {wsbkArticles[0].title}
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Grid Articles */}
+              {wsbkArticles.slice(1).map((article) => (
+                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-3 group">
+                  <div className="relative w-24 h-20 md:w-32 md:h-24 flex-shrink-0 rounded-lg overflow-hidden">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -208,13 +228,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
-                        {article.category}
-                      </span>
-                      <span className="text-muted text-xs">{article.time}</span>
-                    </div>
-                    <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
+                    <span className="text-muted text-xs">{article.time}</span>
+                    <h3 className="text-sm md:text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mt-1">
                       {article.title}
                     </h3>
                   </div>
@@ -239,30 +254,31 @@ export default function Home() {
                 Lihat Semua →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {motogpArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group">
-                  <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
+            {/* Horizontal Scroll */}
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+              <div className="flex gap-4 pb-4">
+                {motogpArticles.map((article) => (
+                  <Link key={article.id} href={`/article/${article.slug}`} className="group flex-none w-64 md:w-72">
+                    <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
                     <div className="flex items-center space-x-2 mb-2">
                       <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
-                        {article.category}
+                        MOTOGP
                       </span>
                       <span className="text-muted text-xs">{article.time}</span>
                     </div>
                     <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
                       {article.title}
                     </h3>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))}
+              </div>
             </div>
           </section>
 
@@ -303,7 +319,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Tech Section */}
+          {/* Tech Section - Numbered List */}
           <section className="mb-12">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-3">
@@ -316,35 +332,25 @@ export default function Home() {
                 Lihat Semua →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {techArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group">
-                  <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+            <div className="space-y-4">
+              {techArticles.map((article, idx) => (
+                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group border-b border-default pb-4 last:border-0">
+                  <div className="flex-shrink-0">
+                    <span className="text-brand text-4xl font-black">{idx + 1}</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
-                        {article.category}
-                      </span>
-                      <span className="text-muted text-xs">{article.time}</span>
-                    </div>
-                    <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mb-1">
+                    <h3 className="text-base md:text-lg font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mb-2">
                       {article.title}
                     </h3>
-                    <p className="text-muted text-xs line-clamp-1">{article.excerpt}</p>
+                    <p className="text-muted text-sm line-clamp-2">{article.excerpt}</p>
+                    <span className="text-muted text-xs mt-1 inline-block">{article.time}</span>
                   </div>
                 </Link>
               ))}
             </div>
           </section>
 
-          {/* Lifestyle Section */}
+          {/* Lifestyle Section - 3-Column Grid */}
           <section className="mb-12">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-3">
@@ -357,28 +363,25 @@ export default function Home() {
                 Lihat Semua →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {lifestyleArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.slug}`} className="flex gap-4 group">
-                  <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                <Link key={article.id} href={`/article/${article.slug}`} className="group">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden mb-3">
                     <Image
                       src={article.image}
                       alt={article.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="bg-brand text-white px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <span className="text-brand text-[9px] md:text-[10px] font-bold uppercase mb-1 block">
                         {article.category}
                       </span>
-                      <span className="text-muted text-xs">{article.time}</span>
+                      <h3 className="text-xs md:text-sm font-bold text-white group-hover:text-brand transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
                     </div>
-                    <h3 className="text-base font-bold text-white group-hover:text-brand transition-colors line-clamp-2 mb-1">
-                      {article.title}
-                    </h3>
-                    <p className="text-muted text-xs line-clamp-1">{article.excerpt}</p>
                   </div>
                 </Link>
               ))}
