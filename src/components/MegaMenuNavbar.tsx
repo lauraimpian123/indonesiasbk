@@ -7,60 +7,60 @@ const menuStructure = {
   motorsport: {
     title: 'MOTORSPORT',
     items: [
-      { name: 'WSBK / Superbike World Championship', href: '/motorsport/wsbk', emoji: '🏍️' },
-      { name: 'MotoGP', href: '/motorsport/motogp', emoji: '🏁' },
-      { name: 'Moto2', href: '/motorsport/moto2', emoji: '🏁' },
-      { name: 'Moto3', href: '/motorsport/moto3', emoji: '🏁' },
-      { name: 'MiniGP', href: '/motorsport/minigp', emoji: '🏍️' },
-      { name: 'Formula 1', href: '/motorsport/f1', emoji: '🏎️' },
-      { name: 'British Superbike (BSB)', href: '/motorsport/bsb', emoji: '🇬🇧' },
-      { name: 'Asia Road Racing Championship (ARRC)', href: '/motorsport/arrc', emoji: '🌏' },
-      { name: 'Indonesia Ducati Championship (IDC)', href: '/motorsport/idc', emoji: '🇮🇩' },
-      { name: 'MotoE', href: '/motorsport/motoe', emoji: '⚡' },
+      { name: 'WSBK / Superbike World Championship', href: '/motorsport/wsbk' },
+      { name: 'MotoGP', href: '/motorsport/motogp' },
+      { name: 'Moto2', href: '/motorsport/moto2' },
+      { name: 'Moto3', href: '/motorsport/moto3' },
+      { name: 'MiniGP', href: '/motorsport/minigp' },
+      { name: 'Formula 1', href: '/motorsport/f1' },
+      { name: 'British Superbike (BSB)', href: '/motorsport/bsb' },
+      { name: 'Asia Road Racing Championship (ARRC)', href: '/motorsport/arrc' },
+      { name: 'Indonesia Ducati Championship (IDC)', href: '/motorsport/idc' },
+      { name: 'MotoE', href: '/motorsport/motoe' },
     ],
   },
   bikeClass: {
     title: 'BIKE CLASS',
     items: [
-      { name: 'Superbike', href: '/bikeclass/superbike', emoji: '🔴' },
-      { name: 'Supersport', href: '/bikeclass/supersport', emoji: '🔵' },
-      { name: 'Supermatic', href: '/bikeclass/supermatic', emoji: '⚙️' },
-      { name: 'Naked Bike', href: '/bikeclass/naked', emoji: '🟢' },
-      { name: 'Adventure', href: '/bikeclass/adventure', emoji: '🗻' },
-      { name: 'Cruiser', href: '/bikeclass/cruiser', emoji: '🛣️' },
+      { name: 'Superbike', href: '/bikeclass/superbike' },
+      { name: 'Supersport', href: '/bikeclass/supersport' },
+      { name: 'Supermatic', href: '/bikeclass/supermatic' },
+      { name: 'Naked Bike', href: '/bikeclass/naked' },
+      { name: 'Adventure', href: '/bikeclass/adventure' },
+      { name: 'Cruiser', href: '/bikeclass/cruiser' },
     ],
   },
   review: {
     title: 'REVIEW',
     items: [
-      { name: 'Bike Review', href: '/review/bike', emoji: '🏍️' },
-      { name: 'Gear Review', href: '/review/gear', emoji: '🧥' },
-      { name: 'Helmet Review', href: '/review/helmet', emoji: '🪖' },
-      { name: 'Accessory Review', href: '/review/accessory', emoji: '🔧' },
-      { name: 'Comparison', href: '/review/comparison', emoji: '⚔️' },
+      { name: 'Bike Review', href: '/review/bike' },
+      { name: 'Gear Review', href: '/review/gear' },
+      { name: 'Helmet Review', href: '/review/helmet' },
+      { name: 'Accessory Review', href: '/review/accessory' },
+      { name: 'Comparison', href: '/review/comparison' },
     ],
   },
   racing: {
     title: 'RACING',
     items: [
-      { name: 'Teams & Manufacturers', href: '/racing/teams', emoji: '🏁' },
-      { name: 'Racing School', href: '/racing/school', emoji: '🎓' },
-      { name: 'Riders Profile', href: '/racing/riders', emoji: '👤' },
+      { name: 'Teams & Manufacturers', href: '/racing/teams' },
+      { name: 'Racing School', href: '/racing/school' },
+      { name: 'Riders Profile', href: '/racing/riders' },
     ],
   },
   standings: {
     title: 'STANDINGS',
     items: [
-      { name: 'MotoGP Standings', href: '/standings/motogp', emoji: '🏁' },
-      { name: 'WSBK Standings', href: '/standings/wsbk', emoji: '🏍️' },
-      { name: 'Moto2 Standings', href: '/standings/moto2', emoji: '🏁' },
-      { name: 'Moto3 Standings', href: '/standings/moto3', emoji: '🏁' },
-      { name: 'MiniGP Standings', href: '/standings/minigp', emoji: '🏍️' },
-      { name: 'Formula 1 Standings', href: '/standings/f1', emoji: '🏎️' },
-      { name: 'BSB Standings', href: '/standings/bsb', emoji: '🇬🇧' },
-      { name: 'ARRC Standings', href: '/standings/arrc', emoji: '🌏' },
-      { name: 'IDC Standings', href: '/standings/idc', emoji: '🇮🇩' },
-      { name: 'MotoE Standings', href: '/standings/motoe', emoji: '⚡' },
+      { name: 'MotoGP Standings', href: '/standings/motogp' },
+      { name: 'WSBK Standings', href: '/standings/wsbk' },
+      { name: 'Moto2 Standings', href: '/standings/moto2' },
+      { name: 'Moto3 Standings', href: '/standings/moto3' },
+      { name: 'MiniGP Standings', href: '/standings/minigp' },
+      { name: 'Formula 1 Standings', href: '/standings/f1' },
+      { name: 'BSB Standings', href: '/standings/bsb' },
+      { name: 'ARRC Standings', href: '/standings/arrc' },
+      { name: 'IDC Standings', href: '/standings/idc' },
+      { name: 'MotoE Standings', href: '/standings/motoe' },
     ],
   },
 }
@@ -109,16 +109,15 @@ export default function MegaMenuNavbar() {
 
                 {/* Mega Dropdown */}
                 {activeMenu === key && (
-                  <div className="absolute top-full left-0 mt-1 min-w-[300px] bg-black/98 backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl overflow-hidden">
+                  <div className="absolute top-full left-0 mt-1 min-w-[300px] bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl overflow-hidden">
                     <div className="p-2">
                       <div className={`grid ${menu.items.length > 6 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
                         {menu.items.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="flex items-center space-x-3 px-4 py-3 rounded-md hover:bg-[#ff1744]/10 hover:text-[#ff1744] text-white/80 transition-all group"
+                            className="flex items-center px-4 py-3 rounded-md hover:bg-[#ff1744]/10 hover:text-[#ff1744] text-white transition-all group"
                           >
-                            <span className="text-xl">{item.emoji}</span>
                             <span className="text-sm font-semibold">{item.name}</span>
                           </Link>
                         ))}
@@ -151,7 +150,7 @@ export default function MegaMenuNavbar() {
               href="/live"
               className="ml-4 px-6 py-2 bg-gradient-to-r from-[#ff1744] to-[#ff4569] text-white text-sm font-black uppercase tracking-wider rounded-full hover:shadow-lg hover:shadow-[#ff1744]/50 transition-all"
             >
-              🔴 LIVE
+              LIVE
             </Link>
           </div>
 
@@ -173,7 +172,7 @@ export default function MegaMenuNavbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-black/98 backdrop-blur-xl border-t border-white/10 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-white/10 max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-6 space-y-4">
             <Link href="/" className="block text-white font-bold text-lg" onClick={() => setMobileMenuOpen(false)}>
               Home
@@ -185,10 +184,10 @@ export default function MegaMenuNavbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block pl-4 py-2 text-white/70 hover:text-white text-sm"
+                    className="block pl-4 py-2 text-white hover:text-[#ff1744] text-sm transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.emoji} {item.name}
+                    {item.name}
                   </Link>
                 ))}
               </div>
@@ -215,7 +214,7 @@ export default function MegaMenuNavbar() {
               className="block px-6 py-3 bg-gradient-to-r from-[#ff1744] to-[#ff4569] text-white text-sm font-black uppercase tracking-wider rounded-full text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              🔴 LIVE
+              LIVE
             </Link>
           </div>
         </div>
