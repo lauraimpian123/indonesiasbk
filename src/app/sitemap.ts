@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'hourly' : 'daily' as const,
+    changeFrequency: (route === '' ? 'hourly' : 'daily') as 'hourly' | 'daily',
     priority: route === '' ? 1.0 : route.includes('/standings') ? 0.9 : 0.8,
   }))
 
