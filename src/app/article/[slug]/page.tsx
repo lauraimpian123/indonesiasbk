@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { articlesPhase2A } from '@/data/articles-phase2a';
 import { articlesPhase2B } from '@/data/articles-phase2b';
 import articlesWave2 from '@/data/articles-wave2';
@@ -428,24 +431,59 @@ export default async function ArticlePage({
 
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-6 py-12 md:py-16">
-        <div 
-          className="prose prose-invert prose-lg max-w-none
-            prose-headings:font-['Bebas_Neue'] prose-headings:tracking-wide
-            prose-h2:text-4xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-red-500
-            prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-cyan-400
-            prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
-            prose-strong:text-white prose-strong:font-bold
-            prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:text-cyan-300
-            prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-400
-            prose-ul:list-disc prose-ul:ml-6 prose-ul:text-gray-300
-            prose-ol:list-decimal prose-ol:ml-6 prose-ol:text-gray-300
-            prose-li:mb-2
-            prose-code:bg-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-cyan-400
-            prose-table:border prose-table:border-gray-700
-            prose-th:bg-gray-800 prose-th:p-3 prose-th:text-left
-            prose-td:p-3 prose-td:border-t prose-td:border-gray-700"
-          dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }}
-        />
+        <div className="prose prose-invert prose-lg max-w-none
+          prose-headings:font-['Bebas_Neue'] prose-headings:tracking-wide
+          prose-h2:text-4xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-red-500
+          prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-cyan-400
+          prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
+          prose-strong:text-white prose-strong:font-bold
+          prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:text-cyan-300
+          prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-400
+          prose-ul:list-disc prose-ul:ml-6 prose-ul:text-gray-300
+          prose-ol:list-decimal prose-ol:ml-6 prose-ol:text-gray-300
+          prose-li:mb-2
+          prose-code:bg-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-cyan-400">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
+              table: ({ children }) => (
+                <div className="overflow-x-auto my-8">
+                  <table className="min-w-full border border-gray-700 rounded-lg overflow-hidden">
+                    {children}
+                  </table>
+                </div>
+              ),
+              thead: ({ children }) => (
+                <thead className="bg-gradient-to-r from-gray-800 to-gray-900">
+                  {children}
+                </thead>
+              ),
+              th: ({ children }) => (
+                <th className="px-6 py-4 text-left text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700">
+                  {children}
+                </th>
+              ),
+              tbody: ({ children }) => (
+                <tbody className="bg-black/40 backdrop-blur-sm divide-y divide-gray-800">
+                  {children}
+                </tbody>
+              ),
+              td: ({ children }) => (
+                <td className="px-6 py-4 text-gray-300 text-sm">
+                  {children}
+                </td>
+              ),
+              tr: ({ children }) => (
+                <tr className="hover:bg-gray-900/50 transition-colors">
+                  {children}
+                </tr>
+              ),
+            }}
+          >
+            {article.content}
+          </ReactMarkdown>
+        </div>
 
         {/* Tags/Keywords */}
         {article.keywords && article.keywords.length > 0 && (
