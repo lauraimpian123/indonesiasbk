@@ -7,10 +7,10 @@ import { articlesPhase2B } from '@/data/articles-phase2b';
 import articlesWave2 from '@/data/articles-wave2';
 import articlesWave3 from '@/data/articles-wave3';
 import articlesRealRace from '@/data/articles-real-race';
-import articlesMotogpProfessional from '@/data/articles-motogp-v4-professional';
+import articlesMotogpIndonesiaPro from '@/data/articles-motogp-indonesia-pro';
 
 // Combine all articles into one database
-const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2, ...articlesWave3, ...articlesRealRace, ...articlesMotogpProfessional];
+const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2, ...articlesWave3, ...articlesRealRace, ...articlesMotogpIndonesiaPro];
 
 // Convert array to Record for easy lookup
 const articles: Record<string, any> = {};
