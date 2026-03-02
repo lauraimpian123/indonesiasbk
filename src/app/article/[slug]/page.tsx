@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { articlesPhase2A } from '@/data/articles-phase2a';
 import { articlesPhase2B } from '@/data/articles-phase2b';
+import articlesWave2 from '@/data/articles-wave2';
 
 // Combine all articles into one database
-const allArticles = [...articlesPhase2A, ...articlesPhase2B];
+const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2];
 
 // Convert array to Record for easy lookup
 const articles: Record<string, any> = {};
