@@ -2,7 +2,9 @@
 // Generated: 2026-03-02
 // Total: 12 articles ready for deployment
 
-export const articlesWave2 = [
+import { Article } from '../types/article';
+
+export const articlesWave2: Article[] = [
   // MotoE Part 2 (3 articles)
   {
     slug: "charging-system-motoe-infrastruktur-listrik-paddock",

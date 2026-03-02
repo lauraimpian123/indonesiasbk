@@ -2,7 +2,9 @@
 // Generated: 2026-03-02
 // Total: 12 articles ready for deployment
 
-export const articlesWave3 = [
+import { Article } from '../types/article';
+
+export const articlesWave3: Article[] = [
   // MiniGP Part 2 (3 articles)
   {
     slug: "biaya-ikut-minigp-investasi-karir-balap-anak-usia-dini",
