@@ -10,6 +10,7 @@ import articlesWave2 from '@/data/articles-wave2'
 import articlesWave3 from '@/data/articles-wave3'
 import articlesRealRace from '@/data/articles-real-race'
 import { articlesMotogpLatest } from '@/data/articles-motogp-latest'
+import articlesThailand2026 from '@/data/articles-thailand-2026'
 
 export default function Home() {
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function Home() {
   }, [])
 
   // Combine all real articles
-  const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2, ...articlesWave3, ...articlesRealRace, ...articlesMotogpLatest]
+  const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2, ...articlesWave3, ...articlesRealRace, ...articlesMotogpLatest, ...articlesThailand2026]
 
   // Helper to get articles by category
   const getArticlesByCategory = (category: string, limit: number = 6) => {
