@@ -6,9 +6,10 @@ import { articlesPhase2A } from '@/data/articles-phase2a';
 import { articlesPhase2B } from '@/data/articles-phase2b';
 import articlesWave2 from '@/data/articles-wave2';
 import articlesWave3 from '@/data/articles-wave3';
+import articlesRealRace from '@/data/articles-real-race';
 
 // Combine all articles into one database
-const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2, ...articlesWave3];
+const allArticles = [...articlesPhase2A, ...articlesPhase2B, ...articlesWave2, ...articlesWave3, ...articlesRealRace];
 
 // Convert array to Record for easy lookup
 const articles: Record<string, any> = {};
