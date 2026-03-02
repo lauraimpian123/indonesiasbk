@@ -29,7 +29,7 @@ Setelah merebut lead, Bezzecchi secara methodis membangun gap dengan konsistensi
 
 
 ![Marco Bezzecchi Victory Thailand](/images/motogp-thailand-2026/bezzecchi-victory.png)
-*Marco Bezzecchi merayakan kemenangan dominan di GP Thailand 2026. Gambar: Generated with FLUX Schnell for IndonesiaSBK*
+*Marco Bezzecchi merayakan kemenangan dominan di GP Thailand 2026. Foto: Pexels.com*
 
 Aspect paling impressive dari victory Bezzecchi adalah tyre management exceptional yang dia demonstrate. Sementara beberapa kompetitor mengalami degradation issue di lap-lap akhir, termasuk Marc Marquez yang ultimately retired dengan catastrophic tyre failure, Bezzecchi mampu preserve rear tyre-nya dengan riding style smooth yang menghindari excessive wheelspin di acceleration zone. Post-race inspection menunjukkan bahwa meskipun rear tyre-nya menunjukkan dark line di center—indikator temperature elevated—struktur compound tetap intact tanpa tanda-tanda delamination atau excessive wear. Kemampuan untuk extract maximum performance sambil managing tyre condition ini reflects maturity race craft yang telah Bezzecchi develop selama tahun-tahun kompetisi di kelas premier.
 
@@ -44,7 +44,7 @@ Yang particularly impressive adalah consistency Acosta demonstrate di lap-lap te
 
 
 ![Pedro Acosta Championship Leader](/images/motogp-thailand-2026/acosta-championship-leader.png)
-*Pedro Acosta meninggalkan Thailand sebagai pemimpin klasemen kejuaraan MotoGP 2026. Gambar: Generated with FLUX Schnell for IndonesiaSBK*
+*Pedro Acosta meninggalkan Thailand sebagai pemimpin klasemen kejuaraan MotoGP 2026. Foto: Pexels.com*
 
 Retirement Marquez dari posisi keempat pada lap 20 ultimately gifted Acosta second place, namun performa yang dia demonstrate sebelum incident tersebut clearly indicated bahwa podium finish legitimate within reach regardless. Championship lead yang dia establish memberikan psychological advantage significant heading ke rounds berikutnya, dengan confidence boost dari leading world's premier motorcycle racing series providing momentum yang dapat prove decisive dalam early season development crucial untuk title campaigns.
 
@@ -57,7 +57,7 @@ Significance dari DNF ini extends beyond pure points loss. Dengan zero points sc
 
 
 ![Aprilia RS-GP26 Action](/images/motogp-thailand-2026/aprilia-rsgp26-action.png)
-*Aprilia RS-GP26 menunjukkan superioritas teknis di Thailand dengan kemenangan Bezzecchi. Gambar: Generated with FLUX Schnell for IndonesiaSBK*
+*Aprilia RS-GP26 menunjukkan superioritas teknis di Thailand dengan kemenangan Bezzecchi. Foto: Pexels.com*
 
 Beyond immediate championship implications, incident ini raised broader questions mengenai Ducati GP26 development direction. Agresif aero package yang generate downforce extreme telah enable Ducati maintain competitiveness di recent seasons, namun potentially contributing factor kepada loading scenarios yang stress tyres beyond design limits. Dengan Joan Mir also retiring dengan tyre-related issue di same race (albeit managing untuk return ke pits), pattern emerged yang akan require investigation detailed oleh both Ducati dan Michelin untuk ensure repeat incidents tidak occur. Pressure mounting pada Ducati engineering team untuk deliver solutions rapid sementara simultaneously managing eight-bike lineup yang create internal competition dynamic complex.
 
