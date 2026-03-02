@@ -3,7 +3,7 @@
 // Bahasa: Indonesia WAJIB
 // Generated: 2 Maret 2026
 
-export const articlesMotogpIndonesiaPro = [
+export const articlesMotogpLatest = [
   {
     slug: "pedro-acosta-puncaki-klasemen-motogp-2026-pencapaian-bersejarah-ktm",
     title: "Pedro Acosta Puncaki Klasemen MotoGP 2026, Pencapaian Bersejarah KTM",
@@ -94,4 +94,4 @@ Gambaran kompetitif yang muncul dari pembuka musim mengindikasikan pertarungan k
   }
 ];
 
-export default articlesMotogpIndonesiaPro;
+export default articlesMotogpLatest;
