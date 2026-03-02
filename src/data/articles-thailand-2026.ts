@@ -12,7 +12,7 @@ export const articlesThailand2026 = [
     date: "2026-03-02",
     readTime: "10 menit",
     category: "MotoGP",
-    image: "/images/hero/2026-03-01-20-21-10-hero-motogp.webp",
+    image: "/images/motogp-thailand-2026/bezzecchi-victory.png",
     keywords: ["MotoGP Thailand 2026", "Marco Bezzecchi", "Aprilia Racing", "Pedro Acosta", "Marc Marquez DNF", "Ducati", "hasil race Thailand", "Buriram"],
     content: `# Bezzecchi Dominasi GP Thailand 2026, Ducati Gagal Podium Pertama Kali dalam Lima Tahun
 
@@ -26,6 +26,11 @@ Execution race Bezzecchi di Thailand mencerminkan performa pembalap yang telah m
 
 Setelah merebut lead, Bezzecchi secara methodis membangun gap dengan konsistensi lap time yang remarkable. Telemetri data menunjukkan bahwa pembalap Italia tersebut mampu mengeluarkan lap time dalam window 1:29.6-1:29.9 secara consistent sepanjang 26 lap race, variability yang minimal mengindikasikan bahwa dia telah menemukan optimal setup dan riding approach. Keunggulan teknis RS-GP26 terlihat jelas di sector dua dan tiga sirkuit, di mana kombinasi stabilitas aerodinamika superior dan traksi exceptional memungkinkan Bezzecchi untuk carry corner speed lebih tinggi dibanding kompetitor. Khususnya di Turn 8 hingga Turn 12 sequence, gap yang dia bangun per lap secara konsisten mencapai 0.15-0.2 detik, accumulation yang over race distance menghasilkan advantage comfortable yang dia maintain hingga checkered flag.
 
+
+
+![Marco Bezzecchi Victory Thailand](/images/motogp-thailand-2026/bezzecchi-victory.png)
+*Marco Bezzecchi merayakan kemenangan dominan di GP Thailand 2026. Gambar: Generated with FLUX Schnell for IndonesiaSBK*
+
 Aspect paling impressive dari victory Bezzecchi adalah tyre management exceptional yang dia demonstrate. Sementara beberapa kompetitor mengalami degradation issue di lap-lap akhir, termasuk Marc Marquez yang ultimately retired dengan catastrophic tyre failure, Bezzecchi mampu preserve rear tyre-nya dengan riding style smooth yang menghindari excessive wheelspin di acceleration zone. Post-race inspection menunjukkan bahwa meskipun rear tyre-nya menunjukkan dark line di center—indikator temperature elevated—struktur compound tetap intact tanpa tanda-tanda delamination atau excessive wear. Kemampuan untuk extract maximum performance sambil managing tyre condition ini reflects maturity race craft yang telah Bezzecchi develop selama tahun-tahun kompetisi di kelas premier.
 
 ## Pedro Acosta: Rookie Fenomenal Pimpin Kejuaraan
@@ -36,6 +41,11 @@ Race Sunday mendemonstrasikan complete skill set yang Acosta possess. Starting d
 
 Yang particularly impressive adalah consistency Acosta demonstrate di lap-lap tengah race ketika tyre performance optimal. Dari lap 10 hingga lap 20, dia running lap times within 0.1 detik dari Bezzecchi—gap yang primarily attributable kepada superior top-end power Aprilia rather than deficiency dalam riding. Kemampuan untuk maintain pace dengan race winner sementara simultaneously managing position terhadap multiple challengers di belakang reflects race intelligence yang typically require seasons untuk develop. KTM crew chief noted post-race bahwa Acosta execution dari pre-planned strategy "textbook perfect," dengan tyre preservation target dan fuel management objectives semua achieved precisely as outlined di pre-race briefing.
 
+
+
+![Pedro Acosta Championship Leader](/images/motogp-thailand-2026/acosta-championship-leader.png)
+*Pedro Acosta meninggalkan Thailand sebagai pemimpin klasemen kejuaraan MotoGP 2026. Gambar: Generated with FLUX Schnell for IndonesiaSBK*
+
 Retirement Marquez dari posisi keempat pada lap 20 ultimately gifted Acosta second place, namun performa yang dia demonstrate sebelum incident tersebut clearly indicated bahwa podium finish legitimate within reach regardless. Championship lead yang dia establish memberikan psychological advantage significant heading ke rounds berikutnya, dengan confidence boost dari leading world's premier motorcycle racing series providing momentum yang dapat prove decisive dalam early season development crucial untuk title campaigns.
 
 ## Marquez DNF: Disaster untuk Ducati Title Defense
@@ -43,6 +53,11 @@ Retirement Marquez dari posisi keempat pada lap 20 ultimately gifted Acosta seco
 Retirement Marc Marquez merepresentasikan worst possible start untuk defending champion's title defense campaign. Running strongly di fourth position dan engaged dalam battle intense dengan Acosta dan Fernandez untuk final podium spot, Marquez sudden exit dari race pada lap 20 due kepada catastrophic tyre failure shocked paddock dan raised immediate questions mengenai tyre integrity di condition yang Thailand weather hot present. Television footage clearly showed Marquez rear wheel rim damaged, dengan puncture resultant causing immediate loss of pressure yang made continuation impossible. Ducati technical director Luigi Dall'Igna confirmed post-race bahwa failure occurred due kepada rim deformation yang compromised tyre bead sealing, issue yang potentially linked kepada loading characteristics extreme yang Desmosedici GP26 generate.
 
 Significance dari DNF ini extends beyond pure points loss. Dengan zero points scored di Sunday race (mitigated minimally oleh nine points dari Sprint runner-up Sabtu), Marquez leaves Thailand already 32 points deficit kepada championship leader Acosta—gap yang dalam 22-race calendar while manageable, represents setback significant yang will require exceptional performance di upcoming rounds untuk recover. Historical analysis menunjukkan bahwa riders yang establish early season points cushions typically maintain advantages tersebut through season, dengan championship leadership after round one correlating strongly dengan final standings. Marquez faced additional pressure untuk deliver immediate results di Qatar next weekend untuk prevent gap dari expanding further.
+
+
+
+![Aprilia RS-GP26 Action](/images/motogp-thailand-2026/aprilia-rsgp26-action.png)
+*Aprilia RS-GP26 menunjukkan superioritas teknis di Thailand dengan kemenangan Bezzecchi. Gambar: Generated with FLUX Schnell for IndonesiaSBK*
 
 Beyond immediate championship implications, incident ini raised broader questions mengenai Ducati GP26 development direction. Agresif aero package yang generate downforce extreme telah enable Ducati maintain competitiveness di recent seasons, namun potentially contributing factor kepada loading scenarios yang stress tyres beyond design limits. Dengan Joan Mir also retiring dengan tyre-related issue di same race (albeit managing untuk return ke pits), pattern emerged yang akan require investigation detailed oleh both Ducati dan Michelin untuk ensure repeat incidents tidak occur. Pressure mounting pada Ducati engineering team untuk deliver solutions rapid sementara simultaneously managing eight-bike lineup yang create internal competition dynamic complex.
 
