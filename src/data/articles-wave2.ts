@@ -69,7 +69,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "11 menit",
     category: "BSB",
-    image: "/images/featured/bsb-silverstone-circuit-panduan-lengkap.webp",
+    image: "/images/featured/2026-03-03-19-51-12-silverstone-circuit-panduan-lengkap.png",
     keywords: ["Silverstone Circuit", "panduan Silverstone", "sirkuit BSB", "Silverstone GP", "Copse Corner", "Maggotts Becketts", "Stowe Corner", "Abbey chicane", "sirkuit Inggris", "British racing circuit"],
     content: ""
   },
@@ -82,7 +82,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "12 menit",
     category: "BSB",
-    image: "/images/featured/bsb-pembalap-bsb-naik-ke-motogp.webp",
+    image: "/images/featured/2026-03-03-19-51-25-pembalap-bsb-naik-ke-motogp.png",
     keywords: ["pembalap BSB ke MotoGP", "Cal Crutchlow", "Scott Redding", "Bradley Smith", "Sam Lowes", "Danny Kent", "jalur karir BSB", "British riders MotoGP", "success story BSB"],
     content: ""
   },
@@ -97,7 +97,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "9 menit",
     category: "BSB",
-    image: "/images/featured/bsb-3-sirkuit-bsb-terfavorit-brands-hatch-donington-oulton.webp",
+    image: "/images/featured/2026-03-03-19-51-37-3-sirkuit-bsb-terfavorit-brands-hatch-do.png",
     keywords: ["sirkuit BSB", "Brands Hatch", "Donington Park", "Oulton Park", "British Superbike", "trek balap Inggris", "Paddock Hill Bend", "Redgate Corner", "The Island Oulton Park", "sirkuit balap motor Inggris"],
     content: ""
   },
@@ -123,7 +123,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "9 menit",
     category: "BSB",
-    image: "/images/featured/bsb-showdown-format-bsb-sistem-playoff-unik.webp",
+    image: "/images/featured/2026-03-03-19-51-51-showdown-format-bsb-sistem-playoff-unik.png",
     keywords: ["Showdown BSB", "British Superbike playoff", "BSB championship format", "showdown format balap motor", "sistem playoff BSB", "British Superbike rules", "title decider BSB", "pressure cooker racing", "BSB final rounds"],
     content: ""
   },
@@ -164,7 +164,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "12 menit",
     category: "MiniGP",
-    image: "/images/featured/minigp-jalur-karir-minigp-ke-motogp-studi-kasus.webp",
+    image: "/images/featured/2026-03-03-19-52-02-jalur-karir-minigp-ke-motogp-studi-kasus.png",
     keywords: ["jalur karir MiniGP", "MiniGP ke MotoGP", "Pedro Acosta career path", "David Alonso MiniGP", "Ivan Guevara", "talent development motorsport", "career progression racing", "MotoGP pathway", "junior racing career"],
     content: ""
   }

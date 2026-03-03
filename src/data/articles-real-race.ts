@@ -12,7 +12,7 @@ export const articlesRealRace = [
     date: "2026-03-02",
     readTime: "12 menit",
     category: "MotoGP",
-    image: "/images/featured/motogp-motogp-thailand-2026-bezzecchi-dominasi-aprilia-marquez-dnf.webp",
+    image: "/images/featured/2026-03-03-19-48-02-motogp-thailand-2026-bezzecchi-dominasi-.png",
     keywords: ["MotoGP Thailand 2026", "Marco Bezzecchi menang", "Aprilia MotoGP", "Marc Marquez DNF", "Pedro Acosta podium", "hasil MotoGP Buriram 2026", "Ducati gagal podium", "ban Marquez pecah", "Bagnaia struggling"],
     content: `# MotoGP Thailand 2026: Bezzecchi Dominasi Start-to-Finish, Marquez DNF Dramatis
 

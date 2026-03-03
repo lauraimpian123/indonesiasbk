@@ -16,7 +16,7 @@ export const articlesPhase2A = [
     {
       slug: "5-tim-moto2-terbaik-2026-dominasi-honda-team-asia",
       title: "5 Tim Moto2 Terbaik 2026: Dominasi Honda Team Asia",
-      image: "/images/featured/moto2-5-tim-moto2-terbaik-2026-dominasi-honda-team-asia.webp",
+      image: "/images/featured/2026-03-03-19-49-12-5-tim-moto2-terbaik-2026-dominasi-honda-.png",
       keywords: [],
       metaDescription: "Analisis 5 tim Moto2 terbaik 2026! Honda Team Asia, Italtrans, Fantic Racing bersaing ketat. Data lengkap, strategi juara, profil rider Indonesia.",
       excerpt: "Tim mana yang paling kuat di Moto2 2026? Honda Team Asia menunjukkan performa impresif dengan Veda Pratama, tapi persaingan masih sengit!",
@@ -2377,7 +2377,7 @@ Realistic timeline untuk Indonesian rider: **4-5 years after MotoGP debut** untu
   {
     slug: "honda-nsf250r-motor-legendaris-moto3",
     title: "Honda NSF250R: Motor Legendaris Moto3",
-      image: "/images/featured/moto3-honda-nsf250r-motor-legendaris-moto3.webp",
+      image: "/images/featured/2026-03-03-19-49-25-honda-nsf250r-motor-legendaris-moto3.png",
     excerpt: "Tahun 2012, Honda meluncurkan sebuah mesin balap 250cc 4-tak yang mengubah permainan selamanya. Honda NSF250R bukan sekadar motor—ini adalah **pabrik ",
     content: `# Honda NSF250R: Motor Legendaris Moto3
 
@@ -3568,7 +3568,7 @@ Dan ketika itu terjadi, seluruh paddock akan tahu: **Indonesia has arrived**.
   {
     slug: "ktm-vs-honda-vs-husqvarna-perbandingan-motor-moto3",
     title: "KTM vs Honda vs Husqvarna: Perbandingan Motor Moto3",
-      image: "/images/featured/moto3-ktm-vs-honda-vs-husqvarna-perbandingan-motor-moto3.webp",
+      image: "/images/featured/2026-03-03-19-49-44-ktm-vs-honda-vs-husqvarna-perbandingan-m.png",
     excerpt: "Di grid Moto3 World Championship 2026, ada **tiga pabrikan** yang menguasai lebih dari 95% total motor: **KTM, Honda, dan Husqvarna**.",
     content: `# KTM vs Honda vs Husqvarna: Perbandingan Motor Moto3
 
@@ -4039,7 +4039,7 @@ Dan yang paling penting: di Moto3, **motor hanya 30% dari equation**. Rider skil
   {
     slug: "dari-moto3-ke-juara-dunia-kisah-inspiratif",
     title: "Dari Moto3 ke Juara Dunia: Kisah Inspiratif",
-      image: "/images/featured/moto3-dari-moto3-ke-juara-dunia-kisah-inspiratif.webp",
+      image: "/images/featured/2026-03-03-19-49-56-dari-moto3-ke-juara-dunia-kisah-inspirat.png",
     excerpt: "Setiap **juara dunia MotoGP modern** punya satu kesamaan: mereka **started dari bottom**, berjuang di kelas terbawah, dan climb their way up.",
     content: `# Dari Moto3 ke Juara Dunia: Kisah Inspiratif
 
@@ -7517,7 +7517,7 @@ Atau seperti kebanyakan fans motorsport:
   {
     slug: "toprak-razgatlioglu-dari-wsbk-ke-motogp-the-turkish-tornado-yang-menaklukkan-dua-dunia",
     title: "Toprak Razgatlioglu: Dari WSBK ke MotoGP — The Turkish Tornado yang Menaklukkan Dua Dunia",
-      image: "/images/featured/motogp-toprak-razgatlioglu-dari-wsbk-ke-motogp-the-turkish-tornado-yang-menaklukkan-dua-dunia.webp",
+      image: "/images/featured/2026-03-03-19-50-10-toprak-razgatlioglu-dari-wsbk-ke-motogp-.png",
     excerpt: "**Bayangkan ini:** Kamu adalah juara dunia di kategori tertinggi motorsport roda dua produksi. Kamu mengalahkan legenda hidup seperti Jonathan Rea. Ka",
     content: `# Toprak Razgatlioglu: Dari WSBK ke MotoGP — The Turkish Tornado yang Menaklukkan Dua Dunia
 
@@ -7979,7 +7979,7 @@ The Turkish Tornado is here to stay.
   {
     slug: "arrc-2024-dominasi-pembalap-indonesia-",
     title: "ARRC 2024: Dominasi Pembalap Indonesia 🇮🇩",
-      image: "/images/featured/arrc-arrc-2024-dominasi-pembalap-indonesia-.webp",
+      image: "/images/featured/2026-03-03-19-50-18-arrc-2024-dominasi-pembalap-indonesia-.png",
     excerpt: "Tiga angka yang bikin Indonesia berdiri tegak di podium Asia Road Racing Championship 2024. Bukan sekadar finis di top 10. Bukan sekadar \"ikut meramai",
     content: `# ARRC 2024: Dominasi Pembalap Indonesia 🇮🇩
 
@@ -9221,7 +9221,7 @@ Tapi satu hal tidak akan berubah:
   {
     slug: "dari-arrc-ke-motogp-success-story-mario-aji-yang-menginspirasi-indonesia-",
     title: "Dari ARRC ke MotoGP: Success Story Mario Aji yang Menginspirasi Indonesia 🇮🇩",
-      image: "/images/featured/motogp-dari-arrc-ke-motogp-success-story-mario-aji-yang-menginspirasi-indonesia-.webp",
+      image: "/images/featured/2026-03-03-19-50-33-dari-arrc-ke-motogp-success-story-mario-.png",
     excerpt: "Bayangkan ini: pembalap Indonesia yang start dari jalanan sirkuit Asia, kini berdiri di grid Moto2 bersama nama-nama besar dunia. Mario Aji bukan cuma",
     content: `# Dari ARRC ke MotoGP: Success Story Mario Aji yang Menginspirasi Indonesia 🇮🇩
 
@@ -9835,7 +9835,7 @@ Tapi pada akhirnya, pemenang sesungguhnya adalah **INDONESIA**. Karena rivalitas
   {
     slug: "5-pembalap-indonesia-terbaik-arrc-2024-ranking-lengkap-",
     title: "5 Pembalap Indonesia Terbaik ARRC 2024: Ranking Lengkap! 🇮🇩🏆",
-      image: "/images/featured/arrc-5-pembalap-indonesia-terbaik-arrc-2024-ranking-lengkap-.webp",
+      image: "/images/featured/2026-03-03-19-50-40-5-pembalap-indonesia-terbaik-arrc-2024-r.png",
     excerpt: "Tahun 2024 adalah tahun EMAS bagi balap motor Indonesia. Di Asia Road Racing Championship (ARRC), pembalap Indonesia tidak cuma ikut race—mereka **MEN",
     content: `# 5 Pembalap Indonesia Terbaik ARRC 2024: Ranking Lengkap! 🇮🇩🏆
 
@@ -10270,7 +10270,7 @@ Top 5 rider ini—Kiandra, Andi Farid, Herjun, Fahmi, dan Adenanta—adalah **HE
       date: "2026-03-02",
       readTime: "12 min",
       category: "WSBK",
-      image: "/images/featured/wsbk-5-pembalap-wsbk-terbaik-sepanjang-masa.webp",
+      image: "/images/featured/2026-03-03-19-50-55-5-pembalap-wsbk-terbaik-sepanjang-masa.png",
       keywords: ["pembalap WSBK terbaik", "legenda WSBK", "juara WSBK", "Jonathan Rea", "Carl Fogarty"],
     content: `
 # 5 Pembalap WSBK Terbaik Sepanjang Masa: Legenda Aspal yang Mengubah Sejarah

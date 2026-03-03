@@ -82,7 +82,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "11 menit",
     category: "IDC",
-    image: "/images/featured/idc-5-pathway-idc-ke-level-internasional.webp",
+    image: "/images/featured/2026-03-03-19-48-42-5-pathway-idc-ke-level-internasional.png",
     keywords: ["jalur karir IDC", "IDC ke MotoGP", "pathway racing indonesia", "karir pembalap IDC", "IDC internasional", "success story racing", "rider development program", "ducati cup pathway"],
     content: ""
   },
@@ -97,7 +97,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "10 menit",
     category: "IDC",
-    image: "/images/featured/idc-biaya-ikut-idc-investasi-karir-balap.webp",
+    image: "/images/featured/2026-03-03-19-48-49-biaya-ikut-idc-investasi-karir-balap.png",
     keywords: ["biaya IDC", "biaya Indonesia Ducati Cup", "entry fee IDC 2026", "investasi racing IDC", "biaya balap motor indonesia", "sponsorship racing tips", "budget racing IDC", "biaya kompetisi ducati"],
     content: ""
   },
@@ -123,7 +123,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "12 menit",
     category: "IDC",
-    image: "/images/featured/idc-teknik-cornering-pembalap-idc-profesional.webp",
+    image: "/images/featured/2026-03-03-19-49-01-teknik-cornering-pembalap-idc-profesiona.png",
     keywords: ["teknik cornering", "cornering IDC", "body position racing", "trail braking ducati", "throttle control superbike", "racing line technique", "fast lap technique", "cornering tips IDC"],
     content: ""
   },

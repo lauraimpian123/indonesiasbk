@@ -13,7 +13,7 @@ export const articlesMotogpLatest = [
     date: "2026-03-02",
     readTime: "8 menit",
     category: "MotoGP",
-    image: "/images/featured/motogp-pedro-acosta-puncaki-klasemen-motogp-2026-pencapaian-bersejarah-ktm.webp",
+    image: "/images/featured/2026-03-03-19-48-17-pedro-acosta-puncaki-klasemen-motogp-202.png",
     keywords: ["Pedro Acosta", "MotoGP 2026", "klasemen kejuaraan", "KTM Racing", "GP Thailand", "Marc Marquez"],
     content: `# Pedro Acosta Puncaki Klasemen MotoGP 2026, Pencapaian Bersejarah KTM
 

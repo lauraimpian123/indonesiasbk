@@ -12,7 +12,7 @@ export const articlesThailand2026 = [
     date: "2026-03-02",
     readTime: "10 menit",
     category: "MotoGP",
-    image: "/images/motogp-thailand-2026/bezzecchi-victory.png",
+    image: "/images/featured/2026-03-03-19-48-27-bezzecchi-dominasi-gp-thailand-2026-duca.png",
     keywords: ["MotoGP Thailand 2026", "Marco Bezzecchi", "Aprilia Racing", "Pedro Acosta", "Marc Marquez DNF", "Ducati", "hasil race Thailand", "Buriram"],
     content: `# Bezzecchi Dominasi GP Thailand 2026, Ducati Gagal Podium Pertama Kali dalam Lima Tahun
 
