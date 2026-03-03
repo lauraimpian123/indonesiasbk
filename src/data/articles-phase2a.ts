@@ -16,7 +16,7 @@ export const articlesPhase2A = [
     {
       slug: "5-tim-moto2-terbaik-2026-dominasi-honda-team-asia",
       title: "5 Tim Moto2 Terbaik 2026: Dominasi Honda Team Asia",
-      image: "/images/featured/2026-03-03-19-49-12-5-tim-moto2-terbaik-2026-dominasi-honda-.png",
+      image: "/images/featured/2026-03-03-20-03-50-5-tim-moto2-terbaik-2026-dominasi-honda-.png",
       keywords: [],
       metaDescription: "Analisis 5 tim Moto2 terbaik 2026! Honda Team Asia, Italtrans, Fantic Racing bersaing ketat. Data lengkap, strategi juara, profil rider Indonesia.",
       excerpt: "Tim mana yang paling kuat di Moto2 2026? Honda Team Asia menunjukkan performa impresif dengan Veda Pratama, tapi persaingan masih sengit!",
@@ -441,7 +441,7 @@ Klasemen tim dihitung dari **total poin kedua rider** (kalau tim punya 2 rider) 
     {
       slug: "teknik-overtaking-moto2-belajar-dari-juara",
       title: "Teknik Overtaking di Moto2: Belajar dari Juara",
-      image: "/images/featured/moto2-teknik-overtaking-moto2-belajar-dari-juara.webp",
+      image: "/images/featured/2026-03-03-20-04-14-teknik-overtaking-moto2-belajar-dari-jua.png",
       keywords: [],
       metaDescription: "Rahasia overtaking di Moto2 dari Moreira, Dixon, González! Late braking, switchback, cutback - teknik lengkap dengan data telemetry dan video analysis.",
       excerpt: "Overtaking di Moto2 bukan cuma soal bravery. Ada science, timing, dan racecraft yang pembalap top gunakan untuk nyalip tanpa risiko crash.",
@@ -1023,7 +1023,7 @@ Honda Team Asia dengan Veda Pratama showing the way. If Indonesia want to produc
     {
       slug: "kalex-vs-boscoscuro-perang-chassis-moto2",
       title: "Kalex vs Boscoscuro: Perang Chassis Moto2",
-      image: "/images/featured/moto2-kalex-vs-boscoscuro-perang-chassis-moto2.webp",
+      image: "/images/featured/2026-03-03-20-04-25-kalex-vs-boscoscuro-perang-chassis-moto2.png",
       keywords: [],
       metaDescription: "Kalex dominasi 90% grid, Boscoscuro fight back! Analisis teknis mendalam: geometry, aero, electronics, data lap time. Which chassis suits your riding style?",
       excerpt: "Kalex atau Boscoscuro - mana yang lebih cepat? Jawabannya tidak sesimple yang kamu kira. Chassis choice bisa bikin atau hancurkan championship campaign.",
@@ -1738,7 +1738,7 @@ Boscoscuro adalah excellent chassis yang keep Kalex honest dan give team alterna
     {
       slug: "jalur-karir-moto2-ke-motogp-studi-kasus",
       title: "Jalur Karir Moto2 ke MotoGP: Studi Kasus",
-      image: "/images/featured/moto2-jalur-karir-moto2-ke-motogp-studi-kasus.webp",
+      image: "/images/featured/2026-03-03-20-45-20-jalur-karir-moto2-ke-motogp-studi-kasus.png",
       keywords: [],
       metaDescription: "Bagaimana Acosta, Binder, Bastianini 'graduate' dari Moto2 ke MotoGP? Data lengkap: minimal poin, usia ideal, kontrak factory. Roadmap untuk Indonesian riders!",
       excerpt: "Moto2 champion otomatis naik MotoGP? Salah! Ada formula rahasia yang determine siapa yang 'graduate' dan siapa yang stuck. Here's the blueprint.",
@@ -2697,7 +2697,7 @@ Karena di dunia balap, **the best bike is the one that wins the most**. Dan seja
   {
     slug: "strategi-balap-moto3-pack-racing-explained",
     title: "Strategi Balap Moto3: Pack Racing Explained",
-      image: "/images/featured/moto3-strategi-balap-moto3-pack-racing-explained.webp",
+      image: "/images/featured/2026-03-03-20-45-44-strategi-balap-moto3-pack-racing-explain.png",
     excerpt: "Balapan Moto3 terkenal dengan satu fenomena yang tidak ada di kelas lain: **pack racing**.",
     content: `# Strategi Balap Moto3: Pack Racing Explained
 
@@ -3067,7 +3067,7 @@ Welcome to Moto3. Welcome to the pack.
   {
     slug: "5-pembalap-moto3-indonesia-sepanjang-masa",
     title: "5 Pembalap Moto3 Indonesia Sepanjang Masa",
-      image: "/images/featured/moto3-5-pembalap-moto3-indonesia-sepanjang-masa.webp",
+      image: "/images/featured/2026-03-03-20-46-11-5-pembalap-moto3-indonesia-sepanjang-mas.png",
     excerpt: "Indonesia punya sejarah panjang di Grand Prix motorcycle racing—tapi prestasi di **Moto3 World Championship** baru dimulai serius di era 2010-an.",
     content: `# 5 Pembalap Moto3 Indonesia Sepanjang Masa
 
@@ -4039,7 +4039,7 @@ Dan yang paling penting: di Moto3, **motor hanya 30% dari equation**. Rider skil
   {
     slug: "dari-moto3-ke-juara-dunia-kisah-inspiratif",
     title: "Dari Moto3 ke Juara Dunia: Kisah Inspiratif",
-      image: "/images/featured/2026-03-03-19-49-56-dari-moto3-ke-juara-dunia-kisah-inspirat.png",
+      image: "/images/featured/2026-03-03-20-46-40-dari-moto3-ke-juara-dunia-kisah-inspirat.png",
     excerpt: "Setiap **juara dunia MotoGP modern** punya satu kesamaan: mereka **started dari bottom**, berjuang di kelas terbawah, dan climb their way up.",
     content: `# Dari Moto3 ke Juara Dunia: Kisah Inspiratif
 
@@ -6746,7 +6746,7 @@ Kalau kamu jadi FIA, apakah kamu akan keep budget cap seperti sekarang, naikkan 
   {
     slug: "ducati-panigale-v4-r-raja-wsbk-2026-yang-tak-tergoyahkan",
     title: "Ducati Panigale V4 R: Raja WSBK 2026 yang Tak Tergoyahkan",
-      image: "/images/featured/wsbk-ducati-panigale-v4-r-raja-wsbk-2026-yang-tak-tergoyahkan.webp",
+      image: "/images/featured/2026-03-03-20-47-05-ducati-panigale-v4-r-raja-wsbk-2026-yang.png",
     excerpt: "Sejak awal musim WSBK 2026, satu nama terus menggema di podium: **Ducati Panigale V4 R**. Bukan kebetulan bahwa motor asal Bologna ini mengoleksi 9 da",
     content: `# Ducati Panigale V4 R: Raja WSBK 2026 yang Tak Tergoyahkan
 
@@ -7112,7 +7112,7 @@ Dan di 2026, statement itu masih 100% valid.
   {
     slug: "perbedaan-wsbk-dan-motogp-production-vs-prototype-mana-yang-lebih-gila",
     title: "Perbedaan WSBK dan MotoGP: Production vs Prototype — Mana yang Lebih Gila?",
-      image: "/images/featured/motogp-perbedaan-wsbk-dan-motogp-production-vs-prototype-mana-yang-lebih-gila.webp",
+      image: "/images/featured/2026-03-03-20-47-32-perbedaan-wsbk-dan-motogp-production-vs-.png",
     excerpt: "**Pertanyaan klasik yang selalu muncul di paddock dan forum motorsport:** mana yang lebih kencang—motor WSBK atau MotoGP?",
     content: `# Perbedaan WSBK dan MotoGP: Production vs Prototype — Mana yang Lebih Gila?
 
@@ -7979,7 +7979,7 @@ The Turkish Tornado is here to stay.
   {
     slug: "arrc-2024-dominasi-pembalap-indonesia-",
     title: "ARRC 2024: Dominasi Pembalap Indonesia 🇮🇩",
-      image: "/images/featured/2026-03-03-19-50-18-arrc-2024-dominasi-pembalap-indonesia-.png",
+      image: "/images/featured/2026-03-03-20-49-55-arrc-2024-dominasi-pembalap-indonesia-.png",
     excerpt: "Tiga angka yang bikin Indonesia berdiri tegak di podium Asia Road Racing Championship 2024. Bukan sekadar finis di top 10. Bukan sekadar \"ikut meramai",
     content: `# ARRC 2024: Dominasi Pembalap Indonesia 🇮🇩
 
@@ -8710,7 +8710,7 @@ Merah Putih berkibar. Asia terperangah. Dunia mulai perhatikan.
   {
     slug: "sentul-international-circuit-kandang-arrc-indonesia-yang-bikin-lawan-gemetar-",
     title: "Sentul International Circuit: Kandang ARRC Indonesia yang Bikin Lawan Gemetar 🇮🇩",
-      image: "/images/featured/arrc-sentul-international-circuit-kandang-arrc-indonesia-yang-bikin-lawan-gemetar-.webp",
+      image: "/images/featured/2026-03-03-20-07-26-sentul-international-circuit-kandang-arr.png",
     excerpt: "**Sentul International Circuit** di Bogor, Jawa Barat, bukan sekadar sirkuit balap motor biasa. Ini adalah **kandang Indonesia** di Asia Road Racing C",
     content: `# Sentul International Circuit: Kandang ARRC Indonesia yang Bikin Lawan Gemetar 🇮🇩
 
@@ -9492,7 +9492,7 @@ Apakah dia akan sampai ke MotoGP? Kita tidak tahu. Tapi satu hal yang pasti: Mar
   {
     slug: "honda-vs-yamaha-di-arrc-persaingan-sengit-yang-memanas-",
     title: "Honda vs Yamaha di ARRC: Persaingan Sengit yang Memanas! 🏍️🔥",
-      image: "/images/featured/arrc-honda-vs-yamaha-di-arrc-persaingan-sengit-yang-memanas-.webp",
+      image: "/images/featured/2026-03-03-20-48-19-honda-vs-yamaha-di-arrc-persaingan-sengi.png",
     excerpt: "Red vs Blue. Honda vs Yamaha. Rivalitas tertua dan terseru di dunia balap motor.",
     content: `# Honda vs Yamaha di ARRC: Persaingan Sengit yang Memanas! 🏍️🔥
 
@@ -9835,7 +9835,7 @@ Tapi pada akhirnya, pemenang sesungguhnya adalah **INDONESIA**. Karena rivalitas
   {
     slug: "5-pembalap-indonesia-terbaik-arrc-2024-ranking-lengkap-",
     title: "5 Pembalap Indonesia Terbaik ARRC 2024: Ranking Lengkap! 🇮🇩🏆",
-      image: "/images/featured/2026-03-03-19-50-40-5-pembalap-indonesia-terbaik-arrc-2024-r.png",
+      image: "/images/featured/2026-03-03-20-48-48-5-pembalap-indonesia-terbaik-arrc-2024-r.png",
     excerpt: "Tahun 2024 adalah tahun EMAS bagi balap motor Indonesia. Di Asia Road Racing Championship (ARRC), pembalap Indonesia tidak cuma ikut race—mereka **MEN",
     content: `# 5 Pembalap Indonesia Terbaik ARRC 2024: Ranking Lengkap! 🇮🇩🏆
 
@@ -10463,7 +10463,7 @@ Siapa pembalap WSBK favorit kamu? Drop di komen!
       date: "2026-03-02",
       readTime: "11 min",
       category: "WSBK",
-      image: "/images/featured/wsbk-kawasaki-zx-10r-legenda-hijau-wsbk.webp",
+      image: "/images/featured/2026-03-03-20-08-59-kawasaki-zx-10r-legenda-hijau-wsbk.png",
       keywords: ["Kawasaki ZX-10R WSBK", "ZX-10RR", "motor WSBK", "Kawasaki racing", "Jonathan Rea"],
     content: `
 # Kawasaki ZX-10R: Legenda Hijau di WSBK yang Gak Pernah Kalah Gengsi
@@ -10677,7 +10677,7 @@ Ninja hijau never dies. 🏁
       date: "2026-03-02",
       readTime: "10 min",
       category: "WSBK",
-      image: "/images/featured/wsbk-strategi-balap-wsbk-3-race-format.webp",
+      image: "/images/featured/2026-03-03-20-49-12-strategi-balap-wsbk-3-race-format.png",
       keywords: ["strategi WSBK", "3-race format", "Superpole Race", "tyre management", "reverse grid"],
     content: `
 # Strategi Balap WSBK: 3 Race Format Explained (Superpole, Race 1, Race 2)

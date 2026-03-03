@@ -56,7 +56,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "9 menit",
     category: "IDC",
-    image: "/images/featured/idc-indonesia-ducati-cup-one-make-series-explained.webp",
+    image: "/images/featured/2026-03-03-20-01-45-indonesia-ducati-cup-one-make-series-exp.png",
     keywords: ["Indonesia Ducati Cup", "IDC 2026", "one make series indonesia", "Ducati Cup Indonesia", "kompetisi motor ducati", "IDC format", "ducati racing indonesia", "one make racing"],
     content: ""
   },
@@ -69,7 +69,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "10 menit",
     category: "IDC",
-    image: "/images/featured/idc-ducati-panigale-v2-spec-motor-idc-2026.webp",
+    image: "/images/featured/2026-03-03-20-02-09-ducati-panigale-v2-spec-motor-idc-2026.png",
     keywords: ["Ducati Panigale V2", "spec motor IDC", "Panigale V2 Indonesia", "Ducati V2 balap", "spec bike IDC 2026", "Panigale V2 review", "motor IDC Indonesia", "Ducati racing V2"],
     content: ""
   },
@@ -82,7 +82,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "11 menit",
     category: "IDC",
-    image: "/images/featured/2026-03-03-19-48-42-5-pathway-idc-ke-level-internasional.png",
+    image: "/images/featured/2026-03-03-20-02-37-5-pathway-idc-ke-level-internasional.png",
     keywords: ["jalur karir IDC", "IDC ke MotoGP", "pathway racing indonesia", "karir pembalap IDC", "IDC internasional", "success story racing", "rider development program", "ducati cup pathway"],
     content: ""
   },
@@ -110,7 +110,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "11 menit",
     category: "IDC",
-    image: "/images/featured/idc-sirkuit-favorit-idc-indonesia-review-lengkap.webp",
+    image: "/images/featured/2026-03-03-20-03-02-sirkuit-favorit-idc-indonesia-review-len.png",
     keywords: ["sirkuit IDC", "Sentul IDC", "Mandalika IDC", "review sirkuit Indonesia", "lap record IDC", "karakteristik sirkuit balap", "track guide IDC", "Indonesia racing circuit"],
     content: ""
   },
@@ -123,7 +123,7 @@ export const articlesWave3: Article[] = [
     date: "2026-03-02",
     readTime: "12 menit",
     category: "IDC",
-    image: "/images/featured/2026-03-03-19-49-01-teknik-cornering-pembalap-idc-profesiona.png",
+    image: "/images/featured/2026-03-03-20-03-25-teknik-cornering-pembalap-idc-profesiona.png",
     keywords: ["teknik cornering", "cornering IDC", "body position racing", "trail braking ducati", "throttle control superbike", "racing line technique", "fast lap technique", "cornering tips IDC"],
     content: ""
   },

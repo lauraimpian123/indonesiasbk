@@ -56,7 +56,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "10 menit",
     category: "BSB",
-    image: "/images/featured/bsb-british-superbike-championship-2026.webp",
+    image: "/images/featured/2026-03-03-20-09-39-british-superbike-championship-2026.png",
     keywords: ["British Superbike Championship", "BSB 2026", "balap motor Inggris", "kompetisi superbike", "championship domestik", "balap motor domestik", "Bennetts BSB", "jadwal BSB 2026", "pembalap BSB", "superbike UK"],
     content: ""
   },
@@ -82,7 +82,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "12 menit",
     category: "BSB",
-    image: "/images/featured/2026-03-03-19-51-25-pembalap-bsb-naik-ke-motogp.png",
+    image: "/images/featured/2026-03-03-20-49-39-pembalap-bsb-naik-ke-motogp.png",
     keywords: ["pembalap BSB ke MotoGP", "Cal Crutchlow", "Scott Redding", "Bradley Smith", "Sam Lowes", "Danny Kent", "jalur karir BSB", "British riders MotoGP", "success story BSB"],
     content: ""
   },
@@ -97,7 +97,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "9 menit",
     category: "BSB",
-    image: "/images/featured/2026-03-03-19-51-37-3-sirkuit-bsb-terfavorit-brands-hatch-do.png",
+    image: "/images/featured/2026-03-03-20-10-20-3-sirkuit-bsb-terfavorit-brands-hatch-do.png",
     keywords: ["sirkuit BSB", "Brands Hatch", "Donington Park", "Oulton Park", "British Superbike", "trek balap Inggris", "Paddock Hill Bend", "Redgate Corner", "The Island Oulton Park", "sirkuit balap motor Inggris"],
     content: ""
   },
@@ -110,7 +110,7 @@ export const articlesWave2: Article[] = [
     date: "2026-03-02",
     readTime: "10 menit",
     category: "BSB",
-    image: "/images/featured/bsb-yamaha-ducati-honda-perang-manufacturer-bsb.webp",
+    image: "/images/featured/2026-03-03-20-10-04-yamaha-ducati-honda-perang-manufacturer-.png",
     keywords: ["Yamaha BSB", "Ducati BSB", "Honda BSB", "British Superbike manufacturer", "Yamaha R1 balap", "Ducati Panigale V4 R", "Honda Fireblade CBR1000RR", "perang manufacturer BSB", "superbike Inggris", "teknologi balap motor"],
     content: ""
   },
